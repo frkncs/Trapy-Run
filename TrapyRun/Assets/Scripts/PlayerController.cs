@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
         MoveHorizontal();
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionExit(Collision collision)
     {
         if (collision.gameObject.CompareTag("GroundCube"))
             collision.gameObject.GetComponent<CubeScript>().fall();
