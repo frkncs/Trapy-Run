@@ -9,12 +9,12 @@ public class PlayerController : MonoBehaviour
 
     // Public Variables
 
-
     // Private Variables
     float firstFingerX, lastFingerX;
 
-    #endregion
+    bool gameOver = false;
 
+    #endregion
 
     void Update()
     {
@@ -23,8 +23,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
+        if (gameOver) return;
+
         if (collision.gameObject.CompareTag("GroundCube"))
             collision.gameObject.GetComponent<CubeScript>().fall();
+    }
+
+    public void die()
+    {
+        GetComponent<MoveForwardScript>().enabled = false;
+        GetComponent<PlayerController>().enabled = false;
+        gameOver = true;
     }
 
     void MoveHorizontal()

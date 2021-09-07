@@ -14,12 +14,18 @@ public class GenerateGround : Editor
 
         GroundGenerator gg = (GroundGenerator)target;
 
-        GUILayout.Space(15);
+        GUILayout.BeginHorizontal();
 
         if (GUILayout.Button("Generate Ground"))
         {
-            gg.generateGround(cube, 5, 150);
+            gg.generateGround(cube);
         }
+        else if (GUILayout.Button("Delete All Ground Items"))
+        {
+            gg.deleteGroundItems();
+        }
+
+        GUILayout.EndHorizontal();
     }
 
     void initializeVariables()

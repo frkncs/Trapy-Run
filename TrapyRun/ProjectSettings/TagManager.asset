@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - GroundCube
+  - Enemy
   layers:
   - Default
   - TransparentFX
