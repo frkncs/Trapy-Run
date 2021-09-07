@@ -2,15 +2,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class GroundGenerator : MonoBehaviour
 {
     #region Variables
 
     // Public Variables
-    public int row, column;
 
     // Private Variables
+    [SerializeField] int row, column;
+    [SerializeField] bool isLevelIncludeNavMesh = false;
+
     float groundStartZPos = -10;
 
     #endregion
@@ -19,6 +22,12 @@ public class GroundGenerator : MonoBehaviour
     {
         // Row count for just one side
         // eg. [row] left + [row] right + 1 center
+
+        if (isLevelIncludeNavMesh)
+        {
+            cube.AddComponent<NavMeshObstacle>();
+            cube.isStatic = true;
+        }
 
         float distanceBetween2Cubes = cube.transform.localScale.x;
 

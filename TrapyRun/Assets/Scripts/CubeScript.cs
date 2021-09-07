@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CubeScript : MonoBehaviour
 {
@@ -30,8 +31,20 @@ public class CubeScript : MonoBehaviour
     {
         if (rb != null && rb.isKinematic)
         {
+            createNavMeshObstacle();
+
             rb.isKinematic = false;
             GetComponent<MeshRenderer>().material.color = Color.red;
         }
+    }
+
+    void createNavMeshObstacle()
+    {
+        GameObject go = new GameObject("NavMeshObstacle");
+        go.AddComponent<NavMeshObstacle>();
+        go.GetComponent<NavMeshObstacle>().carving = true;
+        go.GetComponent<NavMeshObstacle>().carveOnlyStationary = false;
+
+        Instantiate(go, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
     }
 }
