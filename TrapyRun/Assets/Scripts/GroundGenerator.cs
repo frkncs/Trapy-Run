@@ -19,7 +19,7 @@ public class GroundGenerator : MonoBehaviour
     {
         cube = Resources.Load<GameObject>("Prefabs/Cube");
 
-        generateGround(9, 120);
+        generateGround(9, 150);
     }
 
     void generateGround(int row, int column)

@@ -18,6 +18,12 @@ public class PlayerController : MonoBehaviour
         MoveHorizontal();
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("GroundCube"))
+            collision.gameObject.GetComponent<CubeScript>().fall();
+    }
+
     void MoveHorizontal()
     {
         float mousePosX = getMousePos();
@@ -29,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
             float dif = lastFingerX - firstFingerX;
 
-            transform.position += new Vector3(dif, 0, 0);
+            transform.position += new Vector3(dif, 0, 0) * 0.8f;
 
             firstFingerX = lastFingerX;
         }
@@ -38,7 +44,7 @@ public class PlayerController : MonoBehaviour
     float getMousePos()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = transform.position.z + 5;
+        mousePos.z = transform.position.y + 5;
 
         return Camera.main.ScreenToWorldPoint(mousePos).x;
     }
