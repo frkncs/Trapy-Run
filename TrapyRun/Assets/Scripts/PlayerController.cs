@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,10 +9,12 @@ public class PlayerController : MonoBehaviour
 
     // Public Variables
 
+
     // Private Variables
     float firstFingerX, lastFingerX;
-	
-	#endregion
+
+    #endregion
+
 
     void Update()
     {
@@ -26,12 +29,10 @@ public class PlayerController : MonoBehaviour
 
     void MoveHorizontal()
     {
-        float mousePosX = getMousePos();
-
-        if (Input.GetMouseButtonDown(0)) firstFingerX = mousePosX;
+        if (Input.GetMouseButtonDown(0)) firstFingerX = getMousePos();
         else if (Input.GetMouseButton(0))
         {
-            lastFingerX = mousePosX;
+            lastFingerX = getMousePos();
 
             float dif = lastFingerX - firstFingerX;
 

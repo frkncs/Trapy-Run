@@ -22,14 +22,16 @@ public class CubeScript : MonoBehaviour
 
     private void Update()
     {
-        if (!rb.isKinematic)
-        {
-            if (transform.position.y <= maxYPos) Destroy(gameObject);
-        }
+        if (!rb.isKinematic && transform.position.y <= maxYPos)
+            Destroy(gameObject);
     }
 
     public void fall()
     {
-        if (rb != null && rb.isKinematic) rb.isKinematic = false;
+        if (rb != null && rb.isKinematic)
+        {
+            rb.isKinematic = false;
+            GetComponent<MeshRenderer>().material.color = Color.red;
+        }
     }
 }
