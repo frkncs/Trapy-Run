@@ -10,20 +10,12 @@ public class PlayerController : MonoBehaviour
 
     // Private Variables
     float firstFingerX, lastFingerX;
-
-    float speed = 10;
 	
 	#endregion
 
     void Update()
     {
-        MoveForward();
         MoveHorizontal();
-    }
-
-    void MoveForward()
-    {
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 
     void MoveHorizontal()
@@ -46,7 +38,7 @@ public class PlayerController : MonoBehaviour
     float getMousePos()
     {
         Vector3 mousePos = Input.mousePosition;
-        mousePos.z = transform.position.z;
+        mousePos.z = transform.position.z + 5;
 
         return Camera.main.ScreenToWorldPoint(mousePos).x;
     }
