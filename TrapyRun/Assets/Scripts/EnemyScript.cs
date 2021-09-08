@@ -33,7 +33,7 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerController>().die();
-            GetComponent<MoveForwardScript>().enabled = false;
+            GetComponent<MoveScript>().enabled = false;
         }
     }
 }

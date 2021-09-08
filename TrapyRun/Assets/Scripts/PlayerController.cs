@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public void die()
     {
-        GetComponent<MoveForwardScript>().enabled = false;
+        GetComponent<MoveScript>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
         gameOver = true;
     }
