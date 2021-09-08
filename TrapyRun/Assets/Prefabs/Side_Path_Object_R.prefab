@@ -2101,7 +2101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9079186660671366174}
   m_Layer: 0
-  m_Name: Side Path Object
+  m_Name: Side_Path_Object_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

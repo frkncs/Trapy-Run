@@ -2534,8 +2534,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyCount: 10
-  minSpawnPosition: 34
-  maxSpawnPosition: 35
+  minSpawnPosition: -34
+  maxSpawnPosition: -35
   spawnConstantly: 0
   enemiesToSpawn:
   - {fileID: 2620244177001005101, guid: b91ecddedb15b1743aea9d635dcaae0d, type: 3}
@@ -9193,7 +9193,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3470661159855314216}
   m_Layer: 0
-  m_Name: Side Path Object
+  m_Name: Side_Path_Object_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
