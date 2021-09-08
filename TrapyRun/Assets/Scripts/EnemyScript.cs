@@ -12,11 +12,17 @@ public class EnemyScript : MonoBehaviour
     // Private Variables
     [SerializeField] bool isAI = false;
 
+    Animator animator;
     Vector3 playerPos;
 
     float minYPos = -15;
 
     #endregion
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -30,6 +36,8 @@ public class EnemyScript : MonoBehaviour
         }
 
         if (transform.position.y <= minYPos) Destroy(gameObject);
+
+        checkIsFloating();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -63,5 +71,17 @@ public class EnemyScript : MonoBehaviour
         yield return new WaitForSeconds(second);
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    void checkIsFloating()
+    {
+        if (!Physics.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("Ground")))
+        {
+            if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+        }
+        else
+        {
+            if (animator.GetBool("isFloating")) animator.SetBool("isFloating", false);
+        }
     }
 }

@@ -10,15 +10,23 @@ public class PlayerController : MonoBehaviour
     // Public Variables
 
     // Private Variables
+    Animator animator;
+
     float firstFingerX, lastFingerX;
 
     bool gameOver = false;
 
     #endregion
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Update()
     {
         MoveHorizontal();
+        checkIsFloating();
     }
 
     private void OnCollisionExit(Collision collision)
@@ -58,5 +66,17 @@ public class PlayerController : MonoBehaviour
         mousePos.z = transform.position.y + 5;
 
         return Camera.main.ScreenToWorldPoint(mousePos).x;
+    }
+
+    void checkIsFloating()
+    {
+        if (!Physics.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("Ground")))
+        {
+            if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+        }
+        else
+        {
+            if (animator.GetBool("isFloating")) animator.SetBool("isFloating", false);
+        }
     }
 }
