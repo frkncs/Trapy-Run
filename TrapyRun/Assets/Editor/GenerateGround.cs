@@ -4,7 +4,7 @@ using UnityEngine;
 [CustomEditor(typeof(GroundGenerator))]
 public class GenerateGround : Editor
 {
-    GameObject cube;
+    GameObject cube, barrier;
 
     public override void OnInspectorGUI()
     {
@@ -18,7 +18,7 @@ public class GenerateGround : Editor
 
         if (GUILayout.Button("Generate Ground"))
         {
-            gg.generateGround(cube);
+            gg.generateGround(cube, barrier);
         }
         else if (GUILayout.Button("Delete All Ground Items"))
         {
@@ -31,5 +31,6 @@ public class GenerateGround : Editor
     void initializeVariables()
     {
         cube = Resources.Load<GameObject>("Prefabs/Cube");
+        barrier = Resources.Load<GameObject>("Prefabs/Barrier");
     }
 }

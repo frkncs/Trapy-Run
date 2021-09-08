@@ -18,7 +18,7 @@ public class GroundGenerator : MonoBehaviour
 
     #endregion
 
-    public void generateGround(GameObject cube)
+    public void generateGround(GameObject cube, GameObject barrier)
     {
         // Row count for just one side
         // eg. [row] left + [row] right + 1 center
@@ -45,6 +45,21 @@ public class GroundGenerator : MonoBehaviour
                 GameObject go = Instantiate(cube, new Vector3(cloneXPos, -(1.5f * distanceBetween2Cubes), cloneZPos), Quaternion.identity);
                 go.transform.SetParent(cubeObject.transform);
                 cloneXPos += distanceBetween2Cubes;
+
+                if (x == 0)
+                {
+                    GameObject barrierObj = Instantiate(barrier, Vector3.zero, Quaternion.identity);
+                    barrierObj.transform.SetParent(go.transform);
+                    barrierObj.transform.localPosition = new Vector3(-.35f, .55f, 0);
+                    barrierObj.transform.localScale = new Vector3(.3f, .1f, 1);
+                }
+                else if (x == (row * 2 + 1) - 1)
+                {
+                    GameObject barrierObj = Instantiate(barrier, Vector3.zero, Quaternion.identity);
+                    barrierObj.transform.SetParent(go.transform);
+                    barrierObj.transform.localPosition = new Vector3(.35f, .55f, 0);
+                    barrierObj.transform.localScale = new Vector3(.3f, .1f, 1);
+                }
             }
 
             cloneZPos += distanceBetween2Cubes;
