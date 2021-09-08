@@ -31,7 +31,7 @@ public class CubeScript : MonoBehaviour
     {
         if (rb != null && rb.isKinematic)
         {
-            createNavMeshObstacle();
+            if (GroundGenerator.isLevelIncludeNavMesh) createNavMeshObstacle();
 
             rb.isKinematic = false;
             GetComponent<MeshRenderer>().material.color = Color.red;

@@ -10,11 +10,15 @@ public class MoveScript : MonoBehaviour
 
     // Private Variables
     [SerializeField] bool moveForward = false;
+    [SerializeField] bool moveHorizontal = false;
     [SerializeField] bool turnClockwise = false;
     [SerializeField] bool turnReverse = false;
 
     [SerializeField] float moveSpeed = 10;
-    [SerializeField] float turnSpeed = 15;
+    [Range(0,1)]
+    [SerializeField] float turnSpeed = 0;
+
+    Vector3 dir = Vector3.right;
 
     #endregion
 
@@ -22,13 +26,24 @@ public class MoveScript : MonoBehaviour
     {
         if (moveForward)
             MoveForward();
+        else if (moveHorizontal)
+            MoveHorizontal();
+
         if (turnClockwise || turnReverse)
             Turn();
     }
 
     void MoveForward()
     {
-        transform.position += transform.forward * Time.deltaTime * moveSpeed;
+        transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
+    }
+
+    void MoveHorizontal()
+    {
+        if (!Physics.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("Ground")))
+            dir *= -1;
+
+        transform.Translate(dir * Time.deltaTime * moveSpeed);
     }
 
     void Turn()

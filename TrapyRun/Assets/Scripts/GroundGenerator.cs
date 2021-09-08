@@ -9,10 +9,10 @@ public class GroundGenerator : MonoBehaviour
     #region Variables
 
     // Public Variables
+    public static bool isLevelIncludeNavMesh = false;
 
     // Private Variables
     [SerializeField] int row, column;
-    [SerializeField] bool isLevelIncludeNavMesh = false;
 
     float groundStartZPos = -10;
 
