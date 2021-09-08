@@ -11,6 +11,11 @@ public class PlayerController : MonoBehaviour
 
     // Private Variables
     Animator animator;
+    Rigidbody rb;
+    Collider boxCollider;
+
+    Rigidbody[] rigidbodies;
+    Collider[] colliders;
 
     float firstFingerX, lastFingerX;
 
@@ -21,6 +26,43 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
+
+        rigidbodies = GetComponentsInChildren<Rigidbody>();
+        colliders = GetComponentsInChildren<Collider>();
+
+        setCollidersEnabled(false);
+        setRigidbodiesKinematic(true);
+
+        rb.isKinematic = false;
+        boxCollider.enabled = true;
+    }
+
+    void setCollidersEnabled(bool enabled)
+    {
+        foreach (Collider item in colliders)
+        {
+            item.enabled = enabled;
+        }
+    }
+
+    void setRigidbodiesKinematic(bool kinematic)
+    {
+        foreach (Rigidbody item in rigidbodies)
+        {
+            item.isKinematic = kinematic;
+        }
+    }
+
+    void activateRagdoll()
+    {
+        boxCollider.enabled = false;
+        rb.isKinematic = true;
+        animator.enabled = false;
+
+        setCollidersEnabled(true);
+        setRigidbodiesKinematic(false);
     }
 
     void Update()
@@ -41,6 +83,9 @@ public class PlayerController : MonoBehaviour
     {
         GetComponent<MoveScript>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
+
+        activateRagdoll();
+
         gameOver = true;
     }
 
