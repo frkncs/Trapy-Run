@@ -12,7 +12,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int enemyCount = 0;
     [SerializeField] float minSpawnPosition = -5f;
     [SerializeField] float maxSpawnPosition = 5f;
-    [SerializeField] bool spawnConstantly = true;
     [SerializeField] GameObject[] enemiesToSpawn;
 
     Transform playerTrans;
@@ -28,28 +27,18 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
-        if (spawnConstantly) canSpawn = true;
-
         playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void Update()
     {
-        if (!spawnConstantly)
-        {
-            Vector3 dist = transform.position - playerTrans.position;
+        Vector3 dist = transform.position - playerTrans.position;
 
-            canSpawn = dist.z <= spawnDistance;
-        }
+        canSpawn = dist.z <= spawnDistance;
 
         if (canSpawn)
         {
-            if (!spawnConstantly)
-            {
-                if (createdEnemyCount < enemyCount)
-                    spawn();
-            }
-            else
+            if (createdEnemyCount < enemyCount)
                 spawn();
         }
     }
