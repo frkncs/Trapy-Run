@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GroundCube
   - Enemy
+  - SideCube
   layers:
   - Default
   - TransparentFX

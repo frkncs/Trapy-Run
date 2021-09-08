@@ -9,38 +9,69 @@ public class EnemySpawner : MonoBehaviour
     // Public Variables
 
     // Private Variables
+    [SerializeField] int enemyCount = 0;
+    [SerializeField] float minSpawnPosition = -5f;
+    [SerializeField] float maxSpawnPosition = 5f;
+    [SerializeField] bool spawnConstantly = true;
     [SerializeField] GameObject[] enemiesToSpawn;
 
+    Transform playerTrans;
+
+    int createdEnemyCount = 0;
     float spawnTimer = 0;
+    float spawnDistance = 70;
+    bool canSpawn = false;
+
     const float spawnInterval = .2f;
 
-	#endregion
+    #endregion
+
+    private void Start()
+    {
+        if (spawnConstantly) canSpawn = true;
+
+        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     void Update()
+    {
+        if (!spawnConstantly)
+        {
+            Vector3 dist = transform.position - playerTrans.position;
+
+            canSpawn = dist.z <= spawnDistance;
+        }
+
+        if (canSpawn)
+        {
+            if (!spawnConstantly)
+            {
+                if (createdEnemyCount < enemyCount)
+                    spawn();
+            }
+            else
+                spawn();
+        }
+    }
+
+    void spawn()
     {
         spawnTimer += Time.deltaTime;
 
         if (spawnTimer >= spawnInterval)
         {
-            if (canSpawnEnemy())
-                spawnEnemy();
-
+            spawnEnemy();
             spawnTimer = 0;
         }
     }
 
-    bool canSpawnEnemy()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, 15, LayerMask.GetMask("Ground"));
-    }
-
-    float spawnRate = 5f;
-
     void spawnEnemy()
     {
         GameObject enemyToSpawn = enemiesToSpawn[Random.Range(0, enemiesToSpawn.Length)];
-        Vector3 spawnPos = new Vector3(Random.Range(-spawnRate, spawnRate + 1), 1, transform.position.z);
+        Vector3 spawnPos = new Vector3(Random.Range(minSpawnPosition, maxSpawnPosition + 1), .5f, transform.position.z);
 
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
+
+        createdEnemyCount++;
     }
 }

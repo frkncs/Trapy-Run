@@ -10,10 +10,8 @@ public class GroundGenerator : MonoBehaviour
 
     // Public Variables
     public bool isLevelIncludeNavMesh = false;
-
     // Private Variables
     [SerializeField] int row, column;
-
     float groundStartZPos = -10;
 
     #endregion
@@ -24,10 +22,9 @@ public class GroundGenerator : MonoBehaviour
         // eg. [row] left + [row] right + 1 center
 
         if (isLevelIncludeNavMesh)
-        {
             cube.AddComponent<NavMeshObstacle>();
-            cube.isStatic = true;
-        }
+
+        cube.tag = "GroundCube";
 
         float distanceBetween2Cubes = cube.transform.localScale.x;
 

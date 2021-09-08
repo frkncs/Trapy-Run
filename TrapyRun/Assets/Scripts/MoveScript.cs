@@ -35,7 +35,7 @@ public class MoveScript : MonoBehaviour
 
     void MoveForward()
     {
-        transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
+        transform.position += transform.forward * Time.deltaTime * moveSpeed;
     }
 
     void MoveHorizontal()

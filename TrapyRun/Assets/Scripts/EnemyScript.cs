@@ -10,17 +10,17 @@ public class EnemyScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    [SerializeField] bool canFollow = false;
+    [SerializeField] bool isAI = false;
 
     Vector3 playerPos;
 
-    float maxYPos = 10;
+    float minYPos = -15;
 
     #endregion
 
     private void Update()
     {
-        if (canFollow)
+        if (isAI)
         {
             if(GetComponent<NavMeshAgent>() != null)
             {
@@ -29,7 +29,7 @@ public class EnemyScript : MonoBehaviour
             }
         }
 
-        if (transform.position.y >= maxYPos) Destroy(gameObject);
+        if (transform.position.y <= minYPos) Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -37,7 +37,31 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerController>().die();
-            GetComponent<MoveScript>().enabled = false;
+            if (GetComponent<MoveScript>() != null)
+                GetComponent<MoveScript>().enabled = false;
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (!isAI)
+        {
+            if (collision.gameObject.CompareTag("SideCube"))
+            {
+                transform.LookAt(collision.gameObject.transform.parent.Find("EnemyCoord").transform);
+            }
+            else if (collision.gameObject.CompareTag("GroundCube"))
+            {
+                StartCoroutine(resetLookPoint());
+            }
+        }
+    }
+
+    IEnumerator resetLookPoint()
+    {
+        float second = Random.Range(0.8f, 1.1f);
+        yield return new WaitForSeconds(second);
+
+        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 }
