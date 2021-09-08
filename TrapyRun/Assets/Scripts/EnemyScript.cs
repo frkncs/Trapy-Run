@@ -14,6 +14,8 @@ public class EnemyScript : MonoBehaviour
 
     Vector3 playerPos;
 
+    float maxYPos = 10;
+
     #endregion
 
     private void Update()
@@ -26,6 +28,8 @@ public class EnemyScript : MonoBehaviour
                 GetComponent<NavMeshAgent>().SetDestination(playerPos);
             }
         }
+
+        if (transform.position.y >= maxYPos) Destroy(gameObject);
     }
 
     private void OnCollisionEnter(Collision collision)

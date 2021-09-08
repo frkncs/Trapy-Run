@@ -10,32 +10,34 @@ public class CubeScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    Rigidbody rb;
+    static GroundGenerator gg;
 
+    float fallSpeed = 15;
     float maxYPos = -15;
+
+    bool canFall = false;
 
     #endregion
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        if (gg == null) gg = GameObject.Find("GroundGenerator").GetComponent<GroundGenerator>();
     }
 
     private void Update()
     {
-        if (!rb.isKinematic && transform.position.y <= maxYPos)
+        if (canFall)
+            transform.Translate(Vector3.down * Time.deltaTime * fallSpeed);
+
+        if (transform.position.y <= maxYPos)
             Destroy(gameObject);
     }
 
     public void fall()
     {
-        if (rb != null && rb.isKinematic)
-        {
-            if (GroundGenerator.isLevelIncludeNavMesh) createNavMeshObstacle();
-
-            rb.isKinematic = false;
-            GetComponent<MeshRenderer>().material.color = Color.red;
-        }
+        if (gg.isLevelIncludeNavMesh) createNavMeshObstacle();
+        GetComponent<MeshRenderer>().material.color = Color.red;
+        canFall = true;
     }
 
     void createNavMeshObstacle()

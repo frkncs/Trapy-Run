@@ -9,7 +9,7 @@ public class GroundGenerator : MonoBehaviour
     #region Variables
 
     // Public Variables
-    public static bool isLevelIncludeNavMesh = false;
+    public bool isLevelIncludeNavMesh = false;
 
     // Private Variables
     [SerializeField] int row, column;
