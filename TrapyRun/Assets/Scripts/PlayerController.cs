@@ -45,7 +45,8 @@ public class PlayerController : MonoBehaviour
 
             float dif = lastFingerX - firstFingerX;
 
-            transform.position += new Vector3(dif, 0, 0) * 0.8f;
+            transform.rotation = Quaternion.Euler(0, dif * 50, 0);
+            transform.position += new Vector3(dif, 0, 0) * 0.6f;
 
             firstFingerX = lastFingerX;
         }
