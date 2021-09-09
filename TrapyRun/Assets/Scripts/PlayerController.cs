@@ -56,6 +56,23 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (LayerMask.LayerToName(collision.gameObject.layer) == "HelicopterStop")
+        {
+            MoveScript ms = GetComponent<MoveScript>();
+            PlayerController pc = GetComponent<PlayerController>();
+
+            if (ms != null)
+            {
+                ms.enabled = false;
+                animator.SetBool("isIdle", true);
+
+                if (pc != null) pc.enabled = false;
+            }
+        }
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         if (gameOver) return;
@@ -129,7 +146,7 @@ public class PlayerController : MonoBehaviour
 
     void checkIsFloating()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 5))
+        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
         {
             if (hitInfo.collider == null)
             {

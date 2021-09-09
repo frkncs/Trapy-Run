@@ -87,7 +87,7 @@ public class EnemyScript : MonoBehaviour
 
     void checkIsFloating()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 5))
+        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
         {
             if (hitInfo.collider == null)
             {
