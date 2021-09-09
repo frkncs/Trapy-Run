@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Assets.Scripts;
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     #region Variables
 
     // Public Variables
-    [HideInInspector] public bool gameOver = false;
+    [HideInInspector] public static bool isGameStart = false;
     [HideInInspector] public static Action ChangeCameraAngle;
-    [HideInInspector] public static  Action MoveHelicopter;
+    [HideInInspector] public static Action MoveHelicopter;
+    
+    [HideInInspector] public bool gameOver = false;
 
     // Private Variables
     Animator animator;
@@ -20,6 +22,8 @@ public class PlayerController : MonoBehaviour
     Rigidbody[] rigidbodies;
     Collider[] colliders;
 
+    UIController uc;
+
     float firstFingerX, lastFingerX;
     float minYPos = -15;
 
@@ -27,6 +31,12 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        uc = FindObjectOfType<UIController>().GetComponent<UIController>();
+
+        isGameStart = false;
+
+        uc.openScreen(Strings.startScreen);
+
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         boxCollider = GetComponent<BoxCollider>();
@@ -43,6 +53,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (!isGameStart) return;
+        else
+            if (!animator.GetBool("isRunning")) animator.SetBool("isRunning", true);
+
         MoveHorizontal();
         checkIsFloating();
         checkIsFall();
@@ -54,6 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             Camera.main.transform.Find("Confetti_01").gameObject.SetActive(true);
             Camera.main.transform.Find("Confetti_02").gameObject.SetActive(true);
+            uc.openScreen(Strings.youWinScreen);
             ChangeCameraAngle();
         }
     }
@@ -68,7 +83,7 @@ public class PlayerController : MonoBehaviour
             if (ms != null)
             {
                 ms.enabled = false;
-                animator.SetBool("isIdle", true);
+                animator.SetBool("isRunning", false);
 
                 MoveHelicopter();
 
@@ -96,6 +111,8 @@ public class PlayerController : MonoBehaviour
         activateRagdoll();
 
         gameOver = true;
+
+        uc.openScreen(Strings.gameOverScreen);
     }
 
     float getMousePos()
@@ -122,9 +139,13 @@ public class PlayerController : MonoBehaviour
             float dif = lastFingerX - firstFingerX;
 
             transform.rotation = Quaternion.Euler(0, dif * 50, 0);
-            transform.position += new Vector3(dif, 0, 0) * 0.6f;
+            transform.position += new Vector3(dif, 0, 0) * 0.8f;
 
             firstFingerX = lastFingerX;
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z + 5));
         }
     }
 

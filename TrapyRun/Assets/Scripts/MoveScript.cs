@@ -38,6 +38,8 @@ public class MoveScript : MonoBehaviour
 
     void Update()
     {
+        if (!PlayerController.isGameStart) return;
+
         if (moveForward)
             MoveForward();
         else if (moveHorizontal)

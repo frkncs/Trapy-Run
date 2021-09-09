@@ -9,6 +9,7 @@ TagManager:
   - SideCube
   - FinishLine
   - Helicopter
+  - Panel
   layers:
   - Default
   - TransparentFX

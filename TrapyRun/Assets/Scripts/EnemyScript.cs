@@ -32,6 +32,10 @@ public class EnemyScript : MonoBehaviour
 
     private void Update()
     {
+        if (!PlayerController.isGameStart) return;
+        else
+            if (!animator.GetBool("isRunning")) animator.SetBool("isRunning", true);
+
         if (isAI)
         {
             if (player != null)
