@@ -14,14 +14,27 @@ public class MoveScript : MonoBehaviour
     [SerializeField] bool moveHorizontal = false;
     [SerializeField] bool turnClockwise = false;
     [SerializeField] bool turnReverse = false;
+    [SerializeField] bool turnXCoordinate = false;
+    [SerializeField] bool turnYCoordinate = true;
+    [SerializeField] bool turnZCoordinate = false;
 
     [SerializeField] float moveSpeed = 10;
-    [Range(0,1)]
     [SerializeField] float turnSpeed = 0;
 
     Vector3 dir = Vector3.right;
+    Vector3 rot = Vector3.zero;
 
     #endregion
+
+    private void Start()
+    {
+        if (turnXCoordinate)
+            rot = new Vector3((turnClockwise ? 1 : -1) * 360, 0, 0);
+        if (turnYCoordinate)
+            rot = new Vector3(0, (turnClockwise ? 1 : -1) * 360, 0);
+        else if (turnZCoordinate)
+            rot = new Vector3(0, 0, (turnClockwise ? 1 : -1) * 360);
+    }
 
     void Update()
     {
@@ -52,6 +65,6 @@ public class MoveScript : MonoBehaviour
 
     void Turn()
     {
-        transform.Rotate(new Vector3(0, (turnClockwise ? 1 : -1) * 360, 0) * Time.deltaTime * turnSpeed);
+        transform.Rotate(rot * Time.deltaTime * turnSpeed);
     }
 }
