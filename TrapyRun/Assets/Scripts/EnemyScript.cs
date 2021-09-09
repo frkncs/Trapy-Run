@@ -16,6 +16,7 @@ public class EnemyScript : MonoBehaviour
     Animator animator;
     NavMeshAgent navMesh;
     Vector3 playerPos;
+    GameObject player;
 
     float minYPos = -15;
 
@@ -23,7 +24,8 @@ public class EnemyScript : MonoBehaviour
 
     private void Start()
     {
-        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        pc = player.GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         navMesh = GetComponent<NavMeshAgent>();
     }
@@ -32,21 +34,19 @@ public class EnemyScript : MonoBehaviour
     {
         if (isAI)
         {
-            if(navMesh != null && navMesh.enabled)
+            if (player != null)
             {
-                playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-                navMesh.SetDestination(playerPos);
-            }
-
-            if (pc.gameOver)
-            {
-                if (navMesh.enabled)
+                if (navMesh != null && navMesh.enabled)
                 {
-                    GetComponent<MoveScript>().enabled = true;
-                    navMesh.enabled = false;
-                    transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+                    playerPos = player.transform.position;
+                    navMesh.SetDestination(playerPos);
                 }
             }
+            else
+                letAIGo();
+
+            if (pc.gameOver)
+                letAIGo();
         }
 
         if (transform.position.y <= minYPos) Destroy(gameObject);
@@ -85,9 +85,19 @@ public class EnemyScript : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
+    void letAIGo()
+    {
+        if (navMesh.enabled)
+        {
+            GetComponent<MoveScript>().enabled = true;
+            navMesh.enabled = false;
+            transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+        }
+    }
+
     void checkIsFloating()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
+        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 2))
         {
             if (hitInfo.collider == null)
             {

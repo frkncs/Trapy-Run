@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
 
     // Public Variables
     [HideInInspector] public bool gameOver = false;
-    [HideInInspector] public Action ChangeCameraAngle;
+    [HideInInspector] public static Action ChangeCameraAngle;
+    [HideInInspector] public static  Action MoveHelicopter;
 
     // Private Variables
     Animator animator;
@@ -68,7 +69,9 @@ public class PlayerController : MonoBehaviour
                 ms.enabled = false;
                 animator.SetBool("isIdle", true);
 
-                if (pc != null) pc.enabled = false;
+                MoveHelicopter();
+
+                StartCoroutine(DestroyPlayer(1.5f));
             }
         }
     }
@@ -100,6 +103,12 @@ public class PlayerController : MonoBehaviour
         mousePos.z = transform.position.y + 5;
 
         return Camera.main.ScreenToWorldPoint(mousePos).x;
+    }
+
+    IEnumerator DestroyPlayer(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(gameObject);
     }
 
     void MoveHorizontal()
