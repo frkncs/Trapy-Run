@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -13,16 +14,19 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float minSpawnPosition = -5f;
     [SerializeField] float maxSpawnPosition = 5f;
     [SerializeField] bool spawnSuddenly = false;
-    [SerializeField] GameObject[] enemiesToSpawn;
+    [SerializeField] List<GameObject> enemiesToSpawn;
+    
+    static int createdEnemyCount = 0;
 
     GameObject player;
     Transform playerTrans;
 
-    int createdEnemyCount = 0;
+    int createdAIEnemyCount = 0;
     float spawnTimer = 0;
     float spawnDistance = 70;
     bool canSpawn = false;
 
+    const int maxAIEnemyCount = 5;
     const float spawnInterval = .2f;
 
     #endregion
@@ -72,7 +76,22 @@ public class EnemySpawner : MonoBehaviour
 
     void spawnEnemy()
     {
-        GameObject enemyToSpawn = enemiesToSpawn[Random.Range(0, enemiesToSpawn.Length)];
+        int spawnEnemyInx = Random.Range(0, enemiesToSpawn.Count);
+        GameObject enemyToSpawn = enemiesToSpawn[spawnEnemyInx];
+
+        if (enemyToSpawn.GetComponent<NavMeshAgent>() != null)
+        {
+            if (createdAIEnemyCount >= maxAIEnemyCount)
+            {
+                enemiesToSpawn.RemoveAt(spawnEnemyInx);
+
+                spawnEnemyInx = Random.Range(0, enemiesToSpawn.Count);
+                enemyToSpawn = enemiesToSpawn[spawnEnemyInx];
+            }
+
+            createdAIEnemyCount++;
+        }
+
         Vector3 spawnPos = new Vector3(Random.Range(minSpawnPosition, maxSpawnPosition + 1), .5f, transform.position.z);
 
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
