@@ -9,6 +9,7 @@ public class CameraScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
+    PlayerController pc;
     Transform playerTrans;
     Vector3 playerPos;
     Vector3 offset;
@@ -18,6 +19,7 @@ public class CameraScript : MonoBehaviour
     void Start()
     {
         playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
+        pc = playerTrans.GetComponent<PlayerController>();
         playerPos = playerTrans.position;
 
         offset = transform.position - playerPos;
@@ -25,7 +27,10 @@ public class CameraScript : MonoBehaviour
 
     void LateUpdate()
     {
-        playerPos = playerTrans.position;
-        transform.position = playerPos + offset;
+        if (!pc.gameOver)
+        {
+            playerPos = playerTrans.position;
+            transform.position = playerPos + offset;
+        }
     }
 }
