@@ -52,7 +52,8 @@ public class PlayerController : MonoBehaviour
     {
         if (LayerMask.LayerToName(other.gameObject.layer) == "FinishLine")
         {
-            Debug.Log("You Win!");
+            Camera.main.transform.Find("Confetti_01").gameObject.SetActive(true);
+            Camera.main.transform.Find("Confetti_02").gameObject.SetActive(true);
             ChangeCameraAngle();
         }
     }
