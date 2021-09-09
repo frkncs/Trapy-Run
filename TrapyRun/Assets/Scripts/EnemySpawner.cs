@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int enemyCount = 0;
     [SerializeField] float minSpawnPosition = -5f;
     [SerializeField] float maxSpawnPosition = 5f;
+    [SerializeField] bool spawnSuddenly = false;
     [SerializeField] GameObject[] enemiesToSpawn;
 
     Transform playerTrans;
@@ -45,12 +46,22 @@ public class EnemySpawner : MonoBehaviour
 
     void spawn()
     {
-        spawnTimer += Time.deltaTime;
-
-        if (spawnTimer >= spawnInterval)
+        if (!spawnSuddenly)
         {
-            spawnEnemy();
-            spawnTimer = 0;
+            spawnTimer += Time.deltaTime;
+
+            if (spawnTimer >= spawnInterval)
+            {
+                spawnEnemy();
+                spawnTimer = 0;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < enemyCount; i++)
+            {
+                spawnEnemy();
+            }
         }
     }
 

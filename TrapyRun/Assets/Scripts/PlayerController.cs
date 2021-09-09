@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 
     // Public Variables
     [HideInInspector] public bool gameOver = false;
+    [HideInInspector] public Action ChangeCameraAngle;
 
     // Private Variables
     Animator animator;
@@ -46,12 +47,24 @@ public class PlayerController : MonoBehaviour
         checkIsFall();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (LayerMask.LayerToName(other.gameObject.layer) == "FinishLine")
+        {
+            Debug.Log("You Win!");
+            ChangeCameraAngle();
+        }
+    }
+
     private void OnCollisionExit(Collision collision)
     {
         if (gameOver) return;
 
         if (collision.gameObject.CompareTag("GroundCube"))
-            collision.gameObject.GetComponent<CubeScript>().fall();
+        {
+            if (collision.gameObject.GetComponent<CubeScript>() != null)
+                collision.gameObject.GetComponent<CubeScript>().fall();
+        }
     }
 
     public void die()
@@ -116,9 +129,12 @@ public class PlayerController : MonoBehaviour
 
     void checkIsFloating()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("Ground")))
+        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 5))
         {
-            if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+            if (hitInfo.collider == null)
+            {
+                if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+            }
         }
         else
         {

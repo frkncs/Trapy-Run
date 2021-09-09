@@ -12,7 +12,9 @@ public class EnemyScript : MonoBehaviour
     // Private Variables
     [SerializeField] bool isAI = false;
 
+    PlayerController pc;
     Animator animator;
+    NavMeshAgent navMesh;
     Vector3 playerPos;
 
     float minYPos = -15;
@@ -21,17 +23,29 @@ public class EnemyScript : MonoBehaviour
 
     private void Start()
     {
+        pc = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
+        navMesh = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
     {
         if (isAI)
         {
-            if(GetComponent<NavMeshAgent>() != null)
+            if(navMesh != null && navMesh.enabled)
             {
                 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
-                GetComponent<NavMeshAgent>().SetDestination(playerPos);
+                navMesh.SetDestination(playerPos);
+            }
+
+            if (pc.gameOver)
+            {
+                if (navMesh.enabled)
+                {
+                    GetComponent<MoveScript>().enabled = true;
+                    navMesh.enabled = false;
+                    transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+                }
             }
         }
 
@@ -45,8 +59,6 @@ public class EnemyScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerController>().die();
-            if (GetComponent<MoveScript>() != null)
-                GetComponent<MoveScript>().enabled = false;
         }
     }
 
@@ -75,9 +87,12 @@ public class EnemyScript : MonoBehaviour
 
     void checkIsFloating()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, 5, LayerMask.GetMask("Ground")))
+        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 5))
         {
-            if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+            if (hitInfo.collider == null)
+            {
+                if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+            }
         }
         else
         {

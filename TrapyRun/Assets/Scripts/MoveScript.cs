@@ -9,6 +9,7 @@ public class MoveScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
+    [SerializeField] bool useGlobalDirections = false;
     [SerializeField] bool moveForward = false;
     [SerializeField] bool moveHorizontal = false;
     [SerializeField] bool turnClockwise = false;
@@ -35,7 +36,10 @@ public class MoveScript : MonoBehaviour
 
     void MoveForward()
     {
-        transform.position += transform.forward * Time.deltaTime * moveSpeed;
+        if (!useGlobalDirections)
+            transform.position += transform.forward * Time.deltaTime * moveSpeed;
+        else
+            transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
     }
 
     void MoveHorizontal()

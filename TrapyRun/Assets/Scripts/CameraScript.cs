@@ -14,6 +14,8 @@ public class CameraScript : MonoBehaviour
     Vector3 playerPos;
     Vector3 offset;
 
+    bool canChangeAngle = false;
+
 	#endregion
 
     void Start()
@@ -23,14 +25,29 @@ public class CameraScript : MonoBehaviour
         playerPos = playerTrans.position;
 
         offset = transform.position - playerPos;
+
+        pc.ChangeCameraAngle += changeAngle;
+    }
+
+    private void Update()
+    {
+        if (canChangeAngle)
+        {
+            transform.LookAt(playerTrans);
+        }
     }
 
     void LateUpdate()
     {
-        if (!pc.gameOver)
+        if (!pc.gameOver && !canChangeAngle)
         {
             playerPos = playerTrans.position;
             transform.position = playerPos + offset;
         }
+    }
+
+    void changeAngle()
+    {
+        canChangeAngle = true;
     }
 }

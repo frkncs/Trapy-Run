@@ -567,6 +567,7 @@ GameObject:
   - component: {fileID: 7419648873851789056}
   - component: {fileID: 4277328032347037633}
   - component: {fileID: 4277328032347037638}
+  - component: {fileID: -916008784025672049}
   - component: {fileID: 4277328032347037639}
   m_Layer: 0
   m_Name: Enemy_03
@@ -636,6 +637,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAI: 1
+--- !u!114 &-916008784025672049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277328032347037632}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09817d58d1f3cd046aed766b90933fcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useGlobalDirections: 1
+  moveForward: 1
+  moveHorizontal: 0
+  turnClockwise: 0
+  turnReverse: 0
+  moveSpeed: 12
+  turnSpeed: 0
 --- !u!195 &4277328032347037639
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -646,7 +666,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 1.56
-  m_Speed: 13
+  m_Speed: 14
   m_Acceleration: 10
   avoidancePriority: 50
   m_AngularSpeed: 600

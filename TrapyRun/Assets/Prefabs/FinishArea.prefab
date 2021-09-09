@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 168093202391120227}
   - component: {fileID: 168093202391120224}
   - component: {fileID: 168093202391120225}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (2)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,9 +90,9 @@ GameObject:
   - component: {fileID: 168093202748784926}
   - component: {fileID: 168093202748784927}
   - component: {fileID: 168093202748784924}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (3)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,9 +168,9 @@ GameObject:
   m_Component:
   - component: {fileID: 168093202778071410}
   - component: {fileID: 168093202778071413}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FinishLine
-  m_TagString: FinishLine
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -224,9 +224,9 @@ GameObject:
   - component: {fileID: 168093203073681808}
   - component: {fileID: 168093203073681809}
   - component: {fileID: 168093203073681822}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cylinder
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2514,9 +2514,9 @@ GameObject:
   - component: {fileID: 168093203136324164}
   - component: {fileID: 168093203136324165}
   - component: {fileID: 168093203136324162}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pipe
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9841,9 +9841,9 @@ GameObject:
   - component: {fileID: 168093203252403591}
   - component: {fileID: 168093203252403588}
   - component: {fileID: 168093203252403589}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (8)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9920,9 +9920,9 @@ GameObject:
   - component: {fileID: 168093203373590371}
   - component: {fileID: 168093203373590368}
   - component: {fileID: 168093203373590369}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9999,9 +9999,9 @@ GameObject:
   - component: {fileID: 168093203611408273}
   - component: {fileID: 168093203611408286}
   - component: {fileID: 168093203611408287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (4)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10078,9 +10078,9 @@ GameObject:
   - component: {fileID: 168093203934619308}
   - component: {fileID: 168093203934619309}
   - component: {fileID: 168093203934619306}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (5)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10157,9 +10157,9 @@ GameObject:
   - component: {fileID: 168093203953141571}
   - component: {fileID: 168093203953141568}
   - component: {fileID: 168093203953141569}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (1)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10236,9 +10236,9 @@ GameObject:
   - component: {fileID: 168093204047428391}
   - component: {fileID: 168093204047428388}
   - component: {fileID: 168093204047428389}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (6)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10315,9 +10315,9 @@ GameObject:
   - component: {fileID: 168093204099077457}
   - component: {fileID: 168093204099077470}
   - component: {fileID: 168093204099077471}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Line (7)
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10396,9 +10396,9 @@ GameObject:
   - component: {fileID: 168093204398108006}
   - component: {fileID: 168093204398108007}
   - component: {fileID: 168093204398108004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

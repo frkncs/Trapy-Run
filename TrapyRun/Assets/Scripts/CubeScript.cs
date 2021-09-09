@@ -13,7 +13,7 @@ public class CubeScript : MonoBehaviour
     static GroundGenerator gg;
 
     float fallSpeed = 15;
-    float maxYPos = -15;
+    float maxYPos = -20;
 
     bool canFall = false;
 
