@@ -32,7 +32,7 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         TextMeshProUGUI txtLevel = transform.Find("txtLevel").GetComponentInChildren<TextMeshProUGUI>();
-        txtLevel.text = "Level: " + (PlayerPrefs.GetInt(levelKey) + 1);
+        txtLevel.text = "Level " + (PlayerPrefs.GetInt(levelKey) + 1);
     }
 
     public void openScreen(string screenName)
