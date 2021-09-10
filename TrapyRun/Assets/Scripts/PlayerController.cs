@@ -59,6 +59,7 @@ public class PlayerController : MonoBehaviour
             Camera.main.transform.Find("Confetti_01").gameObject.SetActive(true);
             Camera.main.transform.Find("Confetti_02").gameObject.SetActive(true);
             uic.openScreen(youWinScreen);
+
             ChangeCameraAngle();
         }
     }

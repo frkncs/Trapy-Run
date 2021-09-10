@@ -39,7 +39,7 @@ public class EnemyScript : MonoBehaviour
 
         if (navMesh != null) // enemy has ai
         {
-            if (player != null)
+            if (player != null || !pc.gameOver)
             {
                 playerPos = player.transform.position;
                 navMesh.SetDestination(playerPos);

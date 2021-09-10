@@ -18,9 +18,6 @@ public class GroundGenerator : MonoBehaviour
         // Row count for just one side
         // eg. [row] left + [row] right + 1 center
 
-        if (isLevelIncludeNavMesh)
-            cube.AddComponent<NavMeshObstacle>();
-
         cube.tag = "GroundCube";
 
         float distanceBetween2Cubes = cube.transform.localScale.x;
