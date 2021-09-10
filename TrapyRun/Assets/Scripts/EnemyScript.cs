@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
         else
             if (!animator.GetBool("isRunning")) animator.SetBool("isRunning", true);
 
-        if (navMesh != null) // enemy is ai
+        if (navMesh != null) // enemy has ai
         {
             if (player != null)
             {
