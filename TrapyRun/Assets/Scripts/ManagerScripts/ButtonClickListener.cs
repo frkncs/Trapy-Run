@@ -7,8 +7,6 @@ public class ButtonClickListener : MonoBehaviour
 	#region Variables
 
 	// Public Variables
-	[HideInInspector] public static Action restartGame;
-	[HideInInspector] public static Action nextLevel;
 
     // Private Variables
     UIController uic;
@@ -38,10 +36,10 @@ public class ButtonClickListener : MonoBehaviour
             switch (clickedGO.name)
             {
                 case "btnRetry":
-                    restartGame();
+                    uic.restart();
                     break;
                 case "btnNext":
-                    nextLevel();
+                    uic.nextLevel();
                     break;
                 default:
                     break;

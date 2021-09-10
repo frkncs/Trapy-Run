@@ -22,10 +22,9 @@ public class UIController : MonoBehaviour
         currentLevelKey = Strings.PlayerPrefsKeys.current_level.ToString();
         levelKey = Strings.PlayerPrefsKeys.level.ToString();
 
-        /*if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(currentLevelKey))
-            SceneManager.LoadScene(PlayerPrefs.GetInt(currentLevelKey));*/
+        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(currentLevelKey))
+            SceneManager.LoadScene(PlayerPrefs.GetInt(currentLevelKey));
 
-        listenMethods();
         fillList();
     }
 
@@ -51,17 +50,12 @@ public class UIController : MonoBehaviour
             }
         }
     }
-
-    void restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
-    void nextLevel()
+	
+	public void nextLevel()
     {
         PlayerPrefs.SetInt(levelKey, PlayerPrefs.GetInt(levelKey) + 1);
 
-        int sceneCount = SceneManager.sceneCount;
+        int sceneCount = SceneManager.sceneCountInBuildSettings;
 
         if (SceneManager.GetActiveScene().buildIndex == sceneCount - 1)
         {
@@ -77,6 +71,11 @@ public class UIController : MonoBehaviour
         }
     }
 
+    public void restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     void fillList()
     {
         screens = new List<GameObject>();
@@ -85,11 +84,5 @@ public class UIController : MonoBehaviour
         {
             screens.Add(item);
         }
-    }
-
-    void listenMethods()
-    {
-        ButtonClickListener.restartGame += restart;
-        ButtonClickListener.nextLevel += nextLevel;
     }
 }

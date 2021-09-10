@@ -69,7 +69,7 @@ public class MoveScript : MonoBehaviour
 
                 float dist = playerPos.z - transform.position.z;
 
-                if (dist >= 11) moveSpeed = dist;
+                if (dist >= autoSpeedControlDistance) moveSpeed = dist;
             }
         }
 

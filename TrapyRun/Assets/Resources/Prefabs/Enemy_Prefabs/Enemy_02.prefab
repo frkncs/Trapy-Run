@@ -883,7 +883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useAutoSpeed: 1
-  autoSpeedControlDistance: 15
+  autoSpeedControlDistance: 12
   useGlobalDirections: 0
   moveForward: 1
   moveHorizontal: 0
