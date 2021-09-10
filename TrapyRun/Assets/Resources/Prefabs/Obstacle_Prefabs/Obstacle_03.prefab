@@ -106,10 +106,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09817d58d1f3cd046aed766b90933fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useGlobalDirections: 0
   moveForward: 0
   moveHorizontal: 0
+  canTurn: 1
   turnClockwise: 0
-  turnReverse: 1
+  turnCoordinate: y
   moveSpeed: 10
   turnSpeed: 1
 --- !u!1 &1169365894840572867
@@ -237,10 +239,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09817d58d1f3cd046aed766b90933fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useGlobalDirections: 0
   moveForward: 0
   moveHorizontal: 1
+  canTurn: 0
   turnClockwise: 0
-  turnReverse: 0
+  turnCoordinate: x
   moveSpeed: 10
   turnSpeed: 0
 --- !u!1 &9003168015269120554

@@ -22,8 +22,8 @@ public class UIController : MonoBehaviour
         currentLevelKey = Strings.PlayerPrefsKeys.current_level.ToString();
         levelKey = Strings.PlayerPrefsKeys.level.ToString();
 
-        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(currentLevelKey))
-            SceneManager.LoadScene(PlayerPrefs.GetInt(currentLevelKey));
+        /*if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(currentLevelKey))
+            SceneManager.LoadScene(PlayerPrefs.GetInt(currentLevelKey));*/
 
         listenMethods();
         fillList();

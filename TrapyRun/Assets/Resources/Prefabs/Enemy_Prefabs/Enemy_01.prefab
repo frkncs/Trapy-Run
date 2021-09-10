@@ -456,7 +456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6618835535084373937}
   - component: {fileID: 953354703953075659}
-  - component: {fileID: 5805425196875619594}
+  - component: {fileID: 2523558219375881483}
   - component: {fileID: 5805425196875619591}
   - component: {fileID: 5805425196875619593}
   - component: {fileID: 5805425196875619597}
@@ -502,8 +502,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!65 &5805425196875619594
-BoxCollider:
+--- !u!136 &2523558219375881483
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -512,9 +512,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 9.625146, z: 1}
-  m_Center: {x: 0, y: 3.2449641, z: 0}
+  m_Radius: 2.785204
+  m_Height: 9.886944
+  m_Direction: 1
+  m_Center: {x: 0, y: 3.4587545, z: 0}
 --- !u!54 &5805425196875619591
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -530,7 +531,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &5805425196875619593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,14 +544,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09817d58d1f3cd046aed766b90933fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useAutoSpeed: 1
   useGlobalDirections: 0
   moveForward: 1
   moveHorizontal: 0
+  canTurn: 0
   turnClockwise: 0
-  turnReverse: 0
-  turnXCoordinate: 0
-  turnYCoordinate: 1
-  turnZCoordinate: 0
+  turnCoordinate: x
   moveSpeed: 12
   turnSpeed: 0
 --- !u!114 &5805425196875619597
@@ -565,7 +565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63bab3e9ffa1da44ab81eb2a30f6e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isAI: 0
 --- !u!1 &6230687234476960192
 GameObject:
   m_ObjectHideFlags: 0

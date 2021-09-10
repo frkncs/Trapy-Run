@@ -9,6 +9,7 @@ public class MoveScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
+    [SerializeField] bool useAutoSpeed = false;
     [SerializeField] bool useGlobalDirections = false;
     [SerializeField] bool moveForward = false;
     [SerializeField] bool moveHorizontal = false;
@@ -19,6 +20,8 @@ public class MoveScript : MonoBehaviour
     [SerializeField] float moveSpeed = 10;
     [SerializeField] float turnSpeed = 0;
 
+    GameObject player;
+
     Vector3 dir = Vector3.right;
     Vector3 rot = Vector3.zero;
 
@@ -26,6 +29,8 @@ public class MoveScript : MonoBehaviour
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
+
         switch (turnCoordinate.ToLower().Trim())
         {
             case "x":
@@ -57,6 +62,18 @@ public class MoveScript : MonoBehaviour
 
     void MoveForward()
     {
+        if (useAutoSpeed)
+        {
+            if (player != null)
+            {
+                Vector3 playerPos = player.transform.position;
+
+                float dist = playerPos.z - transform.position.z;
+
+                if (dist >= 11) moveSpeed = dist;
+            }
+        }
+
         if (!useGlobalDirections)
             transform.position += transform.forward * Time.deltaTime * moveSpeed;
         else

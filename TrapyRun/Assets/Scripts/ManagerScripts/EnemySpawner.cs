@@ -12,7 +12,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int enemyCount = 0;
     [SerializeField] float minSpawnPosition = -5f;
     [SerializeField] float maxSpawnPosition = 5f;
-    [SerializeField] bool spawnSuddenly = false;
     [SerializeField] List<GameObject> enemiesToSpawn;
 
     static int createdAIEnemyCount;
@@ -22,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
 
     int createdEnemyCount = 0;
     float spawnTimer = 0;
-    float spawnDistance = 70;
+    float spawnDistance = 65;
     bool canSpawn = false;
 
     const int maxAIEnemyCount = 5;
@@ -56,23 +55,13 @@ public class EnemySpawner : MonoBehaviour
 
     void spawn()
     {
-        if (!spawnSuddenly)
-        {
-            spawnTimer += Time.deltaTime;
+        spawnTimer += Time.deltaTime;
 
-            if (spawnTimer >= spawnInterval)
-            {
-                spawnEnemy();
-                spawnTimer = 0;
-            }
-        }
-        else
+        if (spawnTimer >= spawnInterval)
         {
-            for (int i = 0; i < enemyCount; i++)
-            {
-                spawnEnemy();
-            }
-        }
+			spawnEnemy();
+            spawnTimer = 0;
+		}
     }
 
     void spawnEnemy()
@@ -93,9 +82,8 @@ public class EnemySpawner : MonoBehaviour
         }
 
         float randomXPos = Random.Range(minSpawnPosition, maxSpawnPosition);
-        float randomZPos = Random.Range(transform.position.z - 1, transform.position.z + 1);
 
-        Vector3 spawnPos = new Vector3(randomXPos, .5f, randomZPos);
+        Vector3 spawnPos = new Vector3(randomXPos, .5f, transform.position.z);
 
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
 

@@ -16,7 +16,8 @@ public class EnemyScript : MonoBehaviour
     Vector3 playerPos;
     GameObject player;
 
-    float minYPos = -15;
+    float minYPos = -5;
+	float fallSpeed = 10;
 
     bool isFindPath = false;
 
@@ -73,18 +74,10 @@ public class EnemyScript : MonoBehaviour
                 else if (collision.gameObject.CompareTag("GroundCube"))
                 {
                     isFindPath = true;
-                    StartCoroutine(resetLookPoint());
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
         }
-    }
-
-    IEnumerator resetLookPoint()
-    {
-        float second = Random.Range(0f, 1.5f);
-        yield return new WaitForSeconds(second);
-
-        transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     void letAIGo()
@@ -104,6 +97,8 @@ public class EnemyScript : MonoBehaviour
             if (hitInfo.collider == null)
             {
                 if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+				
+				transform.Translate(Vector3.down * Time.deltaTime * fallSpeed);
             }
         }
         else

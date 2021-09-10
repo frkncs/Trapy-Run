@@ -38,6 +38,7 @@ public class CubeScript : MonoBehaviour
         if (gg.isLevelIncludeNavMesh) createNavMeshObstacle();
         GetComponent<MeshRenderer>().material.color = Color.red;
         canFall = true;
+		GetComponent<BoxCollider>().enabled = false;
     }
 
     void createNavMeshObstacle()
