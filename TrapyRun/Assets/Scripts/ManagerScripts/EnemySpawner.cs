@@ -12,6 +12,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] int enemyCount = 0;
     [SerializeField] float minSpawnPosition = -5f;
     [SerializeField] float maxSpawnPosition = 5f;
+    [SerializeField] float spawnDistance = 65;
     [SerializeField] List<GameObject> enemiesToSpawn;
 
     static int createdAIEnemyCount;
@@ -21,7 +22,6 @@ public class EnemySpawner : MonoBehaviour
 
     int createdEnemyCount = 0;
     float spawnTimer = 0;
-    float spawnDistance = 65;
     bool canSpawn = false;
 
     const int maxAIEnemyCount = 5;
@@ -86,7 +86,7 @@ public class EnemySpawner : MonoBehaviour
 
         float randomXPos = Random.Range(minSpawnPosition, maxSpawnPosition);
 
-        Vector3 spawnPos = new Vector3(randomXPos, .5f, transform.position.z);
+        Vector3 spawnPos = new Vector3(randomXPos, transform.position.y, transform.position.z);
 
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
 

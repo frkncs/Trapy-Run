@@ -890,7 +890,7 @@ MonoBehaviour:
   canTurn: 0
   turnClockwise: 0
   turnCoordinate: x
-  moveSpeed: 2
+  moveSpeed: 0
   turnSpeed: 0
 --- !u!114 &8577457601881318679
 MonoBehaviour:

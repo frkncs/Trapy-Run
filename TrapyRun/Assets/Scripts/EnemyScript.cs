@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
         else
             if (!animator.GetBool("isRunning")) animator.SetBool("isRunning", true);
 
-        if (navMesh != null) // enemy has ai
+        if (navMesh != null && navMesh.enabled) // enemy has ai
         {
             if (player != null || !pc.gameOver)
             {
@@ -45,10 +45,10 @@ public class EnemyScript : MonoBehaviour
                 navMesh.SetDestination(playerPos);
             }
             else
-                letAIGo();
+                letAIGo(true);
 
             if (pc.gameOver)
-                letAIGo();
+                letAIGo(true);
         }
 
         if (transform.position.y <= minYPos) Destroy(gameObject);
@@ -74,19 +74,38 @@ public class EnemyScript : MonoBehaviour
                 else if (collision.gameObject.CompareTag("GroundCube"))
                 {
                     isFindPath = true;
-                    transform.rotation = Quaternion.Euler(0, 0, 0);
+                    StartCoroutine(resetLookRotation());
                 }
             }
         }
     }
 
-    void letAIGo()
+    IEnumerator resetLookRotation()
     {
-        if (navMesh.enabled)
+        yield return new WaitForSeconds(0.2f);
+
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    void letAIGo(bool let)
+    {
+        if (let)
         {
-            navMesh.enabled = false;
-            GetComponent<MoveScript>().enabled = true;
-            transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+            if (navMesh.enabled)
+            {
+                navMesh.enabled = false;
+                GetComponent<MoveScript>().enabled = true;
+                transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+            }
+        }
+        else
+        {
+            if (!navMesh.enabled)
+            {
+                navMesh.enabled = true;
+                GetComponent<MoveScript>().enabled = false;
+                transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+            }
         }
     }
 
@@ -97,7 +116,9 @@ public class EnemyScript : MonoBehaviour
             if (hitInfo.collider == null)
             {
                 if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
-				
+
+                if (navMesh != null) letAIGo(true);
+
 				transform.Translate(Vector3.down * Time.deltaTime * fallSpeed);
             }
         }
