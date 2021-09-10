@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour
         uic.openScreen(startScreen);
 
         animator = GetComponent<Animator>();
+
+        Collider heliCheckerCol = GameObject.Find("Heli_Entry_Checker").GetComponent<Collider>();
+        Physics.IgnoreCollision(heliCheckerCol, GetComponent<Collider>());
     }
 
     void Update()
