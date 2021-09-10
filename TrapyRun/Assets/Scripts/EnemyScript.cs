@@ -125,6 +125,7 @@ public class EnemyScript : MonoBehaviour
         else
         {
             if (animator.GetBool("isFloating")) animator.SetBool("isFloating", false);
+            if (navMesh != null) letAIGo(false);
         }
     }
 }
