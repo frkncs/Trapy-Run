@@ -21,7 +21,7 @@ public class CubeScript : MonoBehaviour
 
     private void Start()
     {
-        if (gg == null) gg = GameObject.Find("GroundGenerator").GetComponent<GroundGenerator>();
+        if (gg == null) gg = GameObject.FindObjectOfType<GroundGenerator>().GetComponent<GroundGenerator>();
     }
 
     private void Update()

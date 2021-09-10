@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -15,13 +14,13 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float maxSpawnPosition = 5f;
     [SerializeField] bool spawnSuddenly = false;
     [SerializeField] List<GameObject> enemiesToSpawn;
-    
-    static int createdEnemyCount = 0;
+
+    static int createdAIEnemyCount;
 
     GameObject player;
     Transform playerTrans;
 
-    int createdAIEnemyCount = 0;
+    int createdEnemyCount = 0;
     float spawnTimer = 0;
     float spawnDistance = 70;
     bool canSpawn = false;
@@ -33,6 +32,8 @@ public class EnemySpawner : MonoBehaviour
 
     private void Start()
     {
+        createdAIEnemyCount = 0;
+
         player = GameObject.FindGameObjectWithTag("Player");
         playerTrans = player.transform;
     }
@@ -88,11 +89,13 @@ public class EnemySpawner : MonoBehaviour
                 spawnEnemyInx = Random.Range(0, enemiesToSpawn.Count);
                 enemyToSpawn = enemiesToSpawn[spawnEnemyInx];
             }
-
-            createdAIEnemyCount++;
+            else createdAIEnemyCount++;
         }
 
-        Vector3 spawnPos = new Vector3(Random.Range(minSpawnPosition, maxSpawnPosition + 1), .5f, transform.position.z);
+        float randomXPos = Random.Range(minSpawnPosition, maxSpawnPosition);
+        float randomZPos = Random.Range(transform.position.z - 1, transform.position.z + 1);
+
+        Vector3 spawnPos = new Vector3(randomXPos, .5f, randomZPos);
 
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
 

@@ -2,15 +2,17 @@
 {
     class Strings
     {
-        #region PlayerPrefs Keys
-        public static string level = "level_key";
-        public static string currentLevelInx = "current_level_index";
-        #endregion
+        public enum PlayerPrefsKeys
+        {
+            level,
+            current_level,
+        }
 
-        #region ScreenNames
-        public static string startScreen = "StartScreen";
-        public static string gameOverScreen = "GameOverScreen";
-        public static string youWinScreen = "YouWinScreen";
-        #endregion
+        public enum ScreenNames
+        {
+            StartScreen,
+            GameOverScreen,
+            YouWinScreen,
+        }
     }
 }

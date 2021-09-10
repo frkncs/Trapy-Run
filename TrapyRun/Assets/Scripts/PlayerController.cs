@@ -8,17 +8,18 @@ public class PlayerController : MonoBehaviour
     #region Variables
 
     // Public Variables
-    [HideInInspector] public static bool isGameStart = false;
     [HideInInspector] public static Action ChangeCameraAngle;
     [HideInInspector] public static Action MoveHelicopter;
-    
+    [HideInInspector] public static bool isGameStart = false;
+
     [HideInInspector] public bool gameOver = false;
 
     // Private Variables
     Animator animator;
-    Rigidbody rb;
 
-    UIController uc;
+    UIController uic;
+
+    string startScreen, gameOverScreen, youWinScreen;
 
     float firstFingerX, lastFingerX;
     float minYPos = -15;
@@ -27,14 +28,17 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        uc = FindObjectOfType<UIController>().GetComponent<UIController>();
+        startScreen = Strings.ScreenNames.StartScreen.ToString();
+        gameOverScreen = Strings.ScreenNames.GameOverScreen.ToString();
+        youWinScreen = Strings.ScreenNames.YouWinScreen.ToString();
+
+        uic = FindObjectOfType<UIController>().GetComponent<UIController>();
 
         isGameStart = false;
 
-        uc.openScreen(Strings.startScreen);
+        uic.openScreen(startScreen);
 
         animator = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -54,7 +58,7 @@ public class PlayerController : MonoBehaviour
         {
             Camera.main.transform.Find("Confetti_01").gameObject.SetActive(true);
             Camera.main.transform.Find("Confetti_02").gameObject.SetActive(true);
-            uc.openScreen(Strings.youWinScreen);
+            uic.openScreen(youWinScreen);
             ChangeCameraAngle();
         }
     }
@@ -98,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
         gameOver = true;
 
-        uc.openScreen(Strings.gameOverScreen);
+        uic.openScreen(gameOverScreen);
     }
 
     float getMousePos()

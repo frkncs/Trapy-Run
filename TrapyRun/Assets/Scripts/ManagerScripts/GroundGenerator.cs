@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class GroundGenerator : MonoBehaviour
@@ -13,7 +10,6 @@ public class GroundGenerator : MonoBehaviour
 
     // Private Variables
     [SerializeField] int row, column;
-    float groundStartZPos = -10;
 
     #endregion
 
@@ -32,7 +28,7 @@ public class GroundGenerator : MonoBehaviour
         float defaultCloneXPos = -(row * distanceBetween2Cubes);
 
         float cloneXPos = -(row * distanceBetween2Cubes);
-        float cloneZPos = groundStartZPos;
+        float cloneZPos = 0;
 
         GameObject cubeObject = new GameObject("Cube Object");
 
@@ -46,17 +42,11 @@ public class GroundGenerator : MonoBehaviour
 
                 if (x == 0)
                 {
-                    GameObject barrierObj = Instantiate(barrier, Vector3.zero, Quaternion.identity);
-                    barrierObj.transform.SetParent(go.transform);
-                    barrierObj.transform.localPosition = new Vector3(-.35f, .55f, 0);
-                    barrierObj.transform.localScale = new Vector3(.3f, .1f, 1);
+                    addBarrier(go, barrier, false);
                 }
-                else if (x == (row * 2 + 1) - 1)
+                else if (x == row * 2 + 1 - 1)
                 {
-                    GameObject barrierObj = Instantiate(barrier, Vector3.zero, Quaternion.identity);
-                    barrierObj.transform.SetParent(go.transform);
-                    barrierObj.transform.localPosition = new Vector3(.35f, .55f, 0);
-                    barrierObj.transform.localScale = new Vector3(.3f, .1f, 1);
+                    addBarrier(go, barrier, true);
                 }
             }
 
@@ -73,6 +63,14 @@ public class GroundGenerator : MonoBehaviour
         {
             DestroyImmediate(cube);
         }
+    }
+
+    void addBarrier(GameObject objectToParent, GameObject barrier, bool isRight)
+    {
+        GameObject barrierObj = Instantiate(barrier, Vector3.zero, Quaternion.identity);
+        barrierObj.transform.SetParent(objectToParent.transform);
+        barrierObj.transform.localPosition = new Vector3((isRight ? 1 : -1) * .35f , .55f, 0);
+        barrierObj.transform.localScale = new Vector3(.3f, .1f, 1);
     }
 }
 

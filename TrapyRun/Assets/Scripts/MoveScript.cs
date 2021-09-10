@@ -12,11 +12,9 @@ public class MoveScript : MonoBehaviour
     [SerializeField] bool useGlobalDirections = false;
     [SerializeField] bool moveForward = false;
     [SerializeField] bool moveHorizontal = false;
+    [SerializeField] bool canTurn = false;
     [SerializeField] bool turnClockwise = false;
-    [SerializeField] bool turnReverse = false;
-    [SerializeField] bool turnXCoordinate = false;
-    [SerializeField] bool turnYCoordinate = true;
-    [SerializeField] bool turnZCoordinate = false;
+    [SerializeField] string turnCoordinate = "x";
 
     [SerializeField] float moveSpeed = 10;
     [SerializeField] float turnSpeed = 0;
@@ -28,12 +26,20 @@ public class MoveScript : MonoBehaviour
 
     private void Start()
     {
-        if (turnXCoordinate)
-            rot = new Vector3((turnClockwise ? 1 : -1) * 360, 0, 0);
-        if (turnYCoordinate)
-            rot = new Vector3(0, (turnClockwise ? 1 : -1) * 360, 0);
-        else if (turnZCoordinate)
-            rot = new Vector3(0, 0, (turnClockwise ? 1 : -1) * 360);
+        switch (turnCoordinate.ToLower().Trim())
+        {
+            case "x":
+                rot = new Vector3((turnClockwise ? 1 : -1) * 360, 0, 0);
+                break;
+            case "y":
+                rot = new Vector3(0, (turnClockwise ? 1 : -1) * 360, 0);
+                break;
+            case "z":
+                rot = new Vector3(0, 0, (turnClockwise ? 1 : -1) * 360);
+                break;
+            default:
+                break;
+        }
     }
 
     void Update()
@@ -45,7 +51,7 @@ public class MoveScript : MonoBehaviour
         else if (moveHorizontal)
             MoveHorizontal();
 
-        if (turnClockwise || turnReverse)
+        if (canTurn)
             Turn();
     }
 

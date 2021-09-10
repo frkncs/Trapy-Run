@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 487395722}
   - component: {fileID: 487395719}
   m_Layer: 0
-  m_Name: Boundary_01
+  m_Name: Bound_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ GameObject:
   - component: {fileID: 1028999451}
   - component: {fileID: 1028999452}
   m_Layer: 0
-  m_Name: Boundary_02
+  m_Name: Bound_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,11 +183,9 @@ MonoBehaviour:
   useGlobalDirections: 0
   moveForward: 0
   moveHorizontal: 0
+  canTurn: 1
   turnClockwise: 1
-  turnReverse: 0
-  turnXCoordinate: 1
-  turnYCoordinate: 0
-  turnZCoordinate: 0
+  turnCoordinate: x
   moveSpeed: 10
   turnSpeed: 3
 --- !u!1 &1039351811
@@ -203,7 +201,7 @@ GameObject:
   - component: {fileID: 7605104573543271344}
   m_Layer: 0
   m_Name: Helicopter
-  m_TagString: Untagged
+  m_TagString: Helicopter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,13 +356,11 @@ MonoBehaviour:
   useGlobalDirections: 0
   moveForward: 0
   moveHorizontal: 0
+  canTurn: 1
   turnClockwise: 0
-  turnReverse: 1
-  turnXCoordinate: 1
-  turnYCoordinate: 0
-  turnZCoordinate: 1
+  turnCoordinate: z
   moveSpeed: 10
-  turnSpeed: 3
+  turnSpeed: 2.5
 --- !u!1 &1039351821
 GameObject:
   m_ObjectHideFlags: 0
@@ -578,7 +574,7 @@ GameObject:
   - component: {fileID: 1444508920}
   - component: {fileID: 1444508921}
   m_Layer: 0
-  m_Name: Heli_Stop (2)
+  m_Name: Heli_Bound
   m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +618,7 @@ GameObject:
   - component: {fileID: 1487951492}
   - component: {fileID: 1487951493}
   m_Layer: 0
-  m_Name: Heli_Stop (1)
+  m_Name: Heli_Bound
   m_TagString: GroundCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487951491}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -0.10749817, y: 1.3830435, z: -0.5704855}
+  m_LocalPosition: {x: -0.10749817, y: 1.3826072, z: -0.32048583}
   m_LocalScale: {x: 2.5, y: 0.1, z: 3}
   m_Children: []
   m_Father: {fileID: 1039457315}

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -13,13 +11,13 @@ public class ButtonClickListener : MonoBehaviour
 	[HideInInspector] public static Action nextLevel;
 
     // Private Variables
-    UIController uc;
+    UIController uic;
 
     #endregion
 
     private void Start()
     {
-        uc = FindObjectOfType<UIController>().GetComponent<UIController>();
+        uic = FindObjectOfType<UIController>().GetComponent<UIController>();
     }
 
     void Update()
@@ -29,7 +27,7 @@ public class ButtonClickListener : MonoBehaviour
 			GameObject clickedGO = EventSystem.current.currentSelectedGameObject;
 
 			if (!PlayerController.isGameStart && clickedGO == null)
-				uc.openScreen(null);
+				uic.openScreen(null);
 		}
 		else if (Input.GetMouseButtonUp(0))
         {

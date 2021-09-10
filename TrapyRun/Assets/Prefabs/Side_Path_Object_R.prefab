@@ -8981,11 +8981,8 @@ MonoBehaviour:
   enemyCount: 10
   minSpawnPosition: 34
   maxSpawnPosition: 35
-  spawnConstantly: 0
-  enemiesToSpawn:
-  - {fileID: 2620244177001005101, guid: b91ecddedb15b1743aea9d635dcaae0d, type: 3}
-  - {fileID: 2620244177001005101, guid: 45ccac9e5a5392e4ab36cdc92bd51e5d, type: 3}
-  - {fileID: 5034116760430958314, guid: 0c478b0cc1ff38f42a9ac394b85bba82, type: 3}
+  spawnSuddenly: 0
+  enemiesToSpawn: []
 --- !u!1 &9079186661589615679
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class HelicopterScript : MonoBehaviour
     // Private Variables
     bool canMove = false;
 
+    const float upSpeed = 3.5f;
     const float turnSpeed = 13;
     const float moveSpeed = 10;
     const float rotX = 340;
@@ -26,7 +27,7 @@ public class HelicopterScript : MonoBehaviour
     {
         if (canMove)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * turnSpeed * .4f);
+            transform.Translate(Vector3.up * Time.deltaTime * upSpeed);
 
             if (transform.localRotation.eulerAngles.x > rotX) transform.Rotate(Vector3.right * -1 * Time.deltaTime * turnSpeed);
 

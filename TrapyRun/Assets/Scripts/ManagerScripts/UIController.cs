@@ -1,10 +1,8 @@
 ﻿using Assets.Scripts;
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -15,28 +13,26 @@ public class UIController : MonoBehaviour
     // Private Variables
     List<GameObject> screens;
 
+    string levelKey, currentLevelKey;
+
     #endregion
 
     private void Awake()
     {
-        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(Strings.currentLevelInx))
-            SceneManager.LoadScene(PlayerPrefs.GetInt(Strings.currentLevelInx));
+        currentLevelKey = Strings.PlayerPrefsKeys.current_level.ToString();
+        levelKey = Strings.PlayerPrefsKeys.level.ToString();
 
-        ButtonClickListener.restartGame += restart;
-        ButtonClickListener.nextLevel += nextLevel;
+        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(currentLevelKey))
+            SceneManager.LoadScene(PlayerPrefs.GetInt(currentLevelKey));
 
-        screens = new List<GameObject>();
-
-        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Panel"))
-        {
-            screens.Add(item);
-        }
+        listenMethods();
+        fillList();
     }
 
     private void Start()
     {
         TextMeshProUGUI txtLevel = transform.Find("txtLevel").GetComponentInChildren<TextMeshProUGUI>();
-        txtLevel.text = "Level: " + (PlayerPrefs.GetInt(Strings.level) + 1);
+        txtLevel.text = "Level: " + (PlayerPrefs.GetInt(levelKey) + 1);
     }
 
     public void openScreen(string screenName)
@@ -63,7 +59,7 @@ public class UIController : MonoBehaviour
 
     void nextLevel()
     {
-        PlayerPrefs.SetInt(Strings.level, PlayerPrefs.GetInt(Strings.level) + 1);
+        PlayerPrefs.SetInt(levelKey, PlayerPrefs.GetInt(levelKey) + 1);
 
         int sceneCount = SceneManager.sceneCount;
 
@@ -71,13 +67,29 @@ public class UIController : MonoBehaviour
         {
             int randomLevelInx = Random.Range(0, sceneCount - 1);
 
-            PlayerPrefs.SetInt(Strings.currentLevelInx, randomLevelInx);
+            PlayerPrefs.SetInt(currentLevelKey, randomLevelInx);
             SceneManager.LoadScene(randomLevelInx);
         }
         else
         {
-            PlayerPrefs.SetInt(Strings.currentLevelInx, SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt(currentLevelKey, SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+    }
+
+    void fillList()
+    {
+        screens = new List<GameObject>();
+
+        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Panel"))
+        {
+            screens.Add(item);
+        }
+    }
+
+    void listenMethods()
+    {
+        ButtonClickListener.restartGame += restart;
+        ButtonClickListener.nextLevel += nextLevel;
     }
 }

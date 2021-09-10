@@ -10,8 +10,6 @@ public class EnemyScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    [SerializeField] bool isAI = false;
-
     PlayerController pc;
     Animator animator;
     NavMeshAgent navMesh;
@@ -19,6 +17,8 @@ public class EnemyScript : MonoBehaviour
     GameObject player;
 
     float minYPos = -15;
+
+    bool isFindPath = false;
 
     #endregion
 
@@ -36,15 +36,12 @@ public class EnemyScript : MonoBehaviour
         else
             if (!animator.GetBool("isRunning")) animator.SetBool("isRunning", true);
 
-        if (isAI)
+        if (navMesh != null) // enemy is ai
         {
             if (player != null)
             {
-                if (navMesh != null && navMesh.enabled)
-                {
-                    playerPos = player.transform.position;
-                    navMesh.SetDestination(playerPos);
-                }
+                playerPos = player.transform.position;
+                navMesh.SetDestination(playerPos);
             }
             else
                 letAIGo();
@@ -64,26 +61,27 @@ public class EnemyScript : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerController>().die();
         }
-    }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (!isAI)
+        if (!isFindPath)
         {
-            if (collision.gameObject.CompareTag("SideCube"))
+            if (navMesh == null)
             {
-                transform.LookAt(collision.gameObject.transform.parent.Find("EnemyCoord").transform);
-            }
-            else if (collision.gameObject.CompareTag("GroundCube"))
-            {
-                StartCoroutine(resetLookPoint());
+                if (collision.gameObject.CompareTag("SideCube"))
+                {
+                    transform.LookAt(collision.gameObject.transform.parent.Find("EnemyCoord").transform);
+                }
+                else if (collision.gameObject.CompareTag("GroundCube"))
+                {
+                    isFindPath = true;
+                    StartCoroutine(resetLookPoint());
+                }
             }
         }
     }
 
     IEnumerator resetLookPoint()
     {
-        float second = Random.Range(0.8f, 1.1f);
+        float second = Random.Range(0f, 1.5f);
         yield return new WaitForSeconds(second);
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
@@ -93,8 +91,8 @@ public class EnemyScript : MonoBehaviour
     {
         if (navMesh.enabled)
         {
-            GetComponent<MoveScript>().enabled = true;
             navMesh.enabled = false;
+            GetComponent<MoveScript>().enabled = true;
             transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
         }
     }
