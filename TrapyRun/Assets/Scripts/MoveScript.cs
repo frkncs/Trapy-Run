@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
@@ -10,6 +8,7 @@ public class MoveScript : MonoBehaviour
 
     // Private Variables
     [SerializeField] bool useAutoSpeed = false;
+    [SerializeField] float autoSpeedControlDistance = 11;
     [SerializeField] bool useGlobalDirections = false;
     [SerializeField] bool moveForward = false;
     [SerializeField] bool moveHorizontal = false;

@@ -850,10 +850,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.8743565
-  m_Height: 9.60895
+  m_Radius: 2.128448
+  m_Height: 10.162491
   m_Direction: 1
-  m_Center: {x: 0, y: 3.3071308, z: 0}
+  m_Center: {x: 0, y: 3.5839002, z: 0}
 --- !u!54 &8577457601881318685
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -883,13 +883,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useAutoSpeed: 1
+  autoSpeedControlDistance: 15
   useGlobalDirections: 0
   moveForward: 1
   moveHorizontal: 0
   canTurn: 0
   turnClockwise: 0
   turnCoordinate: x
-  moveSpeed: 13
+  moveSpeed: 2
   turnSpeed: 0
 --- !u!114 &8577457601881318679
 MonoBehaviour:

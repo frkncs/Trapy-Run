@@ -39,16 +39,19 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (player != null)
+        if (PlayerController.isGameStart)
         {
-            Vector3 dist = transform.position - playerTrans.position;
-
-            canSpawn = dist.z <= spawnDistance;
-
-            if (canSpawn)
+            if (player != null)
             {
-                if (createdEnemyCount < enemyCount)
-                    spawn();
+                Vector3 dist = transform.position - playerTrans.position;
+
+                canSpawn = dist.z <= spawnDistance;
+
+                if (canSpawn)
+                {
+                    if (createdEnemyCount < enemyCount)
+                        spawn();
+                }
             }
         }
     }

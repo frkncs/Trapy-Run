@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1429148937520843527}
   - component: {fileID: 1429148937520843526}
   - component: {fileID: 1429148937520843525}
-  - component: {fileID: 1429148937520843524}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -107,22 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937520843524
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937520843642}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937544206856
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +119,6 @@ GameObject:
   - component: {fileID: 1429148937544206869}
   - component: {fileID: 1429148937544206868}
   - component: {fileID: 1429148937544206859}
-  - component: {fileID: 1429148937544206858}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -230,22 +212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937544206858
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937544206856}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937588477179
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +225,6 @@ GameObject:
   - component: {fileID: 1429148937588477056}
   - component: {fileID: 1429148937588477063}
   - component: {fileID: 1429148937588477062}
-  - component: {fileID: 1429148937588477061}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -353,22 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937588477061
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937588477179}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937599243780
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,7 +331,6 @@ GameObject:
   - component: {fileID: 1429148937599243777}
   - component: {fileID: 1429148937599243776}
   - component: {fileID: 1429148937599243783}
-  - component: {fileID: 1429148937599243782}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -476,22 +424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937599243782
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937599243780}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937601035158
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +437,6 @@ GameObject:
   - component: {fileID: 1429148937601035155}
   - component: {fileID: 1429148937601035154}
   - component: {fileID: 1429148937601035153}
-  - component: {fileID: 1429148937601035152}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -599,22 +530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937601035152
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937601035158}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937602550519
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,7 +543,6 @@ GameObject:
   - component: {fileID: 1429148937602550524}
   - component: {fileID: 1429148937602550515}
   - component: {fileID: 1429148937602550514}
-  - component: {fileID: 1429148937602550513}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -722,22 +636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937602550513
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937602550519}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937619848092
 GameObject:
   m_ObjectHideFlags: 0
@@ -751,7 +649,6 @@ GameObject:
   - component: {fileID: 1429148937619848089}
   - component: {fileID: 1429148937619848088}
   - component: {fileID: 1429148937619848095}
-  - component: {fileID: 1429148937619848094}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -845,22 +742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937619848094
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937619848092}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937621552149
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,7 +755,6 @@ GameObject:
   - component: {fileID: 1429148937621552146}
   - component: {fileID: 1429148937621552145}
   - component: {fileID: 1429148937621552144}
-  - component: {fileID: 1429148937621552151}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -968,22 +848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937621552151
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937621552149}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937640707691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,7 +873,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429148937640707691}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11, y: -2, z: 53.000023}
+  m_LocalPosition: {x: 27.000034, y: -4.000001, z: 53.00005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1429148938816232500}
@@ -1031,7 +895,6 @@ MonoBehaviour:
   minSpawnPosition: -65
   maxSpawnPosition: -60
   enemiesToSpawn:
-  - {fileID: 5805425196875619595, guid: b91ecddedb15b1743aea9d635dcaae0d, type: 3}
   - {fileID: 8577457601881318673, guid: fbfb32df3dfbbc843aa7ecc0233214ff, type: 3}
 --- !u!1 &1429148937646772555
 GameObject:
@@ -1046,7 +909,6 @@ GameObject:
   - component: {fileID: 1429148937646772560}
   - component: {fileID: 1429148937646772567}
   - component: {fileID: 1429148937646772566}
-  - component: {fileID: 1429148937646772565}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1140,22 +1002,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937646772565
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937646772555}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937648161894
 GameObject:
   m_ObjectHideFlags: 0
@@ -1180,7 +1026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1429148937648161894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.000002, y: -1, z: -4.000001}
+  m_LocalPosition: {x: -2.0000007, y: -5.000003, z: -4.000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1429148938816232500}
@@ -1199,7 +1045,6 @@ GameObject:
   - component: {fileID: 1429148937653346130}
   - component: {fileID: 1429148937653346129}
   - component: {fileID: 1429148937653346128}
-  - component: {fileID: 1429148937653346135}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1293,22 +1138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937653346135
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937653346133}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937657290854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1151,6 @@ GameObject:
   - component: {fileID: 1429148937657290851}
   - component: {fileID: 1429148937657290850}
   - component: {fileID: 1429148937657290849}
-  - component: {fileID: 1429148937657290848}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1416,22 +1244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937657290848
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937657290854}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937660860074
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1257,6 @@ GameObject:
   - component: {fileID: 1429148937660860087}
   - component: {fileID: 1429148937660860086}
   - component: {fileID: 1429148937660860085}
-  - component: {fileID: 1429148937660860084}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1539,22 +1350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937660860084
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937660860074}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937672312954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1363,6 @@ GameObject:
   - component: {fileID: 1429148937672312839}
   - component: {fileID: 1429148937672312838}
   - component: {fileID: 1429148937672312837}
-  - component: {fileID: 1429148937672312836}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1662,22 +1456,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937672312836
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937672312954}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937681984271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,7 +1469,6 @@ GameObject:
   - component: {fileID: 1429148937681984276}
   - component: {fileID: 1429148937681984267}
   - component: {fileID: 1429148937681984266}
-  - component: {fileID: 1429148937681984265}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1785,22 +1562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937681984265
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937681984271}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937683791866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1814,7 +1575,6 @@ GameObject:
   - component: {fileID: 1429148937683791751}
   - component: {fileID: 1429148937683791750}
   - component: {fileID: 1429148937683791749}
-  - component: {fileID: 1429148937683791748}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -1908,22 +1668,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937683791748
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937683791866}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937687869617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1681,6 @@ GameObject:
   - component: {fileID: 1429148937687869630}
   - component: {fileID: 1429148937687869629}
   - component: {fileID: 1429148937687869628}
-  - component: {fileID: 1429148937687869619}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2031,22 +1774,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937687869619
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937687869617}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937693875063
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +1787,6 @@ GameObject:
   - component: {fileID: 1429148937693875068}
   - component: {fileID: 1429148937693875059}
   - component: {fileID: 1429148937693875058}
-  - component: {fileID: 1429148937693875057}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2154,22 +1880,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937693875057
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937693875063}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937719757122
 GameObject:
   m_ObjectHideFlags: 0
@@ -2183,7 +1893,6 @@ GameObject:
   - component: {fileID: 1429148937719757135}
   - component: {fileID: 1429148937719757134}
   - component: {fileID: 1429148937719757133}
-  - component: {fileID: 1429148937719757132}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2277,22 +1986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937719757132
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937719757122}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937721375169
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,7 +1999,6 @@ GameObject:
   - component: {fileID: 1429148937721375182}
   - component: {fileID: 1429148937721375181}
   - component: {fileID: 1429148937721375180}
-  - component: {fileID: 1429148937721375171}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2400,22 +2092,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937721375171
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937721375169}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937728517127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2429,7 +2105,6 @@ GameObject:
   - component: {fileID: 1429148937728517132}
   - component: {fileID: 1429148937728517123}
   - component: {fileID: 1429148937728517122}
-  - component: {fileID: 1429148937728517121}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2523,22 +2198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937728517121
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937728517127}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937761969997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2552,7 +2211,6 @@ GameObject:
   - component: {fileID: 1429148937761969994}
   - component: {fileID: 1429148937761969993}
   - component: {fileID: 1429148937761969992}
-  - component: {fileID: 1429148937761969999}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2646,22 +2304,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937761969999
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937761969997}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937764016321
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,7 +2317,6 @@ GameObject:
   - component: {fileID: 1429148937764016334}
   - component: {fileID: 1429148937764016333}
   - component: {fileID: 1429148937764016332}
-  - component: {fileID: 1429148937764016323}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2769,22 +2410,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937764016323
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937764016321}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937780081361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2798,7 +2423,6 @@ GameObject:
   - component: {fileID: 1429148937780081374}
   - component: {fileID: 1429148937780081373}
   - component: {fileID: 1429148937780081372}
-  - component: {fileID: 1429148937780081363}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -2892,22 +2516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937780081363
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937780081361}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937795290091
 GameObject:
   m_ObjectHideFlags: 0
@@ -2921,7 +2529,6 @@ GameObject:
   - component: {fileID: 1429148937795290096}
   - component: {fileID: 1429148937795290103}
   - component: {fileID: 1429148937795290102}
-  - component: {fileID: 1429148937795290101}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3015,22 +2622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937795290101
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937795290091}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937839192880
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,7 +2635,6 @@ GameObject:
   - component: {fileID: 1429148937839192893}
   - component: {fileID: 1429148937839192892}
   - component: {fileID: 1429148937839192883}
-  - component: {fileID: 1429148937839192882}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3138,22 +2728,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937839192882
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937839192880}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937875639524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,7 +2741,6 @@ GameObject:
   - component: {fileID: 1429148937875639521}
   - component: {fileID: 1429148937875639520}
   - component: {fileID: 1429148937875639527}
-  - component: {fileID: 1429148937875639526}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3261,22 +2834,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937875639526
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937875639524}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937878577538
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,7 +2847,6 @@ GameObject:
   - component: {fileID: 1429148937878577551}
   - component: {fileID: 1429148937878577550}
   - component: {fileID: 1429148937878577549}
-  - component: {fileID: 1429148937878577548}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3384,22 +2940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937878577548
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937878577538}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937879117952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3413,7 +2953,6 @@ GameObject:
   - component: {fileID: 1429148937879117965}
   - component: {fileID: 1429148937879117964}
   - component: {fileID: 1429148937879117955}
-  - component: {fileID: 1429148937879117954}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3507,22 +3046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937879117954
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937879117952}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937896393979
 GameObject:
   m_ObjectHideFlags: 0
@@ -3536,7 +3059,6 @@ GameObject:
   - component: {fileID: 1429148937896393856}
   - component: {fileID: 1429148937896393863}
   - component: {fileID: 1429148937896393862}
-  - component: {fileID: 1429148937896393861}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3630,22 +3152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937896393861
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937896393979}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937935548359
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,7 +3165,6 @@ GameObject:
   - component: {fileID: 1429148937935548364}
   - component: {fileID: 1429148937935548355}
   - component: {fileID: 1429148937935548354}
-  - component: {fileID: 1429148937935548353}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3753,22 +3258,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937935548353
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937935548359}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937965814022
 GameObject:
   m_ObjectHideFlags: 0
@@ -3782,7 +3271,6 @@ GameObject:
   - component: {fileID: 1429148937965814019}
   - component: {fileID: 1429148937965814018}
   - component: {fileID: 1429148937965814017}
-  - component: {fileID: 1429148937965814016}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3876,22 +3364,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937965814016
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937965814022}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148937996042018
 GameObject:
   m_ObjectHideFlags: 0
@@ -3905,7 +3377,6 @@ GameObject:
   - component: {fileID: 1429148937996042031}
   - component: {fileID: 1429148937996042030}
   - component: {fileID: 1429148937996042029}
-  - component: {fileID: 1429148937996042028}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -3999,22 +3470,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148937996042028
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148937996042018}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938017126414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,7 +3483,6 @@ GameObject:
   - component: {fileID: 1429148938017126411}
   - component: {fileID: 1429148938017126410}
   - component: {fileID: 1429148938017126409}
-  - component: {fileID: 1429148938017126408}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4122,22 +3576,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938017126408
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938017126414}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938018158218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4151,7 +3589,6 @@ GameObject:
   - component: {fileID: 1429148938018158231}
   - component: {fileID: 1429148938018158230}
   - component: {fileID: 1429148938018158229}
-  - component: {fileID: 1429148938018158228}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4245,22 +3682,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938018158228
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938018158218}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938022008735
 GameObject:
   m_ObjectHideFlags: 0
@@ -4274,7 +3695,6 @@ GameObject:
   - component: {fileID: 1429148938022008740}
   - component: {fileID: 1429148938022008731}
   - component: {fileID: 1429148938022008730}
-  - component: {fileID: 1429148938022008729}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4368,22 +3788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938022008729
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938022008735}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938027115460
 GameObject:
   m_ObjectHideFlags: 0
@@ -4397,7 +3801,6 @@ GameObject:
   - component: {fileID: 1429148938027115457}
   - component: {fileID: 1429148938027115456}
   - component: {fileID: 1429148938027115463}
-  - component: {fileID: 1429148938027115462}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4491,22 +3894,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938027115462
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938027115460}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938032453740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4520,7 +3907,6 @@ GameObject:
   - component: {fileID: 1429148938032453737}
   - component: {fileID: 1429148938032453736}
   - component: {fileID: 1429148938032453743}
-  - component: {fileID: 1429148938032453742}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4614,22 +4000,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938032453742
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938032453740}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938036199175
 GameObject:
   m_ObjectHideFlags: 0
@@ -4643,7 +4013,6 @@ GameObject:
   - component: {fileID: 1429148938036199180}
   - component: {fileID: 1429148938036199171}
   - component: {fileID: 1429148938036199170}
-  - component: {fileID: 1429148938036199169}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4737,22 +4106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938036199169
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938036199175}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938047272926
 GameObject:
   m_ObjectHideFlags: 0
@@ -4766,7 +4119,6 @@ GameObject:
   - component: {fileID: 1429148938047272923}
   - component: {fileID: 1429148938047272922}
   - component: {fileID: 1429148938047272921}
-  - component: {fileID: 1429148938047272920}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4860,22 +4212,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938047272920
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938047272926}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938053011943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4889,7 +4225,6 @@ GameObject:
   - component: {fileID: 1429148938053011948}
   - component: {fileID: 1429148938053011939}
   - component: {fileID: 1429148938053011938}
-  - component: {fileID: 1429148938053011937}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -4983,22 +4318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938053011937
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938053011943}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938053437330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5012,7 +4331,6 @@ GameObject:
   - component: {fileID: 1429148938053437343}
   - component: {fileID: 1429148938053437342}
   - component: {fileID: 1429148938053437341}
-  - component: {fileID: 1429148938053437340}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5106,22 +4424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938053437340
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938053437330}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938057773058
 GameObject:
   m_ObjectHideFlags: 0
@@ -5135,7 +4437,6 @@ GameObject:
   - component: {fileID: 1429148938057773071}
   - component: {fileID: 1429148938057773070}
   - component: {fileID: 1429148938057773069}
-  - component: {fileID: 1429148938057773068}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5229,22 +4530,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938057773068
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938057773058}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938065714000
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,7 +4543,6 @@ GameObject:
   - component: {fileID: 1429148938065714013}
   - component: {fileID: 1429148938065714012}
   - component: {fileID: 1429148938065714003}
-  - component: {fileID: 1429148938065714002}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5352,22 +4636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938065714002
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938065714000}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938067145877
 GameObject:
   m_ObjectHideFlags: 0
@@ -5381,7 +4649,6 @@ GameObject:
   - component: {fileID: 1429148938067145874}
   - component: {fileID: 1429148938067145873}
   - component: {fileID: 1429148938067145872}
-  - component: {fileID: 1429148938067145879}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5475,22 +4742,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938067145879
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938067145877}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938071682330
 GameObject:
   m_ObjectHideFlags: 0
@@ -5504,7 +4755,6 @@ GameObject:
   - component: {fileID: 1429148938071682343}
   - component: {fileID: 1429148938071682342}
   - component: {fileID: 1429148938071682341}
-  - component: {fileID: 1429148938071682340}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5598,22 +4848,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938071682340
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938071682330}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938086479428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5627,7 +4861,6 @@ GameObject:
   - component: {fileID: 1429148938086479425}
   - component: {fileID: 1429148938086479424}
   - component: {fileID: 1429148938086479431}
-  - component: {fileID: 1429148938086479430}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5721,22 +4954,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938086479430
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938086479428}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938126500152
 GameObject:
   m_ObjectHideFlags: 0
@@ -5750,7 +4967,6 @@ GameObject:
   - component: {fileID: 1429148938126500293}
   - component: {fileID: 1429148938126500292}
   - component: {fileID: 1429148938126500155}
-  - component: {fileID: 1429148938126500154}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5844,22 +5060,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938126500154
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938126500152}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938126819875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5873,7 +5073,6 @@ GameObject:
   - component: {fileID: 1429148938126819880}
   - component: {fileID: 1429148938126819887}
   - component: {fileID: 1429148938126819886}
-  - component: {fileID: 1429148938126819885}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -5967,22 +5166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938126819885
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938126819875}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938146866686
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,7 +5179,6 @@ GameObject:
   - component: {fileID: 1429148938146866683}
   - component: {fileID: 1429148938146866682}
   - component: {fileID: 1429148938146866681}
-  - component: {fileID: 1429148938146866680}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6090,22 +5272,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938146866680
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938146866686}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938158985222
 GameObject:
   m_ObjectHideFlags: 0
@@ -6119,7 +5285,6 @@ GameObject:
   - component: {fileID: 1429148938158985219}
   - component: {fileID: 1429148938158985218}
   - component: {fileID: 1429148938158985217}
-  - component: {fileID: 1429148938158985216}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6213,22 +5378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938158985216
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938158985222}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938160106254
 GameObject:
   m_ObjectHideFlags: 0
@@ -6242,7 +5391,6 @@ GameObject:
   - component: {fileID: 1429148938160106251}
   - component: {fileID: 1429148938160106250}
   - component: {fileID: 1429148938160106249}
-  - component: {fileID: 1429148938160106248}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6336,22 +5484,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938160106248
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938160106254}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938174113330
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,7 +5497,6 @@ GameObject:
   - component: {fileID: 1429148938174113343}
   - component: {fileID: 1429148938174113342}
   - component: {fileID: 1429148938174113341}
-  - component: {fileID: 1429148938174113340}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6459,22 +5590,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938174113340
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938174113330}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938197188686
 GameObject:
   m_ObjectHideFlags: 0
@@ -6488,7 +5603,6 @@ GameObject:
   - component: {fileID: 1429148938197188683}
   - component: {fileID: 1429148938197188682}
   - component: {fileID: 1429148938197188681}
-  - component: {fileID: 1429148938197188680}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6582,22 +5696,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938197188680
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938197188686}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938237096361
 GameObject:
   m_ObjectHideFlags: 0
@@ -6611,7 +5709,6 @@ GameObject:
   - component: {fileID: 1429148938237096374}
   - component: {fileID: 1429148938237096373}
   - component: {fileID: 1429148938237096372}
-  - component: {fileID: 1429148938237096363}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6705,22 +5802,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938237096363
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938237096361}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938240330858
 GameObject:
   m_ObjectHideFlags: 0
@@ -6734,7 +5815,6 @@ GameObject:
   - component: {fileID: 1429148938240330871}
   - component: {fileID: 1429148938240330870}
   - component: {fileID: 1429148938240330869}
-  - component: {fileID: 1429148938240330868}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6828,22 +5908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938240330868
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938240330858}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938244328645
 GameObject:
   m_ObjectHideFlags: 0
@@ -6857,7 +5921,6 @@ GameObject:
   - component: {fileID: 1429148938244328642}
   - component: {fileID: 1429148938244328641}
   - component: {fileID: 1429148938244328640}
-  - component: {fileID: 1429148938244328647}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -6951,22 +6014,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938244328647
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938244328645}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938245644288
 GameObject:
   m_ObjectHideFlags: 0
@@ -6980,7 +6027,6 @@ GameObject:
   - component: {fileID: 1429148938245644301}
   - component: {fileID: 1429148938245644300}
   - component: {fileID: 1429148938245644291}
-  - component: {fileID: 1429148938245644290}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7074,22 +6120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938245644290
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938245644288}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938268141030
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,7 +6133,6 @@ GameObject:
   - component: {fileID: 1429148938268141027}
   - component: {fileID: 1429148938268141026}
   - component: {fileID: 1429148938268141025}
-  - component: {fileID: 1429148938268141024}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7197,22 +6226,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938268141024
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938268141030}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938282034875
 GameObject:
   m_ObjectHideFlags: 0
@@ -7226,7 +6239,6 @@ GameObject:
   - component: {fileID: 1429148938282034496}
   - component: {fileID: 1429148938282034503}
   - component: {fileID: 1429148938282034502}
-  - component: {fileID: 1429148938282034501}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7320,22 +6332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938282034501
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938282034875}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938311940113
 GameObject:
   m_ObjectHideFlags: 0
@@ -7349,7 +6345,6 @@ GameObject:
   - component: {fileID: 1429148938311940126}
   - component: {fileID: 1429148938311940125}
   - component: {fileID: 1429148938311940124}
-  - component: {fileID: 1429148938311940115}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7443,22 +6438,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938311940115
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938311940113}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938316468306
 GameObject:
   m_ObjectHideFlags: 0
@@ -7472,7 +6451,6 @@ GameObject:
   - component: {fileID: 1429148938316468319}
   - component: {fileID: 1429148938316468318}
   - component: {fileID: 1429148938316468317}
-  - component: {fileID: 1429148938316468316}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7566,22 +6544,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938316468316
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938316468306}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938328872319
 GameObject:
   m_ObjectHideFlags: 0
@@ -7595,7 +6557,6 @@ GameObject:
   - component: {fileID: 1429148938328872196}
   - component: {fileID: 1429148938328872315}
   - component: {fileID: 1429148938328872314}
-  - component: {fileID: 1429148938328872313}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7689,22 +6650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938328872313
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938328872319}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938348035047
 GameObject:
   m_ObjectHideFlags: 0
@@ -7718,7 +6663,6 @@ GameObject:
   - component: {fileID: 1429148938348035052}
   - component: {fileID: 1429148938348035043}
   - component: {fileID: 1429148938348035042}
-  - component: {fileID: 1429148938348035041}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7812,22 +6756,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938348035041
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938348035047}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938388895307
 GameObject:
   m_ObjectHideFlags: 0
@@ -7841,7 +6769,6 @@ GameObject:
   - component: {fileID: 1429148938388895312}
   - component: {fileID: 1429148938388895319}
   - component: {fileID: 1429148938388895318}
-  - component: {fileID: 1429148938388895317}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -7935,22 +6862,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938388895317
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938388895307}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938399793882
 GameObject:
   m_ObjectHideFlags: 0
@@ -7964,7 +6875,6 @@ GameObject:
   - component: {fileID: 1429148938399793895}
   - component: {fileID: 1429148938399793894}
   - component: {fileID: 1429148938399793893}
-  - component: {fileID: 1429148938399793892}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8058,22 +6968,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938399793892
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938399793882}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938426203378
 GameObject:
   m_ObjectHideFlags: 0
@@ -8087,7 +6981,6 @@ GameObject:
   - component: {fileID: 1429148938426203391}
   - component: {fileID: 1429148938426203390}
   - component: {fileID: 1429148938426203389}
-  - component: {fileID: 1429148938426203388}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8181,22 +7074,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938426203388
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938426203378}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938450637671
 GameObject:
   m_ObjectHideFlags: 0
@@ -8210,7 +7087,6 @@ GameObject:
   - component: {fileID: 1429148938450637676}
   - component: {fileID: 1429148938450637667}
   - component: {fileID: 1429148938450637666}
-  - component: {fileID: 1429148938450637665}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8304,22 +7180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938450637665
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938450637671}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938487267799
 GameObject:
   m_ObjectHideFlags: 0
@@ -8333,7 +7193,6 @@ GameObject:
   - component: {fileID: 1429148938487267804}
   - component: {fileID: 1429148938487267795}
   - component: {fileID: 1429148938487267794}
-  - component: {fileID: 1429148938487267793}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8427,22 +7286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938487267793
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938487267799}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938495849584
 GameObject:
   m_ObjectHideFlags: 0
@@ -8456,7 +7299,6 @@ GameObject:
   - component: {fileID: 1429148938495849597}
   - component: {fileID: 1429148938495849596}
   - component: {fileID: 1429148938495849587}
-  - component: {fileID: 1429148938495849586}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8550,22 +7392,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938495849586
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938495849584}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938548012440
 GameObject:
   m_ObjectHideFlags: 0
@@ -8579,7 +7405,6 @@ GameObject:
   - component: {fileID: 1429148938548012453}
   - component: {fileID: 1429148938548012452}
   - component: {fileID: 1429148938548012443}
-  - component: {fileID: 1429148938548012442}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8673,22 +7498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938548012442
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938548012440}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938554266655
 GameObject:
   m_ObjectHideFlags: 0
@@ -8702,7 +7511,6 @@ GameObject:
   - component: {fileID: 1429148938554266660}
   - component: {fileID: 1429148938554266651}
   - component: {fileID: 1429148938554266650}
-  - component: {fileID: 1429148938554266649}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8796,22 +7604,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938554266649
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938554266655}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938563006848
 GameObject:
   m_ObjectHideFlags: 0
@@ -8825,7 +7617,6 @@ GameObject:
   - component: {fileID: 1429148938563006861}
   - component: {fileID: 1429148938563006860}
   - component: {fileID: 1429148938563006851}
-  - component: {fileID: 1429148938563006850}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -8919,22 +7710,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938563006850
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938563006848}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938565299337
 GameObject:
   m_ObjectHideFlags: 0
@@ -8948,7 +7723,6 @@ GameObject:
   - component: {fileID: 1429148938565299350}
   - component: {fileID: 1429148938565299349}
   - component: {fileID: 1429148938565299348}
-  - component: {fileID: 1429148938565299339}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9042,22 +7816,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938565299339
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938565299337}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938603369926
 GameObject:
   m_ObjectHideFlags: 0
@@ -9071,7 +7829,6 @@ GameObject:
   - component: {fileID: 1429148938603369923}
   - component: {fileID: 1429148938603369922}
   - component: {fileID: 1429148938603369921}
-  - component: {fileID: 1429148938603369920}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9165,22 +7922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938603369920
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938603369926}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938638787548
 GameObject:
   m_ObjectHideFlags: 0
@@ -9194,7 +7935,6 @@ GameObject:
   - component: {fileID: 1429148938638787545}
   - component: {fileID: 1429148938638787544}
   - component: {fileID: 1429148938638787551}
-  - component: {fileID: 1429148938638787550}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9288,22 +8028,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938638787550
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938638787548}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938642836229
 GameObject:
   m_ObjectHideFlags: 0
@@ -9317,7 +8041,6 @@ GameObject:
   - component: {fileID: 1429148938642836226}
   - component: {fileID: 1429148938642836225}
   - component: {fileID: 1429148938642836224}
-  - component: {fileID: 1429148938642836231}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9411,22 +8134,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938642836231
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938642836229}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938681134314
 GameObject:
   m_ObjectHideFlags: 0
@@ -9440,7 +8147,6 @@ GameObject:
   - component: {fileID: 1429148938681134327}
   - component: {fileID: 1429148938681134326}
   - component: {fileID: 1429148938681134325}
-  - component: {fileID: 1429148938681134324}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9534,22 +8240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938681134324
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938681134314}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938682037828
 GameObject:
   m_ObjectHideFlags: 0
@@ -9563,7 +8253,6 @@ GameObject:
   - component: {fileID: 1429148938682037825}
   - component: {fileID: 1429148938682037824}
   - component: {fileID: 1429148938682037831}
-  - component: {fileID: 1429148938682037830}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9657,22 +8346,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938682037830
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938682037828}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938693051450
 GameObject:
   m_ObjectHideFlags: 0
@@ -9686,7 +8359,6 @@ GameObject:
   - component: {fileID: 1429148938693051591}
   - component: {fileID: 1429148938693051590}
   - component: {fileID: 1429148938693051589}
-  - component: {fileID: 1429148938693051588}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9780,22 +8452,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938693051588
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938693051450}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938711239417
 GameObject:
   m_ObjectHideFlags: 0
@@ -9809,7 +8465,6 @@ GameObject:
   - component: {fileID: 1429148938711239302}
   - component: {fileID: 1429148938711239301}
   - component: {fileID: 1429148938711239300}
-  - component: {fileID: 1429148938711239419}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -9903,22 +8558,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938711239419
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938711239417}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938714775009
 GameObject:
   m_ObjectHideFlags: 0
@@ -9932,7 +8571,6 @@ GameObject:
   - component: {fileID: 1429148938714775022}
   - component: {fileID: 1429148938714775021}
   - component: {fileID: 1429148938714775020}
-  - component: {fileID: 1429148938714775011}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -10026,22 +8664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938714775011
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938714775009}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938727828359
 GameObject:
   m_ObjectHideFlags: 0
@@ -10055,7 +8677,6 @@ GameObject:
   - component: {fileID: 1429148938727828364}
   - component: {fileID: 1429148938727828355}
   - component: {fileID: 1429148938727828354}
-  - component: {fileID: 1429148938727828353}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -10149,22 +8770,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938727828353
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938727828359}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938733371053
 GameObject:
   m_ObjectHideFlags: 0
@@ -10178,7 +8783,6 @@ GameObject:
   - component: {fileID: 1429148938733371050}
   - component: {fileID: 1429148938733371049}
   - component: {fileID: 1429148938733371048}
-  - component: {fileID: 1429148938733371055}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -10272,22 +8876,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938733371055
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938733371053}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938734766833
 GameObject:
   m_ObjectHideFlags: 0
@@ -10301,7 +8889,6 @@ GameObject:
   - component: {fileID: 1429148938734766846}
   - component: {fileID: 1429148938734766845}
   - component: {fileID: 1429148938734766844}
-  - component: {fileID: 1429148938734766835}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -10395,22 +8982,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938734766835
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938734766833}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938794965142
 GameObject:
   m_ObjectHideFlags: 0
@@ -10424,7 +8995,6 @@ GameObject:
   - component: {fileID: 1429148938794965139}
   - component: {fileID: 1429148938794965138}
   - component: {fileID: 1429148938794965137}
-  - component: {fileID: 1429148938794965136}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -10518,22 +9088,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938794965136
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938794965142}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938816232491
 GameObject:
   m_ObjectHideFlags: 0
@@ -10789,7 +9343,6 @@ GameObject:
   - component: {fileID: 1429148938826159289}
   - component: {fileID: 1429148938826159288}
   - component: {fileID: 1429148938826159295}
-  - component: {fileID: 1429148938826159294}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -10883,22 +9436,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938826159294
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938826159292}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938832808083
 GameObject:
   m_ObjectHideFlags: 0
@@ -10912,7 +9449,6 @@ GameObject:
   - component: {fileID: 1429148938832808088}
   - component: {fileID: 1429148938832808095}
   - component: {fileID: 1429148938832808094}
-  - component: {fileID: 1429148938832808093}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11006,22 +9542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938832808093
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938832808083}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938838936951
 GameObject:
   m_ObjectHideFlags: 0
@@ -11035,7 +9555,6 @@ GameObject:
   - component: {fileID: 1429148938838936956}
   - component: {fileID: 1429148938838936947}
   - component: {fileID: 1429148938838936946}
-  - component: {fileID: 1429148938838936945}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11129,22 +9648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938838936945
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938838936951}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938858795854
 GameObject:
   m_ObjectHideFlags: 0
@@ -11158,7 +9661,6 @@ GameObject:
   - component: {fileID: 1429148938858795851}
   - component: {fileID: 1429148938858795850}
   - component: {fileID: 1429148938858795849}
-  - component: {fileID: 1429148938858795848}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11252,22 +9754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938858795848
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938858795854}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938860763698
 GameObject:
   m_ObjectHideFlags: 0
@@ -11281,7 +9767,6 @@ GameObject:
   - component: {fileID: 1429148938860763711}
   - component: {fileID: 1429148938860763710}
   - component: {fileID: 1429148938860763709}
-  - component: {fileID: 1429148938860763708}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11375,22 +9860,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938860763708
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938860763698}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938860953647
 GameObject:
   m_ObjectHideFlags: 0
@@ -11404,7 +9873,6 @@ GameObject:
   - component: {fileID: 1429148938860953652}
   - component: {fileID: 1429148938860953643}
   - component: {fileID: 1429148938860953642}
-  - component: {fileID: 1429148938860953641}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11498,22 +9966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938860953641
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938860953647}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938863193390
 GameObject:
   m_ObjectHideFlags: 0
@@ -11527,7 +9979,6 @@ GameObject:
   - component: {fileID: 1429148938863193387}
   - component: {fileID: 1429148938863193386}
   - component: {fileID: 1429148938863193385}
-  - component: {fileID: 1429148938863193384}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11621,22 +10072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938863193384
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938863193390}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938867038456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11650,7 +10085,6 @@ GameObject:
   - component: {fileID: 1429148938867038341}
   - component: {fileID: 1429148938867038340}
   - component: {fileID: 1429148938867038459}
-  - component: {fileID: 1429148938867038458}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11744,22 +10178,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938867038458
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938867038456}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938875583117
 GameObject:
   m_ObjectHideFlags: 0
@@ -11773,7 +10191,6 @@ GameObject:
   - component: {fileID: 1429148938875583114}
   - component: {fileID: 1429148938875583113}
   - component: {fileID: 1429148938875583112}
-  - component: {fileID: 1429148938875583119}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11867,22 +10284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938875583119
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938875583117}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938886186817
 GameObject:
   m_ObjectHideFlags: 0
@@ -11896,7 +10297,6 @@ GameObject:
   - component: {fileID: 1429148938886186830}
   - component: {fileID: 1429148938886186829}
   - component: {fileID: 1429148938886186828}
-  - component: {fileID: 1429148938886186819}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -11990,22 +10390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938886186819
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938886186817}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938893747050
 GameObject:
   m_ObjectHideFlags: 0
@@ -12019,7 +10403,6 @@ GameObject:
   - component: {fileID: 1429148938893747063}
   - component: {fileID: 1429148938893747062}
   - component: {fileID: 1429148938893747061}
-  - component: {fileID: 1429148938893747060}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12113,22 +10496,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938893747060
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938893747050}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938916427536
 GameObject:
   m_ObjectHideFlags: 0
@@ -12142,7 +10509,6 @@ GameObject:
   - component: {fileID: 1429148938916427549}
   - component: {fileID: 1429148938916427548}
   - component: {fileID: 1429148938916427539}
-  - component: {fileID: 1429148938916427538}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12236,22 +10602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938916427538
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938916427536}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938946058031
 GameObject:
   m_ObjectHideFlags: 0
@@ -12265,7 +10615,6 @@ GameObject:
   - component: {fileID: 1429148938946058036}
   - component: {fileID: 1429148938946058027}
   - component: {fileID: 1429148938946058026}
-  - component: {fileID: 1429148938946058025}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12359,22 +10708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938946058025
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938946058031}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938948564885
 GameObject:
   m_ObjectHideFlags: 0
@@ -12388,7 +10721,6 @@ GameObject:
   - component: {fileID: 1429148938948564882}
   - component: {fileID: 1429148938948564881}
   - component: {fileID: 1429148938948564880}
-  - component: {fileID: 1429148938948564887}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12482,22 +10814,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938948564887
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938948564885}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938955115857
 GameObject:
   m_ObjectHideFlags: 0
@@ -12511,7 +10827,6 @@ GameObject:
   - component: {fileID: 1429148938955115870}
   - component: {fileID: 1429148938955115869}
   - component: {fileID: 1429148938955115868}
-  - component: {fileID: 1429148938955115859}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12605,22 +10920,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938955115859
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938955115857}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938956044617
 GameObject:
   m_ObjectHideFlags: 0
@@ -12634,7 +10933,6 @@ GameObject:
   - component: {fileID: 1429148938956044630}
   - component: {fileID: 1429148938956044629}
   - component: {fileID: 1429148938956044628}
-  - component: {fileID: 1429148938956044619}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12728,22 +11026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938956044619
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938956044617}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938975093465
 GameObject:
   m_ObjectHideFlags: 0
@@ -12757,7 +11039,6 @@ GameObject:
   - component: {fileID: 1429148938975093478}
   - component: {fileID: 1429148938975093477}
   - component: {fileID: 1429148938975093476}
-  - component: {fileID: 1429148938975093467}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12851,22 +11132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938975093467
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938975093465}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148938980084549
 GameObject:
   m_ObjectHideFlags: 0
@@ -12880,7 +11145,6 @@ GameObject:
   - component: {fileID: 1429148938980084546}
   - component: {fileID: 1429148938980084545}
   - component: {fileID: 1429148938980084544}
-  - component: {fileID: 1429148938980084551}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -12974,22 +11238,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148938980084551
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148938980084549}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939012958336
 GameObject:
   m_ObjectHideFlags: 0
@@ -13003,7 +11251,6 @@ GameObject:
   - component: {fileID: 1429148939012958349}
   - component: {fileID: 1429148939012958348}
   - component: {fileID: 1429148939012958339}
-  - component: {fileID: 1429148939012958338}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13097,22 +11344,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939012958338
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939012958336}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939015430878
 GameObject:
   m_ObjectHideFlags: 0
@@ -13126,7 +11357,6 @@ GameObject:
   - component: {fileID: 1429148939015430875}
   - component: {fileID: 1429148939015430874}
   - component: {fileID: 1429148939015430873}
-  - component: {fileID: 1429148939015430872}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13220,22 +11450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939015430872
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939015430878}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939019030500
 GameObject:
   m_ObjectHideFlags: 0
@@ -13249,7 +11463,6 @@ GameObject:
   - component: {fileID: 1429148939019030497}
   - component: {fileID: 1429148939019030496}
   - component: {fileID: 1429148939019030503}
-  - component: {fileID: 1429148939019030502}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13343,22 +11556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939019030502
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939019030500}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939031224139
 GameObject:
   m_ObjectHideFlags: 0
@@ -13372,7 +11569,6 @@ GameObject:
   - component: {fileID: 1429148939031224144}
   - component: {fileID: 1429148939031224151}
   - component: {fileID: 1429148939031224150}
-  - component: {fileID: 1429148939031224149}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13466,22 +11662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939031224149
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939031224139}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939065409662
 GameObject:
   m_ObjectHideFlags: 0
@@ -13495,7 +11675,6 @@ GameObject:
   - component: {fileID: 1429148939065409659}
   - component: {fileID: 1429148939065409658}
   - component: {fileID: 1429148939065409657}
-  - component: {fileID: 1429148939065409656}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13589,22 +11768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939065409656
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939065409662}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939104412893
 GameObject:
   m_ObjectHideFlags: 0
@@ -13618,7 +11781,6 @@ GameObject:
   - component: {fileID: 1429148939104412890}
   - component: {fileID: 1429148939104412889}
   - component: {fileID: 1429148939104412888}
-  - component: {fileID: 1429148939104412895}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13712,22 +11874,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939104412895
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939104412893}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939106744647
 GameObject:
   m_ObjectHideFlags: 0
@@ -13741,7 +11887,6 @@ GameObject:
   - component: {fileID: 1429148939106744652}
   - component: {fileID: 1429148939106744643}
   - component: {fileID: 1429148939106744642}
-  - component: {fileID: 1429148939106744641}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13835,22 +11980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939106744641
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939106744647}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939132313918
 GameObject:
   m_ObjectHideFlags: 0
@@ -13864,7 +11993,6 @@ GameObject:
   - component: {fileID: 1429148939132313915}
   - component: {fileID: 1429148939132313914}
   - component: {fileID: 1429148939132313913}
-  - component: {fileID: 1429148939132313912}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -13958,22 +12086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939132313912
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939132313918}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939142064272
 GameObject:
   m_ObjectHideFlags: 0
@@ -13987,7 +12099,6 @@ GameObject:
   - component: {fileID: 1429148939142064285}
   - component: {fileID: 1429148939142064284}
   - component: {fileID: 1429148939142064275}
-  - component: {fileID: 1429148939142064274}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14081,22 +12192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939142064274
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939142064272}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939145174215
 GameObject:
   m_ObjectHideFlags: 0
@@ -14110,7 +12205,6 @@ GameObject:
   - component: {fileID: 1429148939145174220}
   - component: {fileID: 1429148939145174211}
   - component: {fileID: 1429148939145174210}
-  - component: {fileID: 1429148939145174209}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14204,22 +12298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939145174209
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939145174215}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939193569868
 GameObject:
   m_ObjectHideFlags: 0
@@ -14233,7 +12311,6 @@ GameObject:
   - component: {fileID: 1429148939193569865}
   - component: {fileID: 1429148939193569864}
   - component: {fileID: 1429148939193569871}
-  - component: {fileID: 1429148939193569870}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14327,22 +12404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939193569870
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939193569868}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939210063589
 GameObject:
   m_ObjectHideFlags: 0
@@ -14356,7 +12417,6 @@ GameObject:
   - component: {fileID: 1429148939210063586}
   - component: {fileID: 1429148939210063585}
   - component: {fileID: 1429148939210063584}
-  - component: {fileID: 1429148939210063591}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14450,22 +12510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939210063591
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939210063589}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939217001053
 GameObject:
   m_ObjectHideFlags: 0
@@ -14479,7 +12523,6 @@ GameObject:
   - component: {fileID: 1429148939217001050}
   - component: {fileID: 1429148939217001049}
   - component: {fileID: 1429148939217001048}
-  - component: {fileID: 1429148939217001055}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14573,22 +12616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939217001055
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939217001053}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939228288642
 GameObject:
   m_ObjectHideFlags: 0
@@ -14602,7 +12629,6 @@ GameObject:
   - component: {fileID: 1429148939228288655}
   - component: {fileID: 1429148939228288654}
   - component: {fileID: 1429148939228288653}
-  - component: {fileID: 1429148939228288652}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14696,22 +12722,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939228288652
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939228288642}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939269389135
 GameObject:
   m_ObjectHideFlags: 0
@@ -14725,7 +12735,6 @@ GameObject:
   - component: {fileID: 1429148939269389140}
   - component: {fileID: 1429148939269389131}
   - component: {fileID: 1429148939269389130}
-  - component: {fileID: 1429148939269389129}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14819,22 +12828,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939269389129
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939269389135}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939330119841
 GameObject:
   m_ObjectHideFlags: 0
@@ -14848,7 +12841,6 @@ GameObject:
   - component: {fileID: 1429148939330119854}
   - component: {fileID: 1429148939330119853}
   - component: {fileID: 1429148939330119852}
-  - component: {fileID: 1429148939330119843}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -14942,22 +12934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939330119843
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939330119841}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939334296898
 GameObject:
   m_ObjectHideFlags: 0
@@ -14971,7 +12947,6 @@ GameObject:
   - component: {fileID: 1429148939334296911}
   - component: {fileID: 1429148939334296910}
   - component: {fileID: 1429148939334296909}
-  - component: {fileID: 1429148939334296908}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15065,22 +13040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939334296908
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939334296898}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939347244709
 GameObject:
   m_ObjectHideFlags: 0
@@ -15094,7 +13053,6 @@ GameObject:
   - component: {fileID: 1429148939347244706}
   - component: {fileID: 1429148939347244705}
   - component: {fileID: 1429148939347244704}
-  - component: {fileID: 1429148939347244711}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15188,22 +13146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939347244711
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939347244709}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939405079045
 GameObject:
   m_ObjectHideFlags: 0
@@ -15217,7 +13159,6 @@ GameObject:
   - component: {fileID: 1429148939405079042}
   - component: {fileID: 1429148939405079041}
   - component: {fileID: 1429148939405079040}
-  - component: {fileID: 1429148939405079047}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15311,22 +13252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939405079047
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939405079045}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939420088171
 GameObject:
   m_ObjectHideFlags: 0
@@ -15340,7 +13265,6 @@ GameObject:
   - component: {fileID: 1429148939420088176}
   - component: {fileID: 1429148939420088183}
   - component: {fileID: 1429148939420088182}
-  - component: {fileID: 1429148939420088181}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15434,22 +13358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939420088181
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939420088171}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939450078888
 GameObject:
   m_ObjectHideFlags: 0
@@ -15463,7 +13371,6 @@ GameObject:
   - component: {fileID: 1429148939450078901}
   - component: {fileID: 1429148939450078900}
   - component: {fileID: 1429148939450078891}
-  - component: {fileID: 1429148939450078890}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15557,22 +13464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939450078890
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939450078888}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939463614674
 GameObject:
   m_ObjectHideFlags: 0
@@ -15586,7 +13477,6 @@ GameObject:
   - component: {fileID: 1429148939463614687}
   - component: {fileID: 1429148939463614686}
   - component: {fileID: 1429148939463614685}
-  - component: {fileID: 1429148939463614684}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15680,22 +13570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939463614684
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939463614674}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939467961956
 GameObject:
   m_ObjectHideFlags: 0
@@ -15709,7 +13583,6 @@ GameObject:
   - component: {fileID: 1429148939467961953}
   - component: {fileID: 1429148939467961952}
   - component: {fileID: 1429148939467961959}
-  - component: {fileID: 1429148939467961958}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15803,22 +13676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939467961958
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939467961956}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939494726925
 GameObject:
   m_ObjectHideFlags: 0
@@ -15832,7 +13689,6 @@ GameObject:
   - component: {fileID: 1429148939494726922}
   - component: {fileID: 1429148939494726921}
   - component: {fileID: 1429148939494726920}
-  - component: {fileID: 1429148939494726927}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -15926,22 +13782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939494726927
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939494726925}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939506412768
 GameObject:
   m_ObjectHideFlags: 0
@@ -15955,7 +13795,6 @@ GameObject:
   - component: {fileID: 1429148939506412781}
   - component: {fileID: 1429148939506412780}
   - component: {fileID: 1429148939506412771}
-  - component: {fileID: 1429148939506412770}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16049,22 +13888,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939506412770
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939506412768}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939516026471
 GameObject:
   m_ObjectHideFlags: 0
@@ -16078,7 +13901,6 @@ GameObject:
   - component: {fileID: 1429148939516026476}
   - component: {fileID: 1429148939516026467}
   - component: {fileID: 1429148939516026466}
-  - component: {fileID: 1429148939516026465}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16172,22 +13994,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939516026465
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939516026471}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939533253705
 GameObject:
   m_ObjectHideFlags: 0
@@ -16201,7 +14007,6 @@ GameObject:
   - component: {fileID: 1429148939533253718}
   - component: {fileID: 1429148939533253717}
   - component: {fileID: 1429148939533253716}
-  - component: {fileID: 1429148939533253707}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16295,22 +14100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939533253707
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939533253705}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939540169838
 GameObject:
   m_ObjectHideFlags: 0
@@ -16324,7 +14113,6 @@ GameObject:
   - component: {fileID: 1429148939540169835}
   - component: {fileID: 1429148939540169834}
   - component: {fileID: 1429148939540169833}
-  - component: {fileID: 1429148939540169832}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16418,22 +14206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939540169832
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939540169838}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939559610723
 GameObject:
   m_ObjectHideFlags: 0
@@ -16447,7 +14219,6 @@ GameObject:
   - component: {fileID: 1429148939559610728}
   - component: {fileID: 1429148939559610735}
   - component: {fileID: 1429148939559610734}
-  - component: {fileID: 1429148939559610733}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16541,22 +14312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939559610733
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939559610723}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939570363437
 GameObject:
   m_ObjectHideFlags: 0
@@ -16570,7 +14325,6 @@ GameObject:
   - component: {fileID: 1429148939570363434}
   - component: {fileID: 1429148939570363433}
   - component: {fileID: 1429148939570363432}
-  - component: {fileID: 1429148939570363439}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16664,22 +14418,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939570363439
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939570363437}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939573416450
 GameObject:
   m_ObjectHideFlags: 0
@@ -16693,7 +14431,6 @@ GameObject:
   - component: {fileID: 1429148939573416463}
   - component: {fileID: 1429148939573416462}
   - component: {fileID: 1429148939573416461}
-  - component: {fileID: 1429148939573416460}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16787,22 +14524,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939573416460
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939573416450}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939577965348
 GameObject:
   m_ObjectHideFlags: 0
@@ -16816,7 +14537,6 @@ GameObject:
   - component: {fileID: 1429148939577965345}
   - component: {fileID: 1429148939577965344}
   - component: {fileID: 1429148939577965351}
-  - component: {fileID: 1429148939577965350}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -16910,22 +14630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939577965350
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939577965348}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939597731674
 GameObject:
   m_ObjectHideFlags: 0
@@ -16939,7 +14643,6 @@ GameObject:
   - component: {fileID: 1429148939597731687}
   - component: {fileID: 1429148939597731686}
   - component: {fileID: 1429148939597731685}
-  - component: {fileID: 1429148939597731684}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -17033,22 +14736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939597731684
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939597731674}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939598658229
 GameObject:
   m_ObjectHideFlags: 0
@@ -17062,7 +14749,6 @@ GameObject:
   - component: {fileID: 1429148939598658226}
   - component: {fileID: 1429148939598658225}
   - component: {fileID: 1429148939598658224}
-  - component: {fileID: 1429148939598658231}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -17156,22 +14842,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939598658231
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939598658229}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939619320736
 GameObject:
   m_ObjectHideFlags: 0
@@ -17185,7 +14855,6 @@ GameObject:
   - component: {fileID: 1429148939619320749}
   - component: {fileID: 1429148939619320748}
   - component: {fileID: 1429148939619320739}
-  - component: {fileID: 1429148939619320738}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -17279,22 +14948,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939619320738
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939619320736}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939641715487
 GameObject:
   m_ObjectHideFlags: 0
@@ -17308,7 +14961,6 @@ GameObject:
   - component: {fileID: 1429148939641715492}
   - component: {fileID: 1429148939641715483}
   - component: {fileID: 1429148939641715482}
-  - component: {fileID: 1429148939641715481}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -17402,22 +15054,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939641715481
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939641715487}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &1429148939647739458
 GameObject:
   m_ObjectHideFlags: 0
@@ -17431,7 +15067,6 @@ GameObject:
   - component: {fileID: 1429148939647739471}
   - component: {fileID: 1429148939647739470}
   - component: {fileID: 1429148939647739469}
-  - component: {fileID: 1429148939647739468}
   m_Layer: 8
   m_Name: Cube(Clone)
   m_TagString: SideCube
@@ -17525,22 +15160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b69de917143a44184e61182c38f843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!208 &1429148939647739468
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429148939647739458}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &2593818902226020033
 GameObject:
   m_ObjectHideFlags: 0
