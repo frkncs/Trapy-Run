@@ -13,17 +13,21 @@ public class HelicopterScript : MonoBehaviour
 
     const float upSpeed = 3.5f;
     const float turnSpeed = 13;
-    const float moveSpeed = 10;
+    const float moveSpeed = 12;
     const float rotX = 340;
 
     #endregion
 
-    void Start()
+    private void OnEnable()
     {
-        PlayerController.MoveHelicopter += moveHelicopter;
+        Actions.MoveHelicopter += moveHelicopter;
+    }
+    private void OnDisable()
+    {
+        Actions.MoveHelicopter -= moveHelicopter;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (canMove)
         {

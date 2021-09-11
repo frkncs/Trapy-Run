@@ -17,6 +17,16 @@ public class UIController : MonoBehaviour
 
     #endregion
 
+    private void OnEnable()
+    {
+        Actions.OpenScreen += openScreen;
+    }
+
+    private void OnDisable()
+    {
+        Actions.OpenScreen -= openScreen;
+    }
+
     private void Awake()
     {
         currentLevelKey = Strings.PlayerPrefsKeys.current_level.ToString();
@@ -34,24 +44,7 @@ public class UIController : MonoBehaviour
         txtLevel.text = "Level " + (PlayerPrefs.GetInt(levelKey) + 1);
     }
 
-    public void openScreen(string screenName)
-    {
-        if (screenName == null) PlayerController.isGameStart = true;
-
-        foreach (GameObject screen in screens)
-        {
-            if (screen.name == screenName)
-            {
-                if (!screen.activeInHierarchy) screen.SetActive(true);
-            }
-            else
-            {
-                if (screen.activeInHierarchy) screen.SetActive(false);
-            }
-        }
-    }
-	
-	public void nextLevel()
+    public void nextLevel()
     {
         PlayerPrefs.SetInt(levelKey, PlayerPrefs.GetInt(levelKey) + 1);
 
@@ -74,6 +67,23 @@ public class UIController : MonoBehaviour
     public void restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    void openScreen(string screenName)
+    {
+        if (screenName == null) PlayerController.isGameStart = true;
+
+        foreach (GameObject screen in screens)
+        {
+            if (screen.name == screenName)
+            {
+                if (!screen.activeInHierarchy) screen.SetActive(true);
+            }
+            else
+            {
+                if (screen.activeInHierarchy) screen.SetActive(false);
+            }
+        }
     }
 
     void fillList()

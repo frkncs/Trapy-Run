@@ -1,5 +1,4 @@
 ﻿using Assets.Scripts;
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -8,16 +7,11 @@ public class PlayerController : MonoBehaviour
     #region Variables
 
     // Public Variables
-    [HideInInspector] public static Action ChangeCameraAngle;
-    [HideInInspector] public static Action MoveHelicopter;
     [HideInInspector] public static bool isGameStart = false;
-
-    [HideInInspector] public bool gameOver = false;
+    [HideInInspector] public static bool gameOver = false;
 
     // Private Variables
     Animator animator;
-
-    UIController uic;
 
     string startScreen, gameOverScreen, youWinScreen;
 
@@ -32,11 +26,10 @@ public class PlayerController : MonoBehaviour
         gameOverScreen = Strings.ScreenNames.GameOverScreen.ToString();
         youWinScreen = Strings.ScreenNames.YouWinScreen.ToString();
 
-        uic = FindObjectOfType<UIController>().GetComponent<UIController>();
-
         isGameStart = false;
+        gameOver = false;
 
-        uic.openScreen(startScreen);
+        Actions.OpenScreen(startScreen);
 
         animator = GetComponent<Animator>();
 
@@ -61,9 +54,9 @@ public class PlayerController : MonoBehaviour
         {
             Camera.main.transform.Find("Confetti_01").gameObject.SetActive(true);
             Camera.main.transform.Find("Confetti_02").gameObject.SetActive(true);
-            uic.openScreen(youWinScreen);
 
-            ChangeCameraAngle();
+            Actions.OpenScreen(youWinScreen);
+            Actions.ChangeCameraAngle();
         }
     }
 
@@ -79,7 +72,7 @@ public class PlayerController : MonoBehaviour
                 ms.enabled = false;
                 animator.SetBool("isRunning", false);
 
-                MoveHelicopter();
+                Actions.MoveHelicopter();
 
                 StartCoroutine(DestroyPlayer(1.5f));
             }
@@ -109,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
         gameOver = true;
 
-        uic.openScreen(gameOverScreen);
+        Actions.OpenScreen(gameOverScreen);
     }
 
     float getMousePos()

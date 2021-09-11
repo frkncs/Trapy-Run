@@ -7,7 +7,6 @@ public class CameraScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    PlayerController pc;
     Transform heliStopTrans;
     GameObject player;
     Vector3 playerPos;
@@ -15,20 +14,26 @@ public class CameraScript : MonoBehaviour
 
     bool canChangeAngle = false;
 
-	#endregion
+    #endregion
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        pc = player.GetComponent<PlayerController>();
         playerPos = player.transform.position;
 
         Transform helicopter = GameObject.FindGameObjectWithTag("Helicopter").transform;
         heliStopTrans = helicopter.Find("Heli_Stop").transform;
 
         offset = transform.position - playerPos;
+    }
 
-        PlayerController.ChangeCameraAngle += changeAngle;
+    private void OnEnable()
+    {
+        Actions.ChangeCameraAngle += changeAngle;
+    }
+    private void OnDisable()
+    {
+        Actions.ChangeCameraAngle -= changeAngle;
     }
 
     private void Update()
@@ -44,7 +49,7 @@ public class CameraScript : MonoBehaviour
 
     void LateUpdate()
     {
-        if (!pc.gameOver && !canChangeAngle)
+        if (!PlayerController.gameOver && !canChangeAngle)
         {
             playerPos = player.transform.position;
             transform.position = playerPos + offset;

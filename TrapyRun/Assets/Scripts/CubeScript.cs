@@ -10,9 +10,9 @@ public class CubeScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-	Animator animator;
-	
     static GroundGenerator gg;
+
+    MeshRenderer mr;
 
     float fallSpeed = 15;
     float maxYPos = -20;
@@ -23,15 +23,8 @@ public class CubeScript : MonoBehaviour
 
     private void Start()
     {
-		if (GetComponent<Animator>() == null)
-		{
-			gameObject.AddComponent<Animator>();
-            GetComponent<Animator>().runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Animators/CubeAnimator");
-			
-		}
-		
-		animator = GetComponent<Animator>();
-		
+        mr = GetComponent<MeshRenderer>();
+
         if (gg == null) gg = FindObjectOfType<GroundGenerator>().GetComponent<GroundGenerator>();
     }
 
@@ -47,10 +40,14 @@ public class CubeScript : MonoBehaviour
     public void fall()
     {
         if (gg.isLevelIncludeNavMesh) createNavMeshObstacle();
-        GetComponent<MeshRenderer>().material.color = Color.red;
+
+        if (ColorUtility.TryParseHtmlString("#F65149", out Color c))
+        {
+            mr.material.color = c;
+        }
+
         canFall = true;
 		GetComponent<BoxCollider>().enabled = false;
-		animator.SetTrigger("turn_to_red");
     }
 
     void createNavMeshObstacle()

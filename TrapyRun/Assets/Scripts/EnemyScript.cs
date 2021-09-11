@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,7 +9,6 @@ public class EnemyScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    PlayerController pc;
     Animator animator;
     NavMeshAgent navMesh;
     Vector3 playerPos;
@@ -26,7 +24,6 @@ public class EnemyScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        pc = player.GetComponent<PlayerController>();
         animator = GetComponent<Animator>();
         navMesh = GetComponent<NavMeshAgent>();
     }
@@ -39,7 +36,7 @@ public class EnemyScript : MonoBehaviour
 
         if (navMesh != null && navMesh.enabled) // enemy has ai
         {
-            if (player != null || !pc.gameOver)
+            if (player != null || !PlayerController.gameOver)
             {
                 playerPos = player.transform.position;
                 navMesh.SetDestination(playerPos);
@@ -47,7 +44,7 @@ public class EnemyScript : MonoBehaviour
             else
                 letAIGo(true);
 
-            if (pc.gameOver)
+            if (PlayerController.gameOver)
                 letAIGo(true);
         }
 
