@@ -133,7 +133,7 @@ public class PlayerController : MonoBehaviour
             float dif = lastFingerX - firstFingerX;
 
             transform.rotation = Quaternion.Euler(0, dif * 50, 0);
-            transform.position += new Vector3(dif, 0, 0) * 0.8f;
+            transform.position += new Vector3(dif, 0, 0) * 0.9f;
 
             firstFingerX = lastFingerX;
         }
