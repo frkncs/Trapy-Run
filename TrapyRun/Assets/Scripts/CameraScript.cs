@@ -8,7 +8,8 @@ public class CameraScript : MonoBehaviour
 
     // Private Variables
     PlayerController pc;
-    Transform playerTrans, heliStopTrans;
+    Transform heliStopTrans;
+    GameObject player;
     Vector3 playerPos;
     Vector3 offset;
 
@@ -18,9 +19,9 @@ public class CameraScript : MonoBehaviour
 
     void Start()
     {
-        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
-        pc = playerTrans.GetComponent<PlayerController>();
-        playerPos = playerTrans.position;
+        player = GameObject.FindGameObjectWithTag("Player");
+        pc = player.GetComponent<PlayerController>();
+        playerPos = player.transform.position;
 
         Transform helicopter = GameObject.FindGameObjectWithTag("Helicopter").transform;
         heliStopTrans = helicopter.Find("Heli_Stop").transform;
@@ -34,7 +35,10 @@ public class CameraScript : MonoBehaviour
     {
         if (canChangeAngle)
         {
-            transform.LookAt(heliStopTrans);
+            if (player != null)
+                transform.LookAt(player.transform);
+            else
+                transform.LookAt(heliStopTrans);
         }
     }
 
@@ -42,7 +46,7 @@ public class CameraScript : MonoBehaviour
     {
         if (!pc.gameOver && !canChangeAngle)
         {
-            playerPos = playerTrans.position;
+            playerPos = player.transform.position;
             transform.position = playerPos + offset;
         }
     }

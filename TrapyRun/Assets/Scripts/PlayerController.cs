@@ -97,12 +97,15 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void die()
+    public void die(bool dieWithFalling)
     {
         GetComponent<MoveScript>().enabled = false;
         GetComponent<PlayerController>().enabled = false;
 
-        animator.SetTrigger("die");
+        if (!dieWithFalling)
+            animator.SetTrigger("die");
+        else
+            animator.SetBool("isFloating", true);
 
         gameOver = true;
 
@@ -161,6 +164,6 @@ public class PlayerController : MonoBehaviour
     void checkIsFall()
     {
         if (transform.position.y <= minYPos)
-            die();
+            die(dieWithFalling: true);
     }
 }

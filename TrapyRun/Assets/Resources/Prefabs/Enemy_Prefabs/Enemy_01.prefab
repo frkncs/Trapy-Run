@@ -545,14 +545,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useAutoSpeed: 1
-  autoSpeedControlDistance: 10
+  autoSpeedControlDistance: 11
   useGlobalDirections: 0
   moveForward: 1
   moveHorizontal: 0
   canTurn: 0
   turnClockwise: 0
   turnCoordinate: x
-  moveSpeed: 0
+  moveSpeed: 12
   turnSpeed: 0
 --- !u!114 &5805425196875619597
 MonoBehaviour:
