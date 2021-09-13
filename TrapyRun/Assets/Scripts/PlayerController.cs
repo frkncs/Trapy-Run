@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     {
         GameManager.currentState = GameManager.GameStates.Stop;
         Actions.OpenScreen();
-        
+
         InitializeVariables();
     }
 

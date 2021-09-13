@@ -14,10 +14,12 @@ public class CubeScript : MonoBehaviour
     private MeshRenderer mr;
     private Collider col;
 
-    private readonly float fallSpeed = 15;
-    private readonly float maxYPos = -20;
-
+    private float fallSpeedTimer = 0;
+    private float fallSpeed = 0;
     private bool canFall = false;
+
+    private const float maxFallSpeed = 15;
+    private const float maxYPos = -20;
 
     #endregion Variables
 
@@ -30,6 +32,17 @@ public class CubeScript : MonoBehaviour
     {
         if (canFall)
         {
+            if (fallSpeed < maxFallSpeed)
+            {
+                fallSpeedTimer += Time.deltaTime;
+
+                if (fallSpeedTimer >= 0.04f)
+                {
+                    fallSpeed++;
+                    fallSpeedTimer = 0;
+                }
+            }
+
             transform.Translate(Vector3.down * (Time.deltaTime * fallSpeed));
         }
 
