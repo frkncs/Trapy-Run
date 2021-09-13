@@ -10,16 +10,18 @@ public class CubeScript : MonoBehaviour
     // Private Variables
     private static GroundGenerator gg;
 
-    private Transform playerTrans;
-    private MeshRenderer mr;
-    private Collider col;
-
-    private float fallSpeedTimer = 0;
-    private float fallSpeed = 0;
     private bool canFall = false;
+    private Collider col;
+    private float colorTimer = 0;
+    private float fallSpeed = 0;
+    private float fallSpeedTimer = 0;
+    private float g = 90, b = 90;
+    private Material material;
+    private Transform playerTrans;
 
     private const float maxFallSpeed = 15;
     private const float maxYPos = -20;
+    private const float r = 255;
 
     #endregion Variables
 
@@ -32,18 +34,8 @@ public class CubeScript : MonoBehaviour
     {
         if (canFall)
         {
-            if (fallSpeed < maxFallSpeed)
-            {
-                fallSpeedTimer += Time.deltaTime;
-
-                if (fallSpeedTimer >= 0.04f)
-                {
-                    fallSpeed++;
-                    fallSpeedTimer = 0;
-                }
-            }
-
-            transform.Translate(Vector3.down * (Time.deltaTime * fallSpeed));
+            FallCube();
+            ChangeCubeColor();
         }
 
         if (transform.position.y <= maxYPos)
@@ -56,24 +48,23 @@ public class CubeScript : MonoBehaviour
     {
         if (gg.isLevelIncludeNavMesh) CreateNavMeshObstacle();
 
-        if (ColorUtility.TryParseHtmlString("#F65149", out Color c))
-        {
-            mr.material.color = c;
-        }
-
+        material.color = new Color(r / 255, g / 255, b / 255);
         canFall = true;
         col.enabled = false;
     }
 
-    private void InitializeVariables()
+    private void ChangeCubeColor()
     {
-        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
-        mr = GetComponent<MeshRenderer>();
-        col = GetComponent<BoxCollider>();
+        colorTimer += Time.deltaTime;
 
-        if (gg == null)
+        if (colorTimer >= .1f && g > 20 && b > 20)
         {
-            gg = FindObjectOfType<GroundGenerator>().GetComponent<GroundGenerator>();
+            g -= 10;
+            b -= 10;
+
+            colorTimer = 0;
+
+            material.color = new Color(r, g / 255, b / 255);
         }
     }
 
@@ -85,5 +76,33 @@ public class CubeScript : MonoBehaviour
         go.GetComponent<NavMeshObstacle>().carveOnlyStationary = false;
 
         Instantiate(go, playerTrans.position, Quaternion.identity);
+    }
+
+    private void FallCube()
+    {
+        if (fallSpeed < maxFallSpeed)
+        {
+            fallSpeedTimer += Time.deltaTime;
+
+            if (fallSpeedTimer >= 0.04f)
+            {
+                fallSpeed++;
+                fallSpeedTimer = 0;
+            }
+        }
+
+        transform.Translate(Vector3.down * (Time.deltaTime * fallSpeed));
+    }
+
+    private void InitializeVariables()
+    {
+        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
+        material = GetComponent<MeshRenderer>().material;
+        col = GetComponent<BoxCollider>();
+
+        if (gg == null)
+        {
+            gg = FindObjectOfType<GroundGenerator>().GetComponent<GroundGenerator>();
+        }
     }
 }
