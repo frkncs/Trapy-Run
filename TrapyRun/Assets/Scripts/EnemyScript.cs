@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Scripts;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -30,7 +31,10 @@ public class EnemyScript : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerController.gameStart) return;
+        if (GameManager.currentState != GameManager.GameStates.Start)
+        {
+            return;
+        }
 
         if (!animator.GetBool("isRunning"))
         {
@@ -39,7 +43,7 @@ public class EnemyScript : MonoBehaviour
 
         if (navMesh != null && navMesh.enabled) // enemy has ai
         {
-            if (player != null || !PlayerController.gameOver)
+            if (player != null && GameManager.currentState != GameManager.GameStates.GameOver)
             {
                 navMesh.SetDestination(playerTrans.position);
             }
@@ -48,7 +52,7 @@ public class EnemyScript : MonoBehaviour
                 LetAIGo(true);
             }
 
-            if (PlayerController.gameOver)
+            if (GameManager.currentState == GameManager.GameStates.GameOver)
             {
                 LetAIGo(true);
             }
@@ -56,12 +60,19 @@ public class EnemyScript : MonoBehaviour
 
         if (transform.position.y <= minYPos)
         {
-            float randomXValue = Random.Range(-5, 5);
-            float randomZValue = Random.Range(30, 40);
+            if (player != null && GameManager.currentState == GameManager.GameStates.Start)
+            {
+                float randomXValue = Random.Range(-5, 5);
+                float randomZValue = Random.Range(30, 40);
 
-            Vector3 newPos = new Vector3(playerTrans.position.x + randomXValue, playerTrans.position.y, playerTrans.position.z - randomZValue);
+                Vector3 newPos = new Vector3(playerTrans.position.x + randomXValue, playerTrans.position.y, playerTrans.position.z - randomZValue);
 
-            transform.position = newPos;
+                transform.position = newPos;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
 
         CheckIsFloating();

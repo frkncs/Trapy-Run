@@ -1,10 +1,10 @@
 ﻿namespace Assets.Scripts
 {
-    abstract class GameStates
+    abstract class GameManager
     {
-        public static GameState currentState;
+        public static GameStates currentState;
 
-        public enum GameState
+        public enum GameStates
         {
             Stop,
             Start,

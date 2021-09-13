@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class CameraScript : MonoBehaviour
 {
@@ -51,7 +52,7 @@ public class CameraScript : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (!PlayerController.gameOver && !canChangeAngle)
+        if (GameManager.currentState != GameManager.GameStates.GameOver && !canChangeAngle)
         {
             playerPos = player.transform.position;
             transform.position = playerPos + offset;

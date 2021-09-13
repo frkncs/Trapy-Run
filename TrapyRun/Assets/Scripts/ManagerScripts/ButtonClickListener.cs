@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonClickListener : MonoBehaviour
@@ -13,13 +14,14 @@ public class ButtonClickListener : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerController.gameStart && Input.GetMouseButtonDown(0))
+        if (GameManager.currentState == GameManager.GameStates.Stop && Input.GetMouseButtonDown(0))
         {
             GameObject clickedGO = EventSystem.current.currentSelectedGameObject;
 
             if (clickedGO == null)
             {
-                Actions.OpenScreen(null);
+                GameManager.currentState = GameManager.GameStates.Start;
+                Actions.OpenScreen();
             }
         }
     }

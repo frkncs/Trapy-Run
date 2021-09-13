@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
@@ -34,7 +35,10 @@ public class MoveScript : MonoBehaviour
 
     private void Update()
     {
-        if (!PlayerController.gameStart) return;
+        if (GameManager.currentState == GameManager.GameStates.Stop)
+        {
+            return;
+        }
 
         if (moveForward)
         {

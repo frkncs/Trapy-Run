@@ -67,11 +67,25 @@ public class UIController : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void OpenScreen(string screenName)
+    private void OpenScreen()
     {
-        if (screenName == null)
+        string screenName = null;
+
+        switch (GameManager.currentState)
         {
-            PlayerController.gameStart = true;
+            case GameManager.GameStates.Start:
+                break;
+            case GameManager.GameStates.Stop:
+                screenName = Strings.startScreen;
+                break;
+            case GameManager.GameStates.GameOver:
+                screenName = Strings.gameOverScreen;
+                break;
+            case GameManager.GameStates.YouWin:
+                screenName = Strings.youWinScreen;
+                break;
+            default:
+                break;
         }
 
         foreach (GameObject screen in screens)

@@ -9,7 +9,7 @@ public static class Actions
 
     public static Action ChangeCameraAngle;
     public static Action StartConfettiEffect;
-    public static Action<string> OpenScreen;
+    public static Action OpenScreen;
 
     // Private Variables
 

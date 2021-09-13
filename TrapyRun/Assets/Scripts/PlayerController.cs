@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
     #region Variables
 
     // Public Variables
-    [HideInInspector] public static bool gameStart = false;
-    [HideInInspector] public static bool gameOver = false;
 
     // Private Variables
     private Animator animator;
@@ -19,16 +17,14 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        Actions.OpenScreen(Strings.startScreen);
+        GameManager.currentState = GameManager.GameStates.Stop;
+        Actions.OpenScreen();
         
         InitializeVariables();
     }
 
     private void InitializeVariables()
     {
-        gameStart = false;
-        gameOver = false;
-
         animator = GetComponent<Animator>();
 
         Collider heliCheckerCol = GameObject.Find("Heli_Entry_Checker").GetComponent<Collider>();
@@ -37,7 +33,10 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (!gameStart) return;
+        if (GameManager.currentState == GameManager.GameStates.Stop)
+        {
+            return;
+        }
 
         if (!animator.GetBool("isRunning"))
         {
@@ -51,11 +50,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (GameManager.currentState == GameManager.GameStates.GameOver)
+        {
+            return;
+        }
+
         if (LayerMask.LayerToName(other.gameObject.layer) == "FinishLine")
         {
-            // YouWin
+            GameManager.currentState = GameManager.GameStates.YouWin;
             Actions.StartConfettiEffect();
-            Actions.OpenScreen(Strings.youWinScreen);
+            Actions.OpenScreen();
             Actions.ChangeCameraAngle();
         }
     }
@@ -80,7 +84,10 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (gameOver) return;
+        if (GameManager.currentState == GameManager.GameStates.GameOver)
+        {
+            return;
+        }
 
         if (collision.gameObject.CompareTag("GroundCube"))
         {
@@ -107,11 +114,8 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isFloating", true);
         }
 
-        // GameOver
-
-        gameOver = true;
-
-        Actions.OpenScreen(Strings.gameOverScreen);
+        GameManager.currentState = GameManager.GameStates.GameOver;
+        Actions.OpenScreen();
     }
 
     private float GetMousePos()

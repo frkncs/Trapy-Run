@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Assets.Scripts;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -37,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerController.gameStart)
+        if (GameManager.currentState == GameManager.GameStates.Start)
         {
             if (player != null)
             {
