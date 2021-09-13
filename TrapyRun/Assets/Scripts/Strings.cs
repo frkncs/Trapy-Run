@@ -1,18 +1,20 @@
 ﻿namespace Assets.Scripts
 {
-    class Strings
+    internal class Strings
     {
-        public enum PlayerPrefsKeys
-        {
-            level,
-            current_level,
-        }
+        #region PlayerPrefsKeys
 
-        public enum ScreenNames
-        {
-            StartScreen,
-            GameOverScreen,
-            YouWinScreen,
-        }
+        public const string level = "level";
+        public const string currentLevel = "currentLevel";
+
+        #endregion PlayerPrefsKeys
+
+        #region ScreenNames
+
+        public const string startScreen = "StartScreen";
+        public const string gameOverScreen = "GameOverScreen";
+        public const string youWinScreen = "YouWinScreen";
+
+        #endregion ScreenNames
     }
 }

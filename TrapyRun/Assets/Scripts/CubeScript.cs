@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 
 public class CubeScript : MonoBehaviour
@@ -10,36 +8,40 @@ public class CubeScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    static GroundGenerator gg;
+    private static GroundGenerator gg;
 
-    MeshRenderer mr;
+    private Transform playerTrans;
+    private MeshRenderer mr;
+    private Collider col;
 
-    float fallSpeed = 15;
-    float maxYPos = -20;
+    private readonly float fallSpeed = 15;
+    private readonly float maxYPos = -20;
 
-    bool canFall = false;
+    private bool canFall = false;
 
-    #endregion
+    #endregion Variables
 
     private void Start()
     {
-        mr = GetComponent<MeshRenderer>();
-
-        if (gg == null) gg = FindObjectOfType<GroundGenerator>().GetComponent<GroundGenerator>();
+        InitializeVariables();
     }
 
     private void Update()
     {
         if (canFall)
-            transform.Translate(Vector3.down * Time.deltaTime * fallSpeed);
+        {
+            transform.Translate(Vector3.down * (Time.deltaTime * fallSpeed));
+        }
 
         if (transform.position.y <= maxYPos)
+        {
             Destroy(gameObject);
+        }
     }
 
-    public void fall()
+    public void Fall()
     {
-        if (gg.isLevelIncludeNavMesh) createNavMeshObstacle();
+        if (gg.isLevelIncludeNavMesh) CreateNavMeshObstacle();
 
         if (ColorUtility.TryParseHtmlString("#F65149", out Color c))
         {
@@ -47,16 +49,28 @@ public class CubeScript : MonoBehaviour
         }
 
         canFall = true;
-		GetComponent<BoxCollider>().enabled = false;
+        col.enabled = false;
     }
 
-    void createNavMeshObstacle()
+    private void InitializeVariables()
+    {
+        playerTrans = GameObject.FindGameObjectWithTag("Player").transform;
+        mr = GetComponent<MeshRenderer>();
+        col = GetComponent<BoxCollider>();
+
+        if (gg == null)
+        {
+            gg = FindObjectOfType<GroundGenerator>().GetComponent<GroundGenerator>();
+        }
+    }
+
+    private void CreateNavMeshObstacle()
     {
         GameObject go = new GameObject("NavMeshObstacle");
         go.AddComponent<NavMeshObstacle>();
         go.GetComponent<NavMeshObstacle>().carving = true;
         go.GetComponent<NavMeshObstacle>().carveOnlyStationary = false;
 
-        Instantiate(go, GameObject.FindGameObjectWithTag("Player").transform.position, Quaternion.identity);
+        Instantiate(go, playerTrans.position, Quaternion.identity);
     }
 }

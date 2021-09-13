@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 
 public class GroundGenerator : MonoBehaviour
 {
@@ -9,11 +8,11 @@ public class GroundGenerator : MonoBehaviour
     public bool isLevelIncludeNavMesh = false;
 
     // Private Variables
-    [SerializeField] int row, column;
+    [SerializeField] private int row, column;
 
-    #endregion
+    #endregion Variables
 
-    public void generateGround(GameObject cube, GameObject barrier)
+    public void GenerateGround(GameObject cube, GameObject barrier)
     {
         // Row count for just one side
         // eg. [row] left + [row] right + 1 center
@@ -39,11 +38,11 @@ public class GroundGenerator : MonoBehaviour
 
                 if (x == 0)
                 {
-                    addBarrier(go, barrier, false);
+                    AddBarrier(go, barrier, false);
                 }
                 else if (x == row * 2 + 1 - 1)
                 {
-                    addBarrier(go, barrier, true);
+                    AddBarrier(go, barrier, true);
                 }
             }
 
@@ -52,7 +51,7 @@ public class GroundGenerator : MonoBehaviour
         }
     }
 
-    public void deleteGroundItems()
+    public void DeleteGroundItems()
     {
         GameObject[] cubes = GameObject.FindGameObjectsWithTag("GroundCube");
 
@@ -62,12 +61,11 @@ public class GroundGenerator : MonoBehaviour
         }
     }
 
-    void addBarrier(GameObject objectToParent, GameObject barrier, bool isRight)
+    private void AddBarrier(GameObject objectToParent, GameObject barrier, bool isRight)
     {
         GameObject barrierObj = Instantiate(barrier, Vector3.zero, Quaternion.identity);
         barrierObj.transform.SetParent(objectToParent.transform);
-        barrierObj.transform.localPosition = new Vector3((isRight ? 1 : -1) * .35f , .55f, 0);
+        barrierObj.transform.localPosition = new Vector3((isRight ? 1 : -1) * .35f, .55f, 0);
         barrierObj.transform.localScale = new Vector3(.3f, .1f, 1);
     }
 }
-

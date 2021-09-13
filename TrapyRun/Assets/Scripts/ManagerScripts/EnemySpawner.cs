@@ -9,37 +9,35 @@ public class EnemySpawner : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    [SerializeField] int enemyCount = 0;
-    [SerializeField] float minSpawnPosition = -5f;
-    [SerializeField] float maxSpawnPosition = 5f;
-    [SerializeField] float spawnDistance = 65;
-    [SerializeField] List<GameObject> enemiesToSpawn;
+    [SerializeField] private int enemyCount = 0;
 
-    static int createdAIEnemyCount;
+    [SerializeField] private float minSpawnPosition = -5f;
+    [SerializeField] private float maxSpawnPosition = 5f;
+    [SerializeField] private float spawnDistance = 65;
+    [SerializeField] private List<GameObject> enemiesToSpawn;
 
-    GameObject player;
-    Transform playerTrans;
+    private static int createdAIEnemyCount;
 
-    int createdEnemyCount = 0;
-    float spawnTimer = 0;
-    bool canSpawn = false;
+    private GameObject player;
+    private Transform playerTrans;
 
-    const int maxAIEnemyCount = 5;
-    const float spawnInterval = .2f;
+    private int createdEnemyCount = 0;
+    private float spawnTimer = 0;
+    private bool canSpawn = false;
 
-    #endregion
+    private const int maxAIEnemyCount = 5;
+    private const float spawnInterval = .2f;
+
+    #endregion Variables
 
     private void Start()
     {
-        createdAIEnemyCount = 0;
-
-        player = GameObject.FindGameObjectWithTag("Player");
-        playerTrans = player.transform;
+        InitializeVariables();
     }
 
-    void Update()
+    private void Update()
     {
-        if (PlayerController.isGameStart)
+        if (PlayerController.gameStart)
         {
             if (player != null)
             {
@@ -50,24 +48,32 @@ public class EnemySpawner : MonoBehaviour
                 if (canSpawn)
                 {
                     if (createdEnemyCount < enemyCount)
-                        spawn();
+                        Spawn();
                 }
             }
         }
     }
 
-    void spawn()
+    private void InitializeVariables()
+    {
+        createdAIEnemyCount = 0;
+
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerTrans = player.transform;
+    }
+
+    private void Spawn()
     {
         spawnTimer += Time.deltaTime;
 
         if (spawnTimer >= spawnInterval)
         {
-			spawnEnemy();
+            SpawnEnemy();
             spawnTimer = 0;
-		}
+        }
     }
 
-    void spawnEnemy()
+    private void SpawnEnemy()
     {
         int spawnEnemyInx = Random.Range(0, enemiesToSpawn.Count);
         GameObject enemyToSpawn = enemiesToSpawn[spawnEnemyInx];
@@ -81,7 +87,10 @@ public class EnemySpawner : MonoBehaviour
                 spawnEnemyInx = Random.Range(0, enemiesToSpawn.Count);
                 enemyToSpawn = enemiesToSpawn[spawnEnemyInx];
             }
-            else createdAIEnemyCount++;
+            else
+            {
+                createdAIEnemyCount++;
+            }
         }
 
         float randomXPos = Random.Range(minSpawnPosition, maxSpawnPosition);

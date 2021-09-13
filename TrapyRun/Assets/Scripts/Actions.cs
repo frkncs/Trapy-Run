@@ -2,16 +2,16 @@
 
 public static class Actions
 {
-	#region Variables
+    #region Variables
 
-	// Public Variables
-	public static Action MoveHelicopter;
-	public static Action ChangeCameraAngle;
-	public static Action<string> OpenScreen;
-	
-	// Private Variables
-	
-	#endregion
+    // Public Variables
+    public static Action MoveHelicopter;
 
-    
+    public static Action ChangeCameraAngle;
+    public static Action StartConfettiEffect;
+    public static Action<string> OpenScreen;
+
+    // Private Variables
+
+    #endregion Variables
 }

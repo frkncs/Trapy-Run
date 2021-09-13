@@ -18,11 +18,11 @@ public class GenerateGround : Editor
 
         if (GUILayout.Button("Generate Ground"))
         {
-            gg.generateGround(cube, barrier);
+            gg.GenerateGround(cube, barrier);
         }
         else if (GUILayout.Button("Delete All Ground Items"))
         {
-            gg.deleteGroundItems();
+            gg.DeleteGroundItems();
         }
 
         GUILayout.EndHorizontal();

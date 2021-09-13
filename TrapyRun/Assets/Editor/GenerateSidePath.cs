@@ -25,7 +25,7 @@ public class GenerateSidePath : Editor
 
         if (GUILayout.Button("Generate Side Path"))
         {
-            spg.generateSidePath(cube);
+            spg.GenerateSidePath(cube);
         }
     }
 

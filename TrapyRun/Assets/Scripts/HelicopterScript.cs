@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class HelicopterScript : MonoBehaviour
 {
@@ -9,37 +7,41 @@ public class HelicopterScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    bool canMove = false;
+    private bool canMove = false;
 
-    const float upSpeed = 3.5f;
-    const float turnSpeed = 13;
-    const float moveSpeed = 12;
-    const float rotX = 340;
+    private const float upSpeed = 3.5f;
+    private const float turnSpeed = 13;
+    private const float moveSpeed = 12;
+    private const float rotX = 340;
 
-    #endregion
+    #endregion Variables
 
     private void OnEnable()
     {
-        Actions.MoveHelicopter += moveHelicopter;
-    }
-    private void OnDisable()
-    {
-        Actions.MoveHelicopter -= moveHelicopter;
+        Actions.MoveHelicopter += MoveHelicopter;
     }
 
-    void FixedUpdate()
+    private void OnDisable()
+    {
+        Actions.MoveHelicopter -= MoveHelicopter;
+    }
+
+    private void FixedUpdate()
     {
         if (canMove)
         {
-            transform.Translate(Vector3.up * Time.deltaTime * upSpeed);
+            transform.Translate(Vector3.up * (Time.deltaTime * upSpeed));
 
-            if (transform.localRotation.eulerAngles.x > rotX) transform.Rotate(Vector3.right * -1 * Time.deltaTime * turnSpeed);
+            if (transform.localRotation.eulerAngles.x > rotX)
+            {
+                transform.Rotate(Time.deltaTime * turnSpeed * -1 * Vector3.right);
+            }
 
-            transform.Translate(Vector3.back * Time.deltaTime * moveSpeed);
+            transform.Translate(Vector3.back * (Time.deltaTime * moveSpeed));
         }
     }
 
-    void moveHelicopter()
+    private void MoveHelicopter()
     {
         canMove = true;
     }

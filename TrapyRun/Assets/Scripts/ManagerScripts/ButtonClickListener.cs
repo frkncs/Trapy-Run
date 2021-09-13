@@ -1,25 +1,26 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class ButtonClickListener : MonoBehaviour
 {
-	#region Variables
+    #region Variables
 
-	// Public Variables
+    // Public Variables
 
     // Private Variables
 
-    #endregion
+    #endregion Variables
 
-    void Update()
+    private void Update()
     {
-        if (!PlayerController.isGameStart && Input.GetMouseButtonDown(0))
+        if (!PlayerController.gameStart && Input.GetMouseButtonDown(0))
         {
-			GameObject clickedGO = EventSystem.current.currentSelectedGameObject;
+            GameObject clickedGO = EventSystem.current.currentSelectedGameObject;
 
-			if (clickedGO == null)
-				Actions.OpenScreen(null);
-		}
+            if (clickedGO == null)
+            {
+                Actions.OpenScreen(null);
+            }
+        }
     }
 }

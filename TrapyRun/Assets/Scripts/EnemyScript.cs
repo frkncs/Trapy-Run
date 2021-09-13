@@ -9,55 +9,69 @@ public class EnemyScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    Animator animator;
-    NavMeshAgent navMesh;
-    Vector3 playerPos;
-    GameObject player;
+    private Animator animator;
 
-    float minYPos = -5;
-	float fallSpeed = 10;
+    private NavMeshAgent navMesh;
+    private Transform playerTrans;
+    private GameObject player;
+    private MoveScript moveScript;
 
-    bool isFindPath = false;
+    private float minYPos = -5;
+    private float fallSpeed = 10;
 
-    #endregion
+    private bool isFindPath = false;
+
+    #endregion Variables
 
     private void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        animator = GetComponent<Animator>();
-        navMesh = GetComponent<NavMeshAgent>();
+        InitializeVariables();
     }
 
     private void Update()
     {
-        if (!PlayerController.isGameStart) return;
-        else
-            if (!animator.GetBool("isRunning")) animator.SetBool("isRunning", true);
+        if (!PlayerController.gameStart) return;
+
+        if (!animator.GetBool("isRunning"))
+        {
+            animator.SetBool("isRunning", true);
+        }
 
         if (navMesh != null && navMesh.enabled) // enemy has ai
         {
             if (player != null || !PlayerController.gameOver)
             {
-                playerPos = player.transform.position;
-                navMesh.SetDestination(playerPos);
+                navMesh.SetDestination(playerTrans.position);
             }
             else
-                letAIGo(true);
+            {
+                LetAIGo(true);
+            }
 
             if (PlayerController.gameOver)
-                letAIGo(true);
+            {
+                LetAIGo(true);
+            }
         }
 
-        if (transform.position.y <= minYPos) Destroy(gameObject);
+        if (transform.position.y <= minYPos)
+        {
+            float randomXValue = Random.Range(-5, 5);
+            float randomZValue = Random.Range(30, 40);
 
-        checkIsFloating();
+            Vector3 newPos = new Vector3(playerTrans.position.x + randomXValue, playerTrans.position.y, playerTrans.position.z - randomZValue);
+
+            transform.position = newPos;
+        }
+
+        CheckIsFloating();
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().die(dieWithFalling: false);
+            collision.gameObject.GetComponent<PlayerController>().Die(dieWithFalling: false);
         }
 
         if (!isFindPath)
@@ -71,58 +85,77 @@ public class EnemyScript : MonoBehaviour
                 else if (collision.gameObject.CompareTag("GroundCube"))
                 {
                     isFindPath = true;
-                    StartCoroutine(resetLookRotation());
+                    StartCoroutine(ResetLookRotation());
                 }
             }
         }
     }
 
-    IEnumerator resetLookRotation()
+    private void InitializeVariables()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerTrans = player.transform;
+        animator = GetComponent<Animator>();
+        navMesh = GetComponent<NavMeshAgent>();
+        moveScript = GetComponent<MoveScript>();
+    }
+
+    private IEnumerator ResetLookRotation()
     {
         yield return new WaitForSeconds(0.2f);
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
-    void letAIGo(bool let)
+    private void LetAIGo(bool let)
     {
         if (let)
         {
-            if (navMesh.enabled)
-            {
-                navMesh.enabled = false;
-                GetComponent<MoveScript>().enabled = true;
-                transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
-            }
+            ChangeNavMeshState(false);
         }
         else
         {
-            if (!navMesh.enabled)
-            {
-                navMesh.enabled = true;
-                GetComponent<MoveScript>().enabled = false;
-                transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
-            }
+            ChangeNavMeshState(true);
         }
     }
 
-    void checkIsFloating()
+    private void ChangeNavMeshState(bool newNavMeshState)
+    {
+        if (navMesh.enabled == !newNavMeshState)
+        {
+            navMesh.enabled = newNavMeshState;
+            moveScript.enabled = !newNavMeshState;
+            transform.LookAt(new Vector3(0, 0, transform.position.z + 10));
+        }
+    }
+
+    private void CheckIsFloating()
     {
         if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 2))
         {
             if (hitInfo.collider == null)
             {
-                if (!animator.GetBool("isFloating")) animator.SetBool("isFloating", true);
+                if (!animator.GetBool("isFloating"))
+                {
+                    animator.SetBool("isFloating", true);
+                }
 
-                if (navMesh != null) letAIGo(true);
+                if (navMesh != null)
+                {
+                    LetAIGo(true);
+                }
 
-				transform.Translate(Vector3.down * Time.deltaTime * fallSpeed);
+                transform.Translate(Vector3.down * (Time.deltaTime * fallSpeed));
             }
         }
         else
         {
-            if (animator.GetBool("isFloating")) animator.SetBool("isFloating", false);
-            if (navMesh != null) letAIGo(false);
+            if (animator.GetBool("isFloating"))
+            {
+                animator.SetBool("isFloating", false);
+            }
+
+            if (navMesh != null) LetAIGo(false);
         }
     }
 }

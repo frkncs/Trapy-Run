@@ -11,42 +11,40 @@ public class UIController : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    List<GameObject> screens;
 
-    string levelKey, currentLevelKey;
+    private List<GameObject> screens;
 
-    #endregion
+    #endregion Variables
 
     private void OnEnable()
     {
-        Actions.OpenScreen += openScreen;
+        Actions.OpenScreen += OpenScreen;
     }
 
     private void OnDisable()
     {
-        Actions.OpenScreen -= openScreen;
+        Actions.OpenScreen -= OpenScreen;
     }
 
     private void Awake()
     {
-        currentLevelKey = Strings.PlayerPrefsKeys.current_level.ToString();
-        levelKey = Strings.PlayerPrefsKeys.level.ToString();
+        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(Strings.currentLevel))
+        {
+            SceneManager.LoadScene(PlayerPrefs.GetInt(Strings.currentLevel));
+        }
 
-        if (SceneManager.GetActiveScene().buildIndex != PlayerPrefs.GetInt(currentLevelKey))
-            SceneManager.LoadScene(PlayerPrefs.GetInt(currentLevelKey));
-
-        fillList();
+        FillList();
     }
 
     private void Start()
     {
         TextMeshProUGUI txtLevel = transform.Find("txtLevel").GetComponentInChildren<TextMeshProUGUI>();
-        txtLevel.text = "Level " + (PlayerPrefs.GetInt(levelKey) + 1);
+        txtLevel.text = "Level " + (PlayerPrefs.GetInt(Strings.level) + 1);
     }
 
-    public void nextLevel()
+    public void NextLevel()
     {
-        PlayerPrefs.SetInt(levelKey, PlayerPrefs.GetInt(levelKey) + 1);
+        PlayerPrefs.SetInt(Strings.level, PlayerPrefs.GetInt(Strings.level) + 1);
 
         int sceneCount = SceneManager.sceneCountInBuildSettings;
 
@@ -54,39 +52,48 @@ public class UIController : MonoBehaviour
         {
             int randomLevelInx = Random.Range(0, sceneCount - 1);
 
-            PlayerPrefs.SetInt(currentLevelKey, randomLevelInx);
+            PlayerPrefs.SetInt(Strings.currentLevel, randomLevelInx);
             SceneManager.LoadScene(randomLevelInx);
         }
         else
         {
-            PlayerPrefs.SetInt(currentLevelKey, SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt(Strings.currentLevel, SceneManager.GetActiveScene().buildIndex + 1);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
-    public void restart()
+    public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void openScreen(string screenName)
+    private void OpenScreen(string screenName)
     {
-        if (screenName == null) PlayerController.isGameStart = true;
+        if (screenName == null)
+        {
+            PlayerController.gameStart = true;
+        }
 
         foreach (GameObject screen in screens)
         {
             if (screen.name == screenName)
             {
-                if (!screen.activeInHierarchy) screen.SetActive(true);
+                if (!screen.activeInHierarchy)
+                {
+                    screen.SetActive(true);
+                }
             }
             else
             {
-                if (screen.activeInHierarchy) screen.SetActive(false);
+                if (screen.activeInHierarchy)
+                {
+                    screen.SetActive(false);
+                }
             }
         }
     }
 
-    void fillList()
+    private void FillList()
     {
         screens = new List<GameObject>();
 

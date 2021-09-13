@@ -8,16 +8,15 @@ public class SidePathGenerator : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    [SerializeField] int row, column;
+    [SerializeField] private int row, column;
 
-    GroundGenerator gg;
+    private GroundGenerator gg;
 
-    bool isLevelIncludeNavMesh = false;
+    private bool isLevelIncludeNavMesh = false;
 
-    #endregion
+    #endregion Variables
 
-    
-    public void generateSidePath(GameObject cube)
+    public void GenerateSidePath(GameObject cube)
     {
         // Row count for just one side
         // eg. [row] left + [row] right + 1 center

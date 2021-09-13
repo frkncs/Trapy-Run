@@ -7,16 +7,58 @@ public class CameraScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    Transform heliStopTrans;
-    GameObject player;
-    Vector3 playerPos;
-    Vector3 offset;
+    private Transform heliStopTrans;
 
-    bool canChangeAngle = false;
+    private GameObject player;
+    private Vector3 playerPos;
+    private Vector3 offset;
 
-    #endregion
+    private bool canChangeAngle = false;
 
-    void Start()
+    #endregion Variables
+
+    private void Start()
+    {
+        InitializeVariables();
+    }
+
+    private void OnEnable()
+    {
+        Actions.ChangeCameraAngle += ChangeAngle;
+        Actions.StartConfettiEffect += StartConfettiEffect;
+    }
+
+    private void OnDisable()
+    {
+        Actions.ChangeCameraAngle -= ChangeAngle;
+        Actions.StartConfettiEffect -= StartConfettiEffect;
+    }
+
+    private void Update()
+    {
+        if (canChangeAngle)
+        {
+            if (player != null)
+            {
+                transform.LookAt(player.transform);
+            }
+            else
+            {
+                transform.LookAt(heliStopTrans);
+            }
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if (!PlayerController.gameOver && !canChangeAngle)
+        {
+            playerPos = player.transform.position;
+            transform.position = playerPos + offset;
+        }
+    }
+
+    private void InitializeVariables()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         playerPos = player.transform.position;
@@ -27,37 +69,14 @@ public class CameraScript : MonoBehaviour
         offset = transform.position - playerPos;
     }
 
-    private void OnEnable()
-    {
-        Actions.ChangeCameraAngle += changeAngle;
-    }
-    private void OnDisable()
-    {
-        Actions.ChangeCameraAngle -= changeAngle;
-    }
-
-    private void Update()
-    {
-        if (canChangeAngle)
-        {
-            if (player != null)
-                transform.LookAt(player.transform);
-            else
-                transform.LookAt(heliStopTrans);
-        }
-    }
-
-    void LateUpdate()
-    {
-        if (!PlayerController.gameOver && !canChangeAngle)
-        {
-            playerPos = player.transform.position;
-            transform.position = playerPos + offset;
-        }
-    }
-
-    void changeAngle()
+    private void ChangeAngle()
     {
         canChangeAngle = true;
+    }
+
+    private void StartConfettiEffect()
+    {
+        transform.Find("Confetti_01").gameObject.SetActive(true);
+        transform.Find("Confetti_02").gameObject.SetActive(true);
     }
 }
