@@ -16,7 +16,7 @@ public class MoveScript : MonoBehaviour
     [SerializeField] private bool moveHorizontal = false;
     [SerializeField] private bool canTurn = false;
     [SerializeField] private bool turnClockwise = false;
-    [SerializeField] private string turnCoordinate = "x";
+    [SerializeField] private Vector3 turnCoordinate;
 
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float turnSpeed = 0;
@@ -35,11 +35,6 @@ public class MoveScript : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.currentState == GameManager.GameStates.Stop)
-        {
-            return;
-        }
-
         if (moveForward)
         {
             MoveForward();
@@ -63,23 +58,7 @@ public class MoveScript : MonoBehaviour
 
     private void InitializeRotValue()
     {
-        switch (turnCoordinate.ToLower().Trim())
-        {
-            case "x":
-                rot = new Vector3((turnClockwise ? 1 : -1) * 360, 0, 0);
-                break;
-
-            case "y":
-                rot = new Vector3(0, (turnClockwise ? 1 : -1) * 360, 0);
-                break;
-
-            case "z":
-                rot = new Vector3(0, 0, (turnClockwise ? 1 : -1) * 360);
-                break;
-
-            default:
-                break;
-        }
+        rot = turnCoordinate * (turnClockwise ? 1 : -1) * 360;
     }
 
     private void MoveForward()

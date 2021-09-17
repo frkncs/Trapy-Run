@@ -47,6 +47,7 @@ public class UIController : MonoBehaviour
     private void FinishTutorial()
     {
         Actions.TutorialFinishEvent?.Invoke();
+        tutorialUI.SetActive(false);
     }
 
     private IEnumerator TutorialLoop()

@@ -6,12 +6,12 @@ namespace States.Player
     {
         public PlayerRunState(PlayerController playerController) : base(playerController)
         {
-            playerController.PlaRunAnim();
+            playerController.PlayRunAnim();
         }
 
         public override void Update(PlayerController playerController)
         {
-            playerController.MoveHorizontal();
+            playerController.playerMovement.MoveAndRotate();
         }
 
         public override void FixedUpdate(PlayerController playerController)

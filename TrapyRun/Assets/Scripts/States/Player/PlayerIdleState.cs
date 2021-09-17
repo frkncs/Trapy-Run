@@ -7,7 +7,7 @@ public class PlayerIdleState : PlayerBaseState
 {
     public PlayerIdleState(PlayerController playerController) : base(playerController)
     {
-        playerController.PlaIdleAnim();
+        playerController.PlayIdleAnim();
     }
 
     public override void Update(PlayerController playerController)

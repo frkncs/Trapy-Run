@@ -6,7 +6,7 @@ namespace States.Player
     {
         public PlayerFallState(PlayerController playerController) : base(playerController)
         {
-            playerController.PlaFallAnim();
+            playerController.PlayFallAnim();
         }
 
         public override void Update(PlayerController playerController)

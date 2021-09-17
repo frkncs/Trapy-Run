@@ -1,57 +1,63 @@
-﻿using Assets.Scripts;
+﻿using System;
+using Assets.Scripts;
 using States.Player;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
-    
     #region Variables
     [SerializeField] private LayerMask groundLayerMask;
     
     [HideInInspector] public PlayerBaseState currentState;
-    // Public Variables
+    [HideInInspector] public PlayerMovement playerMovement;
 
-    // Private Variables
-    private Animator animator;
-    private MoveScript _moveScript;
-
-    private float firstFingerX, lastFingerX;
     private float minYPos = -15;
-
+    private Animator animator;
+    private Rigidbody _rigidbody;
+    
     #endregion Variables
 
     private void Start()
     {
-        Stop();
-
         SignUpEvents();
         InitializeVariables();
+        Stop();
     }
 
     private void InitializeVariables()
     {
         animator = GetComponent<Animator>();
-        _moveScript = GetComponent<MoveScript>();
+        _rigidbody = GetComponent<Rigidbody>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     private void SignUpEvents()
     {
         Actions.TutorialFinishEvent += Run;
     }
+    
+    private void SignOutEvents()
+    {
+        Actions.TutorialFinishEvent -= Run;
+    }
 
     public void Stop()
     {
         currentState = new PlayerIdleState(this);
-        _moveScript.enabled = false;
+        playerMovement.enabled = false;
     }
     
     private void Run()
     {
         currentState = new PlayerRunState(this);
-        _moveScript.enabled = true;
+        playerMovement.enabled = true;
     }
-    
+
+    private void FixedUpdate()
+    {
+        currentState.FixedUpdate(this);
+    }
+
     private void Update()
     {
         currentState.Update(this);
@@ -69,27 +75,15 @@ public class PlayerController : MonoBehaviour
     {
         if (LayerMask.LayerToName(collision.gameObject.layer) == "HelicopterStop")
         {
-            MoveScript ms = GetComponent<MoveScript>();
+            Stop();
 
-            if (ms != null)
-            {
-                ms.enabled = false;
-                animator.SetBool("isRunning", false);
-
-                Actions.HeliEvent();
-
-                Destroy(gameObject, 1.5f);
-            }
+            Actions.HeliEvent();
+            Destroy(gameObject, 1.5f);
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        if (GameManager.currentState == GameManager.GameStates.GameOver)
-        {
-            return;
-        }
-
         if (collision.gameObject.CompareTag("GroundCube"))
         {
             CubeScript cubeScript = collision.gameObject.GetComponent<CubeScript>();
@@ -109,46 +103,16 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        _moveScript.enabled = false;
+        playerMovement.enabled = false;
         enabled = false;
 
         Actions.LoseEvent?.Invoke();
     }
 
-    private float GetMousePos()
-    {
-        Vector3 mousePos = Input.mousePosition;
-        mousePos.z = transform.position.y + 5;
-
-        return Camera.main.ScreenToWorldPoint(mousePos).x;
-    }
-
-    public void MoveHorizontal()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            firstFingerX = GetMousePos();
-        }
-        else if (Input.GetMouseButton(0))
-        {
-            lastFingerX = GetMousePos();
-
-            float dif = lastFingerX - firstFingerX;
-
-            transform.rotation = Quaternion.Euler(0, dif * 50, 0);
-            transform.position += new Vector3(dif, 0, 0) * 0.9f;
-
-            firstFingerX = lastFingerX;
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z + 5));
-        }
-    }
-
     public bool CheckIsFloating()
     {
-        return Physics.Raycast(transform.position, Vector3.down, 1, groundLayerMask);
+        /*return transform.position.y <= -1.3f;*/
+        return _rigidbody.velocity.y < -0.01f;
     }
 
     public bool CheckIfFell()
@@ -156,23 +120,28 @@ public class PlayerController : MonoBehaviour
         return (transform.position.y <= minYPos);
     }
 
-    public void PlaIdleAnim()
+    public void PlayIdleAnim()
     {
-        //TODO: Play Idle Animation
+        animator.Play("Idle");
     }
     
-    public void PlaRunAnim()
+    public void PlayRunAnim()
     {
-        //TODO: Play Run Animation
+        animator.Play("Running");
     }
     
-    public void PlaFallAnim()
+    public void PlayFallAnim()
     {
-        //TODO: Play Fall Animation
+        animator.Play("Falling");
     }
 
     public void PlayDeathAnim()
     {
-        //TODO: Play Death Animation
+        animator.Play("Death");
+    }
+    
+    private void OnDisable()
+    {
+        SignOutEvents();
     }
 }
