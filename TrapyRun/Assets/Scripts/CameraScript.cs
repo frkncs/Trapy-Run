@@ -1,4 +1,5 @@
-﻿using Assets.Scripts;
+﻿using System.Collections;
+using Assets.Scripts;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour
@@ -15,31 +16,54 @@ public class CameraScript : MonoBehaviour
     private Vector3 offset;
 
     private bool canChangeAngle = false;
-
+    
     #endregion Variables
 
     private void Start()
     {
         InitializeVariables();
+
+        FollowPlayer();
     }
 
     private void OnEnable()
     {
-        Actions.ChangeCameraAngle += ChangeAngle;
-        Actions.StartConfettiEffect += StartConfettiEffect;
+        Actions.WinEvent += OnWinEvent;
     }
 
     private void OnDisable()
     {
-        Actions.ChangeCameraAngle -= ChangeAngle;
-        Actions.StartConfettiEffect -= StartConfettiEffect;
+        StopAllCoroutines();
+        Actions.WinEvent -= OnWinEvent;
     }
 
-    private void Update()
+    private void OnWinEvent()
     {
-        if (canChangeAngle)
+        ActivateAngle();
+        StartConfettiEffect();
+        StopAllCoroutines();
+        StartRotation();
+    }
+
+    private void FollowPlayer()
+    {
+        StartCoroutine(MovementLoop());
+    }
+
+    private IEnumerator MovementLoop()
+    {
+        while (true)
         {
-            if (player != null)
+            Move();
+            yield return null;
+        }
+    }
+
+    private IEnumerator RotationLoop()
+    {
+        while (true)
+        {
+            if ((object)player != null)
             {
                 transform.LookAt(player.transform);
             }
@@ -47,16 +71,20 @@ public class CameraScript : MonoBehaviour
             {
                 transform.LookAt(heliStopTrans);
             }
+            
+            yield return null;
         }
     }
 
-    private void LateUpdate()
+    private void StartRotation()
     {
-        if (GameManager.currentState != GameManager.GameStates.GameOver && !canChangeAngle)
-        {
-            playerPos = player.transform.position;
-            transform.position = playerPos + offset;
-        }
+        StartCoroutine(RotationLoop());
+    }
+
+    private void Move()
+    {
+        playerPos = player.transform.position;
+        transform.position = playerPos + offset;
     }
 
     private void InitializeVariables()
@@ -70,7 +98,7 @@ public class CameraScript : MonoBehaviour
         offset = transform.position - playerPos;
     }
 
-    private void ChangeAngle()
+    private void ActivateAngle()
     {
         canChangeAngle = true;
     }

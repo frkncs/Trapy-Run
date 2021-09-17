@@ -1,0 +1,13 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/projectSettingsUpdater.xml
+/modules.xml
+/.idea.TrapyRun.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../:\Users\akinkursatozkan\Desktop\Demos\Furkan Koç\Trapy-Run\TrapyRun\.idea\.idea.TrapyRun\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

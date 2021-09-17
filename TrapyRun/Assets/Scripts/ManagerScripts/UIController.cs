@@ -1,4 +1,5 @@
-﻿using Assets.Scripts;
+﻿using System.Collections;
+using Assets.Scripts;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -12,19 +13,14 @@ public class UIController : MonoBehaviour
 
     // Private Variables
 
+    [SerializeField] private GameObject winUI;
+    [SerializeField] private GameObject loseUI;
+    [SerializeField] private GameObject tutorialUI;
+    
+
     private List<GameObject> screens;
 
     #endregion Variables
-
-    private void OnEnable()
-    {
-        Actions.OpenScreen += OpenScreen;
-    }
-
-    private void OnDisable()
-    {
-        Actions.OpenScreen -= OpenScreen;
-    }
 
     private void Awake()
     {
@@ -32,14 +28,67 @@ public class UIController : MonoBehaviour
         {
             SceneManager.LoadScene(PlayerPrefs.GetInt(Strings.currentLevel));
         }
-
-        FillList();
     }
-
+    
     private void Start()
     {
         TextMeshProUGUI txtLevel = transform.Find("txtLevel").GetComponentInChildren<TextMeshProUGUI>();
         txtLevel.text = "Level " + (PlayerPrefs.GetInt(Strings.level) + 1);
+
+        StartTutorial();
+    }
+
+    private void StartTutorial()
+    {
+        tutorialUI.SetActive(true);
+        StartCoroutine(TutorialLoop());
+    }
+
+    private void FinishTutorial()
+    {
+        Actions.TutorialFinishEvent?.Invoke();
+    }
+
+    private IEnumerator TutorialLoop()
+    {
+        while (true)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                FinishTutorial();
+                break;
+            }
+            yield return null;
+        }
+    }
+    
+    private void OnEnable()
+    {
+        SignUpEvents();
+    }
+
+    private void OnWinEvent()
+    {
+        winUI.SetActive(true);
+        SignOutEvents();
+    }
+
+    private void OnLoseEvent()
+    {
+        loseUI.SetActive(true);
+        SignOutEvents();
+    }
+
+    private void SignUpEvents()
+    {
+        Actions.WinEvent += OnWinEvent;
+        Actions.LoseEvent += OnLoseEvent;
+    }
+
+    private void SignOutEvents()
+    {
+        Actions.WinEvent -= OnWinEvent;
+        Actions.LoseEvent -= OnLoseEvent;
     }
 
     public void NextLevel()
@@ -66,54 +115,9 @@ public class UIController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-    private void OpenScreen()
+    
+    private void OnDisable()
     {
-        string screenName = null;
-
-        switch (GameManager.currentState)
-        {
-            case GameManager.GameStates.Start:
-                break;
-            case GameManager.GameStates.Stop:
-                screenName = Strings.startScreen;
-                break;
-            case GameManager.GameStates.GameOver:
-                screenName = Strings.gameOverScreen;
-                break;
-            case GameManager.GameStates.YouWin:
-                screenName = Strings.youWinScreen;
-                break;
-            default:
-                break;
-        }
-
-        foreach (GameObject screen in screens)
-        {
-            if (screen.name == screenName)
-            {
-                if (!screen.activeInHierarchy)
-                {
-                    screen.SetActive(true);
-                }
-            }
-            else
-            {
-                if (screen.activeInHierarchy)
-                {
-                    screen.SetActive(false);
-                }
-            }
-        }
-    }
-
-    private void FillList()
-    {
-        screens = new List<GameObject>();
-
-        foreach (GameObject item in GameObject.FindGameObjectsWithTag("Panel"))
-        {
-            screens.Add(item);
-        }
+        SignOutEvents();
     }
 }

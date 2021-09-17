@@ -18,12 +18,12 @@ public class HelicopterScript : MonoBehaviour
 
     private void OnEnable()
     {
-        Actions.MoveHelicopter += MoveHelicopter;
+        Actions.HeliEvent += MoveHelicopter;
     }
 
     private void OnDisable()
     {
-        Actions.MoveHelicopter -= MoveHelicopter;
+        Actions.HeliEvent -= MoveHelicopter;
     }
 
     private void FixedUpdate()

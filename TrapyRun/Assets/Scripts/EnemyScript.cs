@@ -82,7 +82,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().Die(dieWithFalling: false);
+            collision.gameObject.GetComponent<PlayerController>().Catch();
         }
 
         if (!isFindPath)

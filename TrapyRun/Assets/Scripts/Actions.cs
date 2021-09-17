@@ -5,11 +5,12 @@ public static class Actions
     #region Variables
 
     // Public Variables
-    public static Action MoveHelicopter;
+    public static Action HeliEvent;
 
-    public static Action ChangeCameraAngle;
-    public static Action StartConfettiEffect;
-    public static Action OpenScreen;
+    public static Action TutorialFinishEvent;
+    
+    public static Action WinEvent;
+    public static Action LoseEvent;
 
     // Private Variables
 

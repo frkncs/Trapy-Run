@@ -1,14 +1,20 @@
 ﻿using Assets.Scripts;
+using States.Player;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
+    
     #region Variables
-
+    [SerializeField] private LayerMask groundLayerMask;
+    
+    [HideInInspector] public PlayerBaseState currentState;
     // Public Variables
 
     // Private Variables
     private Animator animator;
+    private MoveScript _moveScript;
 
     private float firstFingerX, lastFingerX;
     private float minYPos = -15;
@@ -17,50 +23,45 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        GameManager.currentState = GameManager.GameStates.Stop;
-        Actions.OpenScreen();
+        Stop();
 
+        SignUpEvents();
         InitializeVariables();
     }
 
     private void InitializeVariables()
     {
         animator = GetComponent<Animator>();
-
-        Collider heliCheckerCol = GameObject.Find("Heli_Entry_Checker").GetComponent<Collider>();
-        Physics.IgnoreCollision(heliCheckerCol, GetComponent<Collider>());
+        _moveScript = GetComponent<MoveScript>();
     }
 
+    private void SignUpEvents()
+    {
+        Actions.TutorialFinishEvent += Run;
+    }
+
+    public void Stop()
+    {
+        currentState = new PlayerIdleState(this);
+        _moveScript.enabled = false;
+    }
+    
+    private void Run()
+    {
+        currentState = new PlayerRunState(this);
+        _moveScript.enabled = true;
+    }
+    
     private void Update()
     {
-        if (GameManager.currentState == GameManager.GameStates.Stop)
-        {
-            return;
-        }
-
-        if (!animator.GetBool("isRunning"))
-        {
-            animator.SetBool("isRunning", true);
-        }
-
-        MoveHorizontal();
-        CheckIsFloating();
-        CheckIsFall();
+        currentState.Update(this);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (GameManager.currentState == GameManager.GameStates.GameOver)
-        {
-            return;
-        }
-
         if (LayerMask.LayerToName(other.gameObject.layer) == "FinishLine")
         {
-            GameManager.currentState = GameManager.GameStates.YouWin;
-            Actions.StartConfettiEffect();
-            Actions.OpenScreen();
-            Actions.ChangeCameraAngle();
+            Actions.WinEvent?.Invoke();
         }
     }
 
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
                 ms.enabled = false;
                 animator.SetBool("isRunning", false);
 
-                Actions.MoveHelicopter();
+                Actions.HeliEvent();
 
                 Destroy(gameObject, 1.5f);
             }
@@ -100,22 +101,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Die(bool dieWithFalling)
+    public void Catch()
     {
-        GetComponent<MoveScript>().enabled = false;
-        GetComponent<PlayerController>().enabled = false;
+        PlayDeathAnim();
+        Die();
+    }
 
-        if (!dieWithFalling)
-        {
-            animator.SetTrigger("die");
-        }
-        else
-        {
-            animator.SetBool("isFloating", true);
-        }
+    public void Die()
+    {
+        _moveScript.enabled = false;
+        enabled = false;
 
-        GameManager.currentState = GameManager.GameStates.GameOver;
-        Actions.OpenScreen();
+        Actions.LoseEvent?.Invoke();
     }
 
     private float GetMousePos()
@@ -126,7 +123,7 @@ public class PlayerController : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePos).x;
     }
 
-    private void MoveHorizontal()
+    public void MoveHorizontal()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -149,32 +146,33 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void CheckIsFloating()
+    public bool CheckIsFloating()
     {
-        if (!Physics.Raycast(transform.position, Vector3.down, out RaycastHit hitInfo, 1))
-        {
-            if (hitInfo.collider == null)
-            {
-                if (!animator.GetBool("isFloating"))
-                {
-                    animator.SetBool("isFloating", true);
-                }
-            }
-        }
-        else
-        {
-            if (animator.GetBool("isFloating"))
-            {
-                animator.SetBool("isFloating", false);
-            }
-        }
+        return Physics.Raycast(transform.position, Vector3.down, 1, groundLayerMask);
     }
 
-    private void CheckIsFall()
+    public bool CheckIfFell()
     {
-        if (transform.position.y <= minYPos)
-        {
-            Die(dieWithFalling: true);
-        }
+        return (transform.position.y <= minYPos);
+    }
+
+    public void PlaIdleAnim()
+    {
+        //TODO: Play Idle Animation
+    }
+    
+    public void PlaRunAnim()
+    {
+        //TODO: Play Run Animation
+    }
+    
+    public void PlaFallAnim()
+    {
+        //TODO: Play Fall Animation
+    }
+
+    public void PlayDeathAnim()
+    {
+        //TODO: Play Death Animation
     }
 }

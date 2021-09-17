@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 178864019}
   - component: {fileID: 178864020}
-  m_Layer: 11
+  m_Layer: 13
   m_Name: Heli_Entry_Checker
   m_TagString: GroundCube
   m_Icon: {fileID: 0}
