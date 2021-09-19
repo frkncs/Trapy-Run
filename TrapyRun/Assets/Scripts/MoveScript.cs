@@ -8,9 +8,6 @@ public class MoveScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
-    [SerializeField] private bool useAutoSpeed = false;
-
-    [SerializeField] private float autoSpeedControlDistance = 11;
     [SerializeField] private bool useGlobalDirections = false;
     [SerializeField] private bool moveForward = false;
     [SerializeField] private bool moveHorizontal = false;
@@ -20,8 +17,6 @@ public class MoveScript : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 10;
     [SerializeField] private float turnSpeed = 0;
-
-    private GameObject player;
 
     private Vector3 dir = Vector3.right;
     private Vector3 rot = Vector3.zero;
@@ -52,7 +47,6 @@ public class MoveScript : MonoBehaviour
 
     private void InitializeVariables()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         InitializeRotValue();
     }
 
@@ -63,21 +57,6 @@ public class MoveScript : MonoBehaviour
 
     private void MoveForward()
     {
-        if (useAutoSpeed)
-        {
-            if (player != null)
-            {
-                Vector3 playerPos = player.transform.position;
-
-                float dist = playerPos.z - transform.position.z;
-
-                if (dist >= autoSpeedControlDistance)
-                {
-                    moveSpeed = dist;
-                }
-            }
-        }
-
         if (!useGlobalDirections)
         {
             transform.position += transform.forward * (Time.deltaTime * moveSpeed);

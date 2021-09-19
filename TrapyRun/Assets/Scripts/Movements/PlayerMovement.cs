@@ -27,10 +27,6 @@ public class PlayerMovement : MonoBehaviour
 
             firstFingerX = lastFingerX;
         }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            RotateForward();
-        }
     }
 
     public void MoveAndRotate()
@@ -38,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
         CalcInputValues();
         Rotate();
         Move();
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            RotateForward();
+        }
     }
 
     private void Rotate()
@@ -45,20 +46,20 @@ public class PlayerMovement : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, _swipeDiff * 50, 0);
     }
 
-    private void RotateForward()
-    {
-        transform.LookAt(new Vector3(transform.position.x, transform.position.y, transform.position.z + 5));
-    }
-
     private void Move()
     {
         MoveForward();
         MoveHorizontal();
     }
-    
+
+    private void RotateForward()
+    {
+        Vector3 _lookRot = new Vector3(transform.position.x, transform.position.y, transform.position.z + 10);
+        transform.LookAt(_lookRot);
+    }
+
     private void MoveHorizontal()
     {
-        
         transform.position += new Vector3(_swipeDiff, 0, 0) * 0.9f;
     }
 

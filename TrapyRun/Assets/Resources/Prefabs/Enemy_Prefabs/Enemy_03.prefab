@@ -412,9 +412,9 @@ GameObject:
   - component: {fileID: 3465466597574821242}
   - component: {fileID: 7419648873851789056}
   - component: {fileID: 4277328032347037638}
-  - component: {fileID: -916008784025672049}
   - component: {fileID: 7551403154320155237}
   - component: {fileID: -7419160732002800644}
+  - component: {fileID: 3955893344057725970}
   - component: {fileID: 4277328032347037639}
   m_Layer: 0
   m_Name: Enemy_03
@@ -470,28 +470,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a63bab3e9ffa1da44ab81eb2a30f6e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-916008784025672049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4277328032347037632}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09817d58d1f3cd046aed766b90933fcd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useAutoSpeed: 1
-  autoSpeedControlDistance: 10
-  useGlobalDirections: 1
-  moveForward: 1
-  moveHorizontal: 0
-  canTurn: 0
-  turnClockwise: 0
-  turnCoordinate: x
-  moveSpeed: 12
-  turnSpeed: 0
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 1792
+  enemyMovement: {fileID: 0}
 --- !u!136 &7551403154320155237
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -522,6 +504,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &3955893344057725970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277328032347037632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcbc1392033ac0246bcda67ab7c8be72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoSpeedControlDistance: 7
 --- !u!195 &4277328032347037639
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -745,6 +740,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:

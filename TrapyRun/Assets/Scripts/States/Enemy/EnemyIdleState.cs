@@ -11,7 +11,10 @@ namespace States.Enemy
 
         public override void Update(EnemyController enemyController)
         {
-            
+            if (EnemyController.canRun)
+            {
+                enemyController.currentState = new EnemyRunState(enemyController);
+            }
         }
 
         public override void FixedUpdate(EnemyController enemyController)

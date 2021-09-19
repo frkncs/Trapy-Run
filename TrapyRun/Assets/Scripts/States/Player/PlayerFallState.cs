@@ -11,11 +11,16 @@ namespace States.Player
 
         public override void Update(PlayerController playerController)
         {
-            
+            playerController.playerMovement.MoveAndRotate();
         }
 
         public override void FixedUpdate(PlayerController playerController)
         {
+            if (!playerController.CheckIsFloating())
+            {
+                playerController.currentState = new PlayerRunState(playerController);
+            }
+
             if (playerController.CheckIfFell())
             {
                 playerController.Die();

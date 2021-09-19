@@ -108,6 +108,7 @@ SkinnedMeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -898,8 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcbc1392033ac0246bcda67ab7c8be72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  autoSpeedControlDistance: 11
-  moveSpeed: 12
+  autoSpeedControlDistance: 7
 --- !u!1 &8976733755771300670
 GameObject:
   m_ObjectHideFlags: 0

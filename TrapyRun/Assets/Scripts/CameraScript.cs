@@ -63,7 +63,7 @@ public class CameraScript : MonoBehaviour
     {
         while (true)
         {
-            if ((object)player != null)
+            if (player != null)
             {
                 transform.LookAt(player.transform);
             }

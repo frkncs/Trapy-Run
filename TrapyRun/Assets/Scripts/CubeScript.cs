@@ -15,7 +15,7 @@ public class CubeScript : MonoBehaviour
     private float colorTimer = 0;
     private float fallSpeed = 0;
     private float fallSpeedTimer = 0;
-    private float g = 90, b = 90;
+    private float g = 140, b = 140;
     private Material material;
     private Transform playerTrans;
 
@@ -57,7 +57,7 @@ public class CubeScript : MonoBehaviour
     {
         colorTimer += Time.deltaTime;
 
-        if (colorTimer >= .1f && g > 20 && b > 20)
+        if (colorTimer >= .1f && g > 70 && b > 70)
         {
             g -= 10;
             b -= 10;

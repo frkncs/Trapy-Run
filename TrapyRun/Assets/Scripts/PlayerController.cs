@@ -1,56 +1,39 @@
-﻿using System;
-using Assets.Scripts;
-using States.Player;
+﻿using States.Player;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private LayerMask groundLayerMask;
-    
+
+    // Public variables
+
     [HideInInspector] public PlayerBaseState currentState;
     [HideInInspector] public PlayerMovement playerMovement;
 
-    private float minYPos = -15;
+    // Private Variables
+
+    [SerializeField] private LayerMask groundLayerMask;
+
     private Animator animator;
-    private Rigidbody _rigidbody;
-    
+
+    private const float minYPos = -15;
+
     #endregion Variables
 
     private void Start()
     {
-        SignUpEvents();
         InitializeVariables();
         Stop();
     }
 
-    private void InitializeVariables()
+    private void OnEnable()
     {
-        animator = GetComponent<Animator>();
-        _rigidbody = GetComponent<Rigidbody>();
-        playerMovement = GetComponent<PlayerMovement>();
+        SignUpEvents();
     }
 
-    private void SignUpEvents()
+    private void OnDisable()
     {
-        Actions.TutorialFinishEvent += Run;
-    }
-    
-    private void SignOutEvents()
-    {
-        Actions.TutorialFinishEvent -= Run;
-    }
-
-    public void Stop()
-    {
-        currentState = new PlayerIdleState(this);
-        playerMovement.enabled = false;
-    }
-    
-    private void Run()
-    {
-        currentState = new PlayerRunState(this);
-        playerMovement.enabled = true;
+        SignOutEvents();
     }
 
     private void FixedUpdate()
@@ -78,7 +61,7 @@ public class PlayerController : MonoBehaviour
             Stop();
 
             Actions.HeliEvent();
-            Destroy(gameObject, 1.5f);
+            Destroy(gameObject, 1f);
         }
     }
 
@@ -93,6 +76,12 @@ public class PlayerController : MonoBehaviour
                 cubeScript.Fall();
             }
         }
+    }
+
+    public void Stop()
+    {
+        currentState = new PlayerIdleState(this);
+        playerMovement.enabled = false;
     }
 
     public void Catch()
@@ -111,37 +100,57 @@ public class PlayerController : MonoBehaviour
 
     public bool CheckIsFloating()
     {
-        /*return transform.position.y <= -1.3f;*/
-        return _rigidbody.velocity.y < -0.01f;
+        Vector3 _rayPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
+
+        return !Physics.Raycast(_rayPosition, Vector3.down, 5, groundLayerMask);
     }
 
     public bool CheckIfFell()
     {
-        return (transform.position.y <= minYPos);
+        return transform.position.y <= minYPos;
     }
 
     public void PlayIdleAnim()
     {
         animator.Play("Idle");
     }
-    
+
     public void PlayRunAnim()
     {
-        animator.Play("Running");
+        animator.SetBool("running", true);
+        animator.SetBool("floating", false);
     }
-    
+
     public void PlayFallAnim()
     {
-        animator.Play("Falling");
+        animator.SetBool("running", false);
+        animator.SetBool("floating", true);
     }
 
     public void PlayDeathAnim()
     {
-        animator.Play("Death");
+        animator.SetTrigger("die");
     }
-    
-    private void OnDisable()
+
+    private void Run()
     {
-        SignOutEvents();
+        currentState = new PlayerRunState(this);
+        playerMovement.enabled = true;
+    }
+
+    private void InitializeVariables()
+    {
+        animator = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+
+    private void SignUpEvents()
+    {
+        Actions.TutorialFinishEvent += Run;
+    }
+
+    private void SignOutEvents()
+    {
+        Actions.TutorialFinishEvent -= Run;
     }
 }
