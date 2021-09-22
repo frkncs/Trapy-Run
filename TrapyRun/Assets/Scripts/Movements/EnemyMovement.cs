@@ -37,7 +37,7 @@ public class EnemyMovement : MonoBehaviour
 
     private IEnumerator ResetLookRotation()
     {
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(.5f);
 
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
@@ -160,6 +160,6 @@ public class EnemyMovement : MonoBehaviour
             }
         }
 
-        transform.position += Vector3.forward * (Time.deltaTime * moveSpeed);
+        transform.position += transform.forward * (Time.deltaTime * moveSpeed);
     }
 }

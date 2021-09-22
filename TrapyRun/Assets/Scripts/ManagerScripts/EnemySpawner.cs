@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
 
     private GameObject player;
     private Transform playerTrans;
+    private Transform enemyCoordTransform;
 
     private int createdEnemyCount = 0;
     private float spawnTimer = 0;
@@ -58,6 +59,7 @@ public class EnemySpawner : MonoBehaviour
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerTrans = player.transform;
+        enemyCoordTransform = transform.Find("EnemyCoord");
     }
 
     private void Spawn()
@@ -95,6 +97,9 @@ public class EnemySpawner : MonoBehaviour
 
         Vector3 spawnPos = new Vector3(randomXPos, transform.position.y, transform.position.z);
 
+        EnemyController enemyController = enemyToSpawn.GetComponent<EnemyController>();
+
+        enemyController.enemyLookCoordTransform = enemyCoordTransform;
         Instantiate(enemyToSpawn, spawnPos, Quaternion.identity);
 
         createdEnemyCount++;

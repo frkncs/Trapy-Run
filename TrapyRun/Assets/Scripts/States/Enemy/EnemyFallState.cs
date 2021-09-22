@@ -32,17 +32,17 @@ namespace States.Enemy
         
         }
 
-        public override void OnCollisionExit(EnemyController enemyController)
+        public override void OnCollisionExit(EnemyController enemyController, Collision collision)
         {
         
         }
 
-        public override void OnTriggerEnter(EnemyController enemyController)
+        public override void OnTriggerEnter(EnemyController enemyController, Collider other)
         {
         
         }
 
-        public override void OnTriggerExit(EnemyController enemyController)
+        public override void OnTriggerExit(EnemyController enemyController, Collider other)
         {
         
         }

@@ -48,6 +48,7 @@ public class UIController : MonoBehaviour
     {
         Actions.TutorialFinishEvent?.Invoke();
         tutorialUI.SetActive(false);
+        EnemyController.canRun = true;
     }
 
     private IEnumerator TutorialLoop()

@@ -1,4 +1,5 @@
 ﻿using States.Enemy;
+using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -7,14 +8,17 @@ public class EnemyController : MonoBehaviour
 
     // Public Variables
     [HideInInspector] public EnemyBaseState currentState;
+
     [HideInInspector] public EnemyMovement enemyMovement;
+    [HideInInspector] public Transform enemyLookCoordTransform;
+
     [HideInInspector] public static bool canRun = false;
     /* Bu şekilde canRun adında bir değişken kullanmamın sebebi;
     sağ veya sol yoldan spawn'lanan düşmanlar harekete başlayamıyor.
     default olarak idle'nin içinde kalıyorlar ve arayüz (tutorialUI) 1 kere kapandığı
     için bir daha TutorialFinish Action'ı çalışmıyor. Bu yüzden de düşman harekete geçemiyor.
-    bunu static yaptığımız için arayüz 1 kere kapanınca (oyun başlayınca)
-    düşmanlar koşmaya başlıyor. */
+    bunu static yaptığımız için arayüz 1 kere kapanınca (oyun başlayınca) sonradan spawnlanan
+    düşmanlar direkt koşmaya başlıyor. */
 
     // Private Variables
     [SerializeField] private LayerMask groundLayerMask;
@@ -47,26 +51,14 @@ public class EnemyController : MonoBehaviour
         currentState.Update(this);
     }
 
+    private void FixedUpdate()
+    {
+        currentState.FixedUpdate(this);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         currentState.OnCollisionEnter(this, collision);
-    }
-
-    private void SignInEvents()
-    {
-        Actions.TutorialFinishEvent += Run;
-        Actions.WinEvent += OnWinEvent;
-    }
-
-    private void SignOutEvents()
-    {
-        Actions.TutorialFinishEvent -= Run;
-        Actions.WinEvent -= OnWinEvent;
-    }
-
-    private void OnWinEvent()
-    {
-        _canCatchPlayer = false;
     }
 
     public void Stop()
@@ -78,8 +70,8 @@ public class EnemyController : MonoBehaviour
     public void Run()
     {
         enemyMovement.enabled = true;
+        currentState = new EnemyRunState(this);
         enemyMovement.ActivateNavMesh();
-        canRun = true;
     }
 
     public void CatchPlayer(Collision collision)
@@ -95,17 +87,6 @@ public class EnemyController : MonoBehaviour
     public bool CheckIfFell()
     {
         return transform.position.y <= minYPos;
-    }
-
-    private void InitializeVariables()
-    {
-        animator = GetComponent<Animator>();
-        enemyMovement = GetComponent<EnemyMovement>();
-    }
-
-    private void FixedUpdate()
-    {
-        currentState.FixedUpdate(this);
     }
 
     public bool CheckIfFloating()
@@ -126,5 +107,39 @@ public class EnemyController : MonoBehaviour
     public void PlayFallAnim()
     {
         animator.Play("Falling");
+    }
+
+    public void ResetLookRotation(float delay)
+    {
+        StartCoroutine(Reset(delay));
+    }
+
+    private void InitializeVariables()
+    {
+        animator = GetComponent<Animator>();
+        enemyMovement = GetComponent<EnemyMovement>();
+    }
+
+    private IEnumerator Reset(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Vector3 enemyTrans = transform.position;
+
+        transform.LookAt(new Vector3(enemyTrans.x, enemyTrans.y, enemyTrans.z + 10));
+    }
+
+    private void SignInEvents()
+    {
+        Actions.WinEvent += OnWinEvent;
+    }
+
+    private void SignOutEvents()
+    {
+        Actions.WinEvent -= OnWinEvent;
+    }
+
+    private void OnWinEvent()
+    {
+        _canCatchPlayer = false;
     }
 }

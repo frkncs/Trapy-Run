@@ -15,10 +15,10 @@ namespace States.Enemy
         
         public abstract void OnCollisionEnter(EnemyController enemyController, Collision collision);
         
-        public abstract void OnCollisionExit(EnemyController enemyController);
+        public abstract void OnCollisionExit(EnemyController enemyController, Collision collision);
         
-        public abstract void OnTriggerEnter(EnemyController enemyController);
+        public abstract void OnTriggerEnter(EnemyController enemyController, Collider other);
         
-        public abstract void OnTriggerExit(EnemyController enemyController);
+        public abstract void OnTriggerExit(EnemyController enemyController, Collider other);
     }
 }
