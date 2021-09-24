@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using Assets.Scripts;
 using UnityEngine;
 
 public class CameraScript : MonoBehaviour
@@ -14,7 +13,7 @@ public class CameraScript : MonoBehaviour
     private GameObject player;
     private Vector3 playerPos;
     private Vector3 offset;
-    
+
     #endregion Variables
 
     private void Start()
@@ -68,7 +67,7 @@ public class CameraScript : MonoBehaviour
             {
                 transform.LookAt(heliStopTrans);
             }
-            
+
             yield return null;
         }
     }

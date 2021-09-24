@@ -1,11 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour
 {
     #region Variables
+
+    // Public Variables
+
+    // Private Variables
     [SerializeField] private bool useGlobalDirections = false;
+
     [SerializeField] private bool moveForward = false;
     [SerializeField] private bool canTurn = false;
     [SerializeField] private bool turnClockwise = false;

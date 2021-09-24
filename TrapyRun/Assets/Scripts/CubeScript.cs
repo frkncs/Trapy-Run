@@ -10,15 +10,17 @@ public class CubeScript : MonoBehaviour
     // Private Variables
     private static GroundGenerator gg;
 
-    private bool canFall = false;
     private Collider col;
+    private Material material;
+    private Transform playerTrans;
+
     private float colorTimer = 0;
     private float fallSpeed = 0;
     private float fallSpeedTimer = 0;
     private float g = 140, b = 140;
-    private Material material;
-    private Transform playerTrans;
 
+    private bool canFall = false;
+    
     private const float maxFallSpeed = 15;
     private const float maxYPos = -20;
     private const float r = 255;

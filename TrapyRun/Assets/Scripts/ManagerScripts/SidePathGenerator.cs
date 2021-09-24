@@ -11,7 +11,7 @@ public class SidePathGenerator : MonoBehaviour
     [SerializeField] private int row, column;
 
     private GroundGenerator gg;
-
+    
     private bool isLevelIncludeNavMesh = false;
 
     #endregion Variables

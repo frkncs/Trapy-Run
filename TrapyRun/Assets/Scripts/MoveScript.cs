@@ -1,5 +1,4 @@
-﻿using Assets.Scripts;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MoveScript : MonoBehaviour
 {
@@ -8,15 +7,16 @@ public class MoveScript : MonoBehaviour
     // Public Variables
 
     // Private Variables
+    [SerializeField] private Vector3 turnCoordinate;
+
+    [SerializeField] private float moveSpeed = 10;
+    [SerializeField] private float turnSpeed = 0;
+
     [SerializeField] private bool useGlobalDirections = false;
     [SerializeField] private bool moveForward = false;
     [SerializeField] private bool moveHorizontal = false;
     [SerializeField] private bool canTurn = false;
     [SerializeField] private bool turnClockwise = false;
-    [SerializeField] private Vector3 turnCoordinate;
-
-    [SerializeField] private float moveSpeed = 10;
-    [SerializeField] private float turnSpeed = 0;
 
     private Vector3 dir = Vector3.right;
     private Vector3 rot = Vector3.zero;

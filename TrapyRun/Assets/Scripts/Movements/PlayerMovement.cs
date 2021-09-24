@@ -1,18 +1,31 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
 
+    // Public Variables
+
+    // Private Variables
     [SerializeField] private float moveSpeed = 10;
-    
+
     private float firstFingerX, lastFingerX;
     private float _swipeDiff;
 
     #endregion Variables
-    
+
+    public void MoveAndRotate()
+    {
+        CalcInputValues();
+        Rotate();
+        Move();
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            RotateForward();
+        }
+    }
+
     private void CalcInputValues()
     {
         if (Input.GetMouseButtonDown(0))
@@ -26,18 +39,6 @@ public class PlayerMovement : MonoBehaviour
             _swipeDiff = lastFingerX - firstFingerX;
 
             firstFingerX = lastFingerX;
-        }
-    }
-
-    public void MoveAndRotate()
-    {
-        CalcInputValues();
-        Rotate();
-        Move();
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            RotateForward();
         }
     }
 

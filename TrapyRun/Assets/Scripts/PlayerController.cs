@@ -5,13 +5,11 @@ public class PlayerController : MonoBehaviour
 {
     #region Variables
 
-    // Public variables
-
+    // Public Variables
     [HideInInspector] public PlayerBaseState currentState;
     [HideInInspector] public PlayerMovement playerMovement;
 
     // Private Variables
-
     [SerializeField] private LayerMask groundLayerMask;
 
     private Animator animator;

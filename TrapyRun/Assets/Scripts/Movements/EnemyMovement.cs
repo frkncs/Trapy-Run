@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
@@ -10,7 +9,6 @@ public class EnemyMovement : MonoBehaviour
     // Public Variables
 
     // Private Variables
-
     [SerializeField] private float autoSpeedControlDistance = 11;
 
     private GameObject player;
@@ -38,6 +36,23 @@ public class EnemyMovement : MonoBehaviour
     private void OnDisable()
     {
         DeactivateNavMesh();
+    }
+
+    public void MoveForward()
+    {
+        if (player != null)
+        {
+            Vector3 playerPos = player.transform.position;
+
+            float dist = playerPos.z - transform.position.z;
+
+            if (dist >= autoSpeedControlDistance)
+            {
+                moveSpeed = dist;
+            }
+        }
+
+        transform.position += transform.forward * (Time.deltaTime * moveSpeed);
     }
 
     public void NavMeshMovement()
@@ -139,22 +154,5 @@ public class EnemyMovement : MonoBehaviour
         playerTrans = player.transform;
 
         navMesh = GetComponent<NavMeshAgent>();
-    }
-
-    public void MoveForward()
-    {
-        if (player != null)
-        {
-            Vector3 playerPos = player.transform.position;
-
-            float dist = playerPos.z - transform.position.z;
-
-            if (dist >= autoSpeedControlDistance)
-            {
-                moveSpeed = dist;
-            }
-        }
-
-        transform.position += transform.forward * (Time.deltaTime * moveSpeed);
     }
 }

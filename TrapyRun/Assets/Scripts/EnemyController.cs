@@ -1,5 +1,4 @@
 ﻿using States.Enemy;
-using System.Collections;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
@@ -7,11 +6,6 @@ public class EnemyController : MonoBehaviour
     #region Variables
 
     // Public Variables
-    [HideInInspector] public EnemyBaseState currentState;
-
-    [HideInInspector] public EnemyMovement enemyMovement;
-    [HideInInspector] public Transform enemyLookCoordTransform;
-
     [HideInInspector] public static bool canRun = false;
     /* Bu şekilde canRun adında bir değişken kullanmamın sebebi;
     sağ veya sol yoldan spawn'lanan düşmanlar harekete başlayamıyor.
@@ -19,6 +13,11 @@ public class EnemyController : MonoBehaviour
     için bir daha TutorialFinish Action'ı çalışmıyor. Bu yüzden de düşman harekete geçemiyor.
     bunu static yaptığımız için arayüz 1 kere kapanınca (oyun başlayınca) sonradan spawnlanan
     düşmanlar direkt koşmaya başlıyor. */
+
+    [HideInInspector] public EnemyBaseState currentState;
+
+    [HideInInspector] public EnemyMovement enemyMovement;
+    [HideInInspector] public Transform enemyLookCoordTransform;
 
     // Private Variables
     [SerializeField] private LayerMask groundLayerMask;
