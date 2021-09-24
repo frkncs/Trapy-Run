@@ -26,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void ResetLookRotation()
+    {
+        _swipeDiff = 0;
+        transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
     private void CalcInputValues()
     {
         if (Input.GetMouseButtonDown(0))
