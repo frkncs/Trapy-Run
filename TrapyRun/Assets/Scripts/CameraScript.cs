@@ -14,8 +14,6 @@ public class CameraScript : MonoBehaviour
     private GameObject player;
     private Vector3 playerPos;
     private Vector3 offset;
-
-    private bool canChangeAngle = false;
     
     #endregion Variables
 
@@ -39,7 +37,6 @@ public class CameraScript : MonoBehaviour
 
     private void OnWinEvent()
     {
-        ActivateAngle();
         StartConfettiEffect();
         StopAllCoroutines();
         StartRotation();
@@ -96,11 +93,6 @@ public class CameraScript : MonoBehaviour
         heliStopTrans = helicopter.Find("Heli_Stop").transform;
 
         offset = transform.position - playerPos;
-    }
-
-    private void ActivateAngle()
-    {
-        canChangeAngle = true;
     }
 
     private void StartConfettiEffect()

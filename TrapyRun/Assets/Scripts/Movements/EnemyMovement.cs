@@ -35,11 +35,9 @@ public class EnemyMovement : MonoBehaviour
         MoveForward();
     }
 
-    private IEnumerator ResetLookRotation()
+    private void OnDisable()
     {
-        yield return new WaitForSeconds(.5f);
-
-        transform.rotation = Quaternion.Euler(0, 0, 0);
+        DeactivateNavMesh();
     }
 
     public void NavMeshMovement()
@@ -55,11 +53,6 @@ public class EnemyMovement : MonoBehaviour
                 DeactivateNavMesh();
             }
         }
-    }
-
-    private void OnDisable()
-    {
-        DeactivateNavMesh();
     }
 
     public void Fall()
@@ -125,14 +118,16 @@ public class EnemyMovement : MonoBehaviour
         {
             if (navMesh == null)
             {
-                if (collision.gameObject.CompareTag("SideCube"))
+                string collisionTag = collision.gameObject.tag;
+
+                if (collisionTag == "SideCube")
                 {
                     transform.LookAt(collision.gameObject.transform.parent.Find("EnemyCoord").transform);
                 }
-                else if (collision.gameObject.CompareTag("GroundCube"))
+                else if (collisionTag == "GroundCube")
                 {
                     isFindPath = true;
-                    StartCoroutine(ResetLookRotation());
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
             }
         }

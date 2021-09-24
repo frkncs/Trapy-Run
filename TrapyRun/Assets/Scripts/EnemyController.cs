@@ -109,23 +109,10 @@ public class EnemyController : MonoBehaviour
         animator.Play("Falling");
     }
 
-    public void ResetLookRotation(float delay)
-    {
-        StartCoroutine(Reset(delay));
-    }
-
     private void InitializeVariables()
     {
         animator = GetComponent<Animator>();
         enemyMovement = GetComponent<EnemyMovement>();
-    }
-
-    private IEnumerator Reset(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        Vector3 enemyTrans = transform.position;
-
-        transform.LookAt(new Vector3(enemyTrans.x, enemyTrans.y, enemyTrans.z + 10));
     }
 
     private void SignInEvents()

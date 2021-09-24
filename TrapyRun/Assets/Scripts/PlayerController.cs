@@ -142,6 +142,7 @@ public class PlayerController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
+        EnemyController.canRun = false;
     }
 
     private void SignUpEvents()
