@@ -9,26 +9,27 @@ public class PlayerMovement : MonoBehaviour
     // Private Variables
     [SerializeField] private float moveSpeed = 10;
 
-    private float firstFingerX, lastFingerX;
+    private Rigidbody _rb;
+
+    private float _firstFingerX, _lastFingerX;
     private float _swipeDiff;
 
     #endregion Variables
+
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody>();
+    }
 
     public void MoveAndRotate()
     {
         CalcInputValues();
         Rotate();
         Move();
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            RotateForward();
-        }
     }
 
     public void ResetLookRotation()
     {
-        _swipeDiff = 0;
         transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
@@ -36,15 +37,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            firstFingerX = GetMousePos();
+            _firstFingerX = GetMousePos();
         }
         else if (Input.GetMouseButton(0))
+        {   
+            _lastFingerX = GetMousePos();
+
+            _swipeDiff = _lastFingerX - _firstFingerX;
+
+            _firstFingerX = _lastFingerX;
+        }
+        else if (Input.GetMouseButtonUp(0))
         {
-            lastFingerX = GetMousePos();
-
-            _swipeDiff = lastFingerX - firstFingerX;
-
-            firstFingerX = lastFingerX;
+            _swipeDiff = 0;
+            ResetLookRotation();
         }
     }
 
@@ -57,12 +63,6 @@ public class PlayerMovement : MonoBehaviour
     {
         MoveForward();
         MoveHorizontal();
-    }
-
-    private void RotateForward()
-    {
-        Vector3 _lookRot = new Vector3(transform.position.x, transform.position.y, transform.position.z + 10);
-        transform.LookAt(_lookRot);
     }
 
     private void MoveHorizontal()

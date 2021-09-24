@@ -20,11 +20,6 @@ namespace States.Player
             {
                 playerController.currentState = new PlayerFallState(playerController);
             }
-
-            if (Input.GetMouseButtonUp(0))
-            {
-                playerController.playerMovement.ResetLookRotation();
-            }
         }
 
         public override void OnCollisionEnter(PlayerController playerController)
