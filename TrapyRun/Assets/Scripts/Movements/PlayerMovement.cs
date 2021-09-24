@@ -9,17 +9,10 @@ public class PlayerMovement : MonoBehaviour
     // Private Variables
     [SerializeField] private float moveSpeed = 10;
 
-    private Rigidbody _rb;
-
     private float _firstFingerX, _lastFingerX;
     private float _swipeDiff;
 
     #endregion Variables
-
-    private void Start()
-    {
-        _rb = GetComponent<Rigidbody>();
-    }
 
     public void MoveAndRotate()
     {
